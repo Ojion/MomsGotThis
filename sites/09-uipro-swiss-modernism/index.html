@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mom's Got This Cleaning Co. — House cleaning around Kansas City</title>
+<!-- MGT-OG -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mom's Got This Cleaning Co.">
+<meta property="og:title" content="Mom&#x27;s Got This Cleaning Co. — House cleaning around Kansas City">
+<meta property="og:description" content="House cleaning around Kansas City, done by Amber herself. Weekly, biweekly, one-time and deep cleaning, with a free personal quote by text.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /MGT-OG -->
+<meta name="description" content="House cleaning around Kansas City, done by Amber herself. Weekly, biweekly, one-time and deep cleaning, with a free personal quote by text.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #FFFFFF;
+    --paper: #F5F5F3;
+    --ink: #111111;
+    --grey: #5C5C5C;
+    --line: #D9D9D6;
+    --accent: #1E40AF;
+    --accent-dark: #17338C;
+    --error: #B3261E;
+    --u: 8px;
+    --head: "Work Sans", "Segoe UI", sans-serif;
+    --body: "Figtree", "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--white); color: var(--ink); font: 400 1.0625rem/1.6 var(--body); overflow-x: hidden; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--head); font-weight: 500; margin: 0; letter-spacing: -.025em; line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.25rem); }
+  p { margin: 0; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .skip { position: absolute; left: 16px; top: -60px; background: var(--ink); color: var(--white); padding: 12px 18px; z-index: 50; }
+  .skip:focus { top: 12px; }
+
+  /* 12-column grid, 8px base unit */
+  .wrap { width: min(1312px, 100% - 32px); margin-inline: auto; }
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: calc(var(--u) * 3); }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 52px; padding: 12px 28px; border: 1.5px solid var(--accent); border-radius: 2px;
+    background: var(--accent); color: var(--white); font: 500 1.05rem/1.2 var(--head); text-decoration: none; cursor: pointer;
+    transition: background-color .2s ease;
+  }
+  .btn:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+  .link-arrow { display: inline-flex; align-items: center; gap: 8px; min-height: 52px; font: 500 1.05rem/1.2 var(--head); color: var(--ink); text-decoration: none; border-bottom: 1.5px solid var(--ink); }
+  .link-arrow:hover { color: var(--accent); border-color: var(--accent); }
+  .link-arrow svg { width: 18px; height: 18px; }
+
+  /* header */
+  .top { border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
+  .name { display: inline-flex; align-items: center; min-height: 44px; font: 600 1.1rem/1.1 var(--head); letter-spacing: -.02em; color: var(--ink); text-decoration: none; }
+  .name span { color: var(--grey); font-weight: 400; margin-left: 6px; }
+  .top ul { display: flex; gap: calc(var(--u) * 3); list-style: none; margin: 0; padding: 0; align-items: center; }
+  .top ul a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); text-decoration: none; font-weight: 500; }
+  .top ul a:hover { color: var(--accent); }
+  .top .call { color: var(--accent); font-weight: 600; }
+
+  /* hero */
+  .hero { padding: calc(var(--u) * 10) 0 calc(var(--u) * 6); row-gap: calc(var(--u) * 5); align-items: end; }
+  .hero-text { grid-column: 1 / 8; }
+  .hero h1 { font-size: clamp(2.3rem, 5.4vw, 5.25rem); max-width: 13ch; }
+  .hero-sub { display: grid; grid-template-columns: 1fr 1fr; gap: calc(var(--u) * 3); margin-top: calc(var(--u) * 5); padding-top: calc(var(--u) * 3); border-top: 1px solid var(--ink); }
+  .hero-sub p { color: var(--grey); }
+  .hero-sub b { display: block; color: var(--ink); font-weight: 600; }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: calc(var(--u) * 2) calc(var(--u) * 4); margin-top: calc(var(--u) * 5); }
+  .hero-photo { grid-column: 9 / 13; margin: 0; }
+  .hero-photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+  .caption, figcaption { font-size: .95rem; color: var(--grey); margin-top: var(--u); }
+  .wide { margin: 0; }
+  .wide img { width: 100%; aspect-ratio: 21 / 8; object-fit: cover; object-position: 50% 62%; }
+
+  section { padding: calc(var(--u) * 14) 0; }
+  .label { grid-column: 1 / 4; font: 500 1rem/1.4 var(--head); color: var(--grey); padding-top: 10px; }
+
+  /* services as a typographic list */
+  .services-body { grid-column: 4 / 13; }
+  .services-body > p { font-size: 1.25rem; max-width: 46ch; margin-top: calc(var(--u) * 3); color: var(--grey); }
+  .services { list-style: none; margin: calc(var(--u) * 6) 0 0; padding: 0; border-top: 1px solid var(--ink); }
+  .services li { display: grid; grid-template-columns: 4fr 5fr; gap: calc(var(--u) * 3); padding: calc(var(--u) * 3) 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .services h3 { font-size: clamp(1.4rem, 2.4vw, 2rem); }
+  .services p { color: var(--grey); max-width: 44ch; }
+
+  /* Amber */
+  .amber { background: var(--paper); }
+  .amber-photo { grid-column: 1 / 6; margin: 0; }
+  .amber-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%; }
+  .amber-text { grid-column: 7 / 13; align-self: center; display: grid; gap: calc(var(--u) * 3); font-size: 1.15rem; }
+  .amber-text p { max-width: 52ch; }
+  .her-line { margin: calc(var(--u) * 2) 0 0; padding-top: calc(var(--u) * 3); border-top: 1px solid var(--ink); font: 400 clamp(1.5rem, 2.6vw, 2.1rem)/1.25 var(--head); letter-spacing: -.02em; }
+  .her-line cite { display: block; margin-top: calc(var(--u) * 2); font: 400 1rem/1.4 var(--body); font-style: normal; color: var(--grey); }
+
+  /* work */
+  .work-head { grid-column: 4 / 13; }
+  .work-head p { margin-top: calc(var(--u) * 3); color: var(--grey); font-size: 1.15rem; max-width: 52ch; }
+  .photos { margin-top: calc(var(--u) * 8); row-gap: calc(var(--u) * 5); }
+  .photos figure { margin: 0; }
+  .photos img { width: 100%; object-fit: cover; }
+  .p-a { grid-column: 1 / 9; } .p-a img { aspect-ratio: 4 / 3; }
+  .p-b { grid-column: 9 / 13; } .p-b img { aspect-ratio: 3 / 4.1; }
+  .p-c { grid-column: 1 / 5; } .p-d { grid-column: 5 / 9; } .p-e { grid-column: 9 / 13; }
+  .p-c img, .p-d img, .p-e img { aspect-ratio: 3 / 4; }
+  .p-f { grid-column: 1 / 7; } .p-g { grid-column: 7 / 13; }
+  .p-f img, .p-g img { aspect-ratio: 3 / 2; }
+  .refs { grid-column: 4 / 13; margin-top: calc(var(--u) * 6); padding-top: calc(var(--u) * 3); border-top: 1px solid var(--line); color: var(--grey); }
+  .refs b { color: var(--ink); font-weight: 600; }
+
+  /* quote */
+  .quote { background: var(--paper); }
+  .quote-side { grid-column: 1 / 6; display: grid; gap: calc(var(--u) * 3); align-content: start; }
+  .quote-side > p { color: var(--grey); max-width: 40ch; }
+  .direct { list-style: none; margin: calc(var(--u) * 2) 0 0; padding: 0; border-top: 1px solid var(--ink); }
+  .direct li { border-bottom: 1px solid var(--line); }
+  .direct a { display: grid; grid-template-columns: 96px 1fr; align-items: center; min-height: 56px; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+  .direct a span { color: var(--grey); }
+  .direct a:hover b { color: var(--accent); }
+  .direct b { font-weight: 500; }
+  form { grid-column: 7 / 13; display: grid; grid-template-columns: 1fr 1fr; gap: calc(var(--u) * 3); }
+  .field { display: grid; gap: var(--u); }
+  .full { grid-column: 1 / -1; }
+  label, legend { font: 500 1rem/1.3 var(--head); }
+  .opt { color: var(--grey); font-weight: 400; }
+  input[type=text], input[type=tel], textarea {
+    font: inherit; color: var(--ink); width: 100%; min-height: 52px; padding: 12px 14px;
+    background: var(--white); border: 1px solid #8C8C8C; border-radius: 2px;
+  }
+  textarea { min-height: 120px; resize: vertical; }
+  input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 0; border-color: var(--accent); }
+  input[aria-invalid=true] { border-color: var(--error); }
+  .err { color: var(--error); font-weight: 600; font-size: .98rem; }
+  fieldset { border: 0; margin: 0; padding: 0; }
+  .types { display: grid; grid-template-columns: repeat(5, 1fr); margin-top: var(--u); border: 1px solid #8C8C8C; border-radius: 2px; background: var(--white); }
+  .types label { font: 400 1rem/1.2 var(--body); }
+  .types label + label span { border-left: 1px solid #8C8C8C; }
+  .types input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .types span { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 52px; padding: 6px 4px; cursor: pointer; }
+  .types input:checked + span { background: var(--accent); color: var(--white); font-weight: 600; }
+  .types input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: -4px; }
+  .send { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: calc(var(--u) * 2) calc(var(--u) * 3); }
+  .send p { color: var(--grey); font-size: .98rem; max-width: 38ch; }
+
+  footer { border-top: 1px solid var(--ink); padding: calc(var(--u) * 6) 0 calc(var(--u) * 8); }
+  .foot-name { grid-column: 1 / 6; font: 600 1.15rem/1.3 var(--head); }
+  .foot-name p { font: 400 1rem/1.5 var(--body); color: var(--grey); margin-top: var(--u); }
+  footer ul { grid-column: 7 / 13; list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 calc(var(--u) * 4); }
+  footer li a { display: inline-flex; min-height: 44px; align-items: center; color: var(--ink); overflow-wrap: anywhere; }
+
+  @media (max-width: 1000px) {
+    .hero-text { grid-column: 1 / 9; }
+    .hero-photo { grid-column: 9 / 13; }
+    .label { grid-column: 1 / -1; padding: 0 0 calc(var(--u) * 2); }
+    .services-body, .work-head, .refs { grid-column: 1 / -1; }
+    .amber-photo { grid-column: 1 / 6; }
+    .amber-text { grid-column: 6 / 13; }
+    .quote-side, form { grid-column: 1 / -1; }
+    form { margin-top: calc(var(--u) * 5); }
+    .types { grid-template-columns: repeat(3, 1fr); }
+    .types label:nth-child(4) span { border-left: 0; }
+    .types label:nth-child(n+4) span { border-top: 1px solid #8C8C8C; }
+  }
+  @media (max-width: 700px) {
+    .top ul li:not(:last-child) { display: none; }
+    .top .wrap { min-height: 60px; }
+    .name span { display: none; }
+    .hero { padding: calc(var(--u) * 3) 0 calc(var(--u) * 4); row-gap: calc(var(--u) * 4); }
+    .hero-text, .hero-photo { grid-column: 1 / -1; }
+    .hero h1 { font-size: 2.35rem; max-width: none; }
+    .hero-sub { grid-template-columns: 1fr; gap: var(--u); margin-top: calc(var(--u) * 2); padding-top: calc(var(--u) * 2); }
+    .actions { margin-top: calc(var(--u) * 3); gap: var(--u) calc(var(--u) * 3); }
+    .hero-photo img { aspect-ratio: 4 / 3; }
+    .wide img { aspect-ratio: 4 / 3; }
+    section { padding: calc(var(--u) * 8) 0; }
+    .services li { grid-template-columns: 1fr; gap: 4px; }
+    .amber-photo, .amber-text { grid-column: 1 / -1; }
+    .amber-photo { max-width: 320px; margin-bottom: calc(var(--u) * 4); }
+    .photos { margin-top: calc(var(--u) * 4); row-gap: calc(var(--u) * 3); column-gap: calc(var(--u) * 2); }
+    .p-a, .p-f, .p-g { grid-column: 1 / -1; }
+    .p-b, .p-c { grid-column: span 6; }
+    .p-d, .p-e { grid-column: span 6; }
+    .p-b img { aspect-ratio: 3 / 4; }
+    form { grid-template-columns: 1fr; }
+    .direct a { grid-template-columns: 84px 1fr; font-size: .97rem; }
+    .direct a span { white-space: nowrap; }
+    .types { grid-template-columns: 1fr 1fr; }
+    .types label span { border-left: 0 !important; border-top: 0 !important; }
+    .types label:nth-child(even) span { border-left: 1px solid #8C8C8C !important; }
+    .types label:nth-child(n+3) span { border-top: 1px solid #8C8C8C !important; }
+    .types label:nth-child(5) { grid-column: 1 / -1; }
+    .foot-name, footer ul { grid-column: 1 / -1; }
+    footer ul { margin-top: calc(var(--u) * 3); flex-direction: column; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="name" href="#top">Mom's Got This<span>Cleaning Co.</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#amber">Amber</a></li>
+        <li><a href="#work">Real homes</a></li>
+        <li><a class="call" href="#quote">Free quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap grid hero" id="top">
+    <div class="hero-text">
+      <h1>House cleaning around Kansas City, done by Amber herself.</h1>
+      <div class="hero-sub">
+        <p><b>Amber, mom of four</b>Owner, and the one who shows up to clean your home.</p>
+        <p><b>Weekly, biweekly, one-time, deep</b>Every home quoted personally. The quote is free.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#quote">Get a free quote</a>
+        <a class="link-arrow" href="sms:+18167154322">Text 816-715-4322
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="../../images/staircase.webp" width="1500" height="1125" alt="Modern staircase rising toward a tall grid of windows in a client's home" style="object-position:45% 50%">
+      <figcaption>Staircase and windows, a client home.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <figure class="wide">
+      <img src="../../images/kitchen.webp" width="1500" height="1125" alt="Open kitchen and dining room with white cabinets and wood floors in a client's home">
+      <figcaption>Kitchen and dining. Every photo on this page is a real client home, shown with the homeowner's permission.</figcaption>
+    </figure>
+  </div>
+
+  <section id="services" aria-labelledby="services-h">
+    <div class="wrap grid">
+      <p class="label">Services</p>
+      <div class="services-body">
+        <h2 id="services-h">One less thing on your list.</h2>
+        <p>Pick the rhythm that suits your home, or tell Amber what's going on and she'll suggest one.</p>
+        <ul class="services">
+          <li><h3>Weekly cleaning</h3><p>The same thorough reset every week, so the house never gets away from you.</p></li>
+          <li><h3>Biweekly cleaning</h3><p>Every other week. Steady upkeep sized to how your household actually lives.</p></li>
+          <li><h3>One-time cleaning</h3><p>Before guests, after a busy stretch, or simply because you need a break.</p></li>
+          <li><h3>Deep cleaning</h3><p>A full reset: build-up, baseboards, fixtures and the corners regular cleaning skips.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="amber" id="amber" aria-labelledby="amber-h">
+    <div class="wrap grid">
+      <figure class="amber-photo">
+        <img src="../../images/owner.webp" width="880" height="1100" loading="lazy" alt="Amber, owner of Mom's Got This Cleaning Co., smiling in a white blazer">
+      </figure>
+      <div class="amber-text">
+        <h2 id="amber-h">Hi, I'm Amber.</h2>
+        <p>I'm a mom of four, so I know how overwhelming a house can get between work, kids, appointments and activities. That's why I started Mom's Got This.</p>
+        <p>I run the business and I do the cleaning. I take pride in the details, and I treat every home the way I'd want mine treated.</p>
+        <blockquote class="her-line">“Because sometimes, even moms need someone to say, ‘Don't worry, I've got this!’”<cite>Amber</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="wrap grid">
+      <p class="label">Real homes</p>
+      <div class="work-head">
+        <h2 id="work-h">Homes I've cleaned.</h2>
+        <p>Phone photos from clients' homes around Kansas City, shared with their permission. Cropped to fit the page, otherwise exactly as I left them.</p>
+      </div>
+    </div>
+    <div class="wrap grid photos">
+      <figure class="p-a"><img src="../../images/entertaining.webp" width="1500" height="1125" loading="lazy" alt="Modern dark kitchen bar with a wine wall"><figcaption>Bar and wine wall</figcaption></figure>
+      <figure class="p-b"><img src="../../images/bathroom.webp" width="1125" height="1500" loading="lazy" alt="Glass shower room with a freestanding tub and a black wall"><figcaption>Bathroom</figcaption></figure>
+      <figure class="p-c"><img src="../../images/vanity.webp" width="1125" height="1500" loading="lazy" alt="Double vanity above a white marble floor"><figcaption>Vanity and marble floor</figcaption></figure>
+      <figure class="p-d"><img src="../../images/playroom.webp" width="1125" height="1500" loading="lazy" alt="Kids' playroom with a slide and a play kitchen"><figcaption>Playroom</figcaption></figure>
+      <figure class="p-e"><img src="../../images/shower.webp" width="1125" height="1500" loading="lazy" alt="Glass shower and tile"><figcaption>Shower and tile</figcaption></figure>
+      <figure class="p-f"><img src="../../images/bedroom.webp" width="1500" height="1125" loading="lazy" alt="Bright bedroom with a neatly made bed and grey carpet"><figcaption>Bedroom</figcaption></figure>
+      <figure class="p-g"><img src="../../images/sitting-room.webp" width="1125" height="1500" loading="lazy" alt="Sitting room with a zebra rug, orange sofa and French doors" style="object-position:50% 60%"><figcaption>Sitting room</figcaption></figure>
+      <p class="refs"><b>References available on request.</b> Ask when you get in touch and I'll put you in contact.</p>
+    </div>
+  </section>
+
+  <section class="quote" id="quote" aria-labelledby="quote-h">
+    <div class="wrap grid">
+      <div class="quote-side">
+        <h2 id="quote-h">Get a free quote.</h2>
+        <p>Fill this in and your phone writes the text to me. Or reach me directly, whichever is easier.</p>
+        <ul class="direct">
+          <li><a href="tel:+18167154322"><span>Call</span><b>816-715-4322</b></a></li>
+          <li><a href="sms:+18167154322"><span>Text</span><b>816-715-4322</b></a></li>
+          <li><a href="mailto:momsgothiscleaningco@gmail.com"><span>Email</span><b>momsgothiscleaningco@gmail.com</b></a></li>
+          <li><a href="https://www.facebook.com/search/top?q=moms%20got%20this%20cleaning%20co"><span>Facebook</span><b>Mom's Got This Cleaning Co.</b></a></li>
+        </ul>
+      </div>
+      <form id="quote-form" novalidate>
+        <div class="field">
+          <label for="q-name">Name</label>
+          <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-err">
+          <span class="err" id="q-name-err" hidden>Please add your name.</span>
+        </div>
+        <div class="field">
+          <label for="q-phone">Phone</label>
+          <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="q-phone-err">
+          <span class="err" id="q-phone-err" hidden>Please add a number I can text back.</span>
+        </div>
+        <div class="field full">
+          <label for="q-city">City or neighborhood</label>
+          <input id="q-city" name="city" type="text" autocomplete="address-level2" required aria-describedby="q-city-err">
+          <span class="err" id="q-city-err" hidden>Please add roughly where you are.</span>
+        </div>
+        <fieldset class="field full">
+          <legend>Type of cleaning</legend>
+          <div class="types">
+            <label><input type="radio" name="type" value="Weekly"><span>Weekly</span></label>
+            <label><input type="radio" name="type" value="Biweekly"><span>Biweekly</span></label>
+            <label><input type="radio" name="type" value="One-time"><span>One-time</span></label>
+            <label><input type="radio" name="type" value="Deep clean"><span>Deep clean</span></label>
+            <label><input type="radio" name="type" value="Not sure yet" checked><span>Not sure yet</span></label>
+          </div>
+        </fieldset>
+        <div class="field full">
+          <label for="q-needs">Home size &amp; needs <span class="opt">(optional)</span></label>
+          <textarea id="q-needs" name="needs" placeholder="Bedrooms, bathrooms, pets, rooms that need extra care"></textarea>
+        </div>
+        <div class="send">
+          <button class="btn" type="submit">Text my request</button>
+          <p>This opens your texting app with the message written out. Nothing is sent until you tap send.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div class="foot-name">
+      Mom's Got This Cleaning Co.
+      <p>House cleaning in the Kansas City area<br>&copy; <span id="year">2026</span> Mom's Got This Cleaning Co.</p>
+    </div>
+    <ul>
+      <li><a href="tel:+18167154322">816-715-4322</a></li>
+      <li><a href="mailto:momsgothiscleaningco@gmail.com">momsgothiscleaningco@gmail.com</a></li>
+      <li><a href="https://www.facebook.com/search/top?q=moms%20got%20this%20cleaning%20co">Facebook</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const form = document.getElementById("quote-form");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    let firstProblem = null;
+    for (const id of ["q-name", "q-phone", "q-city"]) {
+      const input = document.getElementById(id);
+      const missing = input.value.trim() === "";
+      input.setAttribute("aria-invalid", missing ? "true" : "false");
+      document.getElementById(id + "-err").hidden = !missing;
+      if (missing && !firstProblem) {
+        firstProblem = input;
+      }
+    }
+    if (firstProblem) {
+      firstProblem.focus();
+      return;
+    }
+    const data = new FormData(form);
+    const message = [
+      "Hi Amber, I'd like a free cleaning quote.",
+      `Name: ${data.get("name").trim()}`,
+      `Phone: ${data.get("phone").trim()}`,
+      `City/neighborhood: ${data.get("city").trim()}`,
+      `Cleaning type: ${data.get("type")}`,
+      `Home size & needs: ${data.get("needs").trim() || "-"}`
+    ].join("\n");
+    window.location.href = "sms:+18167154322?body=" + encodeURIComponent(message);
+  });
+</script>
+</body>
+</html>

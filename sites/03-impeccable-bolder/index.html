@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mom's Got This Cleaning Co. — House cleaning around Kansas City</title>
+<!-- MGT-OG -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mom's Got This Cleaning Co.">
+<meta property="og:title" content="Mom&#x27;s Got This Cleaning Co. — House cleaning around Kansas City">
+<meta property="og:description" content="Don't worry, I've got this. Amber, a mom of four, cleans homes around Kansas City: weekly, biweekly, one-time and deep. Text 816-715-4322 for a free quote.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /MGT-OG -->
+<meta name="description" content="Don't worry, I've got this. Amber, a mom of four, cleans homes around Kansas City: weekly, biweekly, one-time and deep. Text 816-715-4322 for a free quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#E0106C;
+  --pink-lite:#FF6AA8;   /* small pink text on black */
+  --black:#1A0A12;
+  --bone:#F8F3EE;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bone);color:var(--black);font:400 1.0625rem/1.55 "Archivo","Arial",sans-serif;font-stretch:100%;caret-color:var(--pink)}
+::selection{background:var(--black);color:var(--pink-lite)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.18em;text-decoration-thickness:2px}
+a[href^="mailto"]{overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--black);outline-offset:3px}
+.on-dark :focus-visible{outline-color:var(--pink-lite)}
+.on-pink :focus-visible{outline-color:var(--bone)}
+h1,h2,h3{font-stretch:125%;font-weight:900;line-height:.92;letter-spacing:-.035em;margin:0;text-transform:uppercase;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.wrap{width:min(1400px,100% - 48px);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--black);color:var(--bone);padding:10px 16px;z-index:10}
+.skip:focus{left:8px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:58px;padding:0 1.6em;border:0;border-radius:0;font:800 1.05rem/1 "Archivo",sans-serif;font-stretch:112%;text-transform:uppercase;letter-spacing:.01em;text-decoration:none;cursor:pointer;transition:background-color .25s,color .25s,transform .4s var(--ease)}
+.btn svg{width:1.2em;height:1.2em;transition:transform .4s var(--ease)}
+.btn:hover svg{transform:translateX(5px)}
+.btn-black{background:var(--black);color:var(--bone)}
+.btn-black:hover{background:var(--bone);color:var(--black)}
+.btn-pink{background:var(--pink);color:#fff}
+.btn-pink:hover{background:var(--bone);color:var(--black)}
+
+/* ---------- hero (pink field) ---------- */
+.masthead,.hero{background:var(--pink);color:#fff}
+.hero{padding-bottom:64px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px}
+.logo{font-stretch:125%;font-weight:900;font-size:1.15rem;letter-spacing:-.02em;text-decoration:none;text-transform:uppercase;line-height:1;min-height:44px;display:inline-flex;align-items:center}
+.logo span{font-weight:500;font-stretch:100%;text-transform:none;letter-spacing:0;margin-left:.5em;font-size:.95rem}
+.bar nav{display:flex;align-items:center;gap:8px}
+.bar nav a.tel{font-weight:700;text-decoration:none;padding:0 12px;min-height:46px;display:inline-flex;align-items:center}
+.bar nav a.tel:hover{text-decoration:underline}
+.bar .btn{min-height:46px;font-size:.92rem;padding:0 1.2em}
+.hero h1{font-size:clamp(3.4rem,10.4vw,10.2rem);margin:0;padding-top:clamp(28px,5vw,72px);letter-spacing:-.045em}
+.hero h1 .l2{display:block;color:var(--black)}
+.hero-foot{display:grid;grid-template-columns:1.1fr 1fr auto;gap:32px 48px;align-items:end;margin-top:clamp(36px,5vw,64px);padding-top:28px;border-top:3px solid #fff}
+.hero-foot p{font-size:clamp(1.1rem,1.5vw,1.3rem);font-weight:500;margin:0;max-width:30em}
+.hero-foot .sig{font-size:1rem;font-weight:400}
+.hero-foot .act{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.hero-foot .act small{font-size:.95rem}
+.hero-foot .act a.call{color:#fff;font-weight:700}
+
+/* ---------- services (black) ---------- */
+.services{background:var(--black);color:var(--bone);padding:120px 0}
+.services .top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 48px;margin-bottom:56px}
+.services h2{font-size:clamp(2.4rem,5vw,4.6rem);color:var(--pink-lite)}
+.services .top p{max-width:26em;margin:0;font-size:1.1rem;color:#E9DDE3}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:grid;grid-template-columns:1fr minmax(0,24rem);gap:16px 48px;align-items:center;padding:22px 0;border-top:2px solid #4A2A39}
+.list li:last-child{border-bottom:2px solid #4A2A39}
+.list h3{font-size:clamp(2.6rem,8.4vw,8.2rem);letter-spacing:-.045em;transition:color .35s var(--ease),transform .5s var(--ease);transform-origin:left center}
+.list li:hover h3{color:var(--pink);transform:translateX(12px)}
+.list p{margin:0;font-size:1.1rem;color:#E9DDE3}
+
+/* ---------- number (bone) ---------- */
+.number{padding:120px 0 110px;overflow:hidden}
+.number p.lead{font-size:clamp(1.4rem,2.6vw,2.2rem);font-weight:700;font-stretch:112%;letter-spacing:-.02em;line-height:1.15;max-width:22em;margin:0 0 28px}
+.number a.big{display:block;font-stretch:125%;font-weight:900;font-size:clamp(2.6rem,11.6vw,11.6rem);line-height:.9;letter-spacing:-.05em;color:var(--pink);text-decoration:none;white-space:nowrap;transition:color .25s}
+.number a.big:hover{color:var(--black)}
+.number .row{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;margin-top:34px;font-weight:600}
+.number .row a{min-height:44px;display:inline-flex;align-items:center}
+
+/* ---------- work ---------- */
+.work{padding:0 0 120px}
+.work h2{font-size:clamp(3rem,9vw,8.6rem);letter-spacing:-.045em;margin-bottom:40px}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+.mosaic figure{margin:0;position:relative;overflow:hidden;background:var(--black)}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.mosaic figure:hover img{transform:scale(1.04)}
+.mosaic figcaption{position:absolute;left:0;bottom:0;background:var(--black);color:var(--bone);font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em;padding:8px 14px}
+.m1{grid-column:span 8;aspect-ratio:16/10}
+.m2{grid-column:span 4}
+.m3{grid-column:span 4;aspect-ratio:3/4}
+.m4{grid-column:span 4;aspect-ratio:3/4}
+.m5{grid-column:span 4;aspect-ratio:3/4}
+.m6{grid-column:span 5;aspect-ratio:4/5}
+.m7{grid-column:span 7}
+.tile{background:var(--pink);color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(22px,3vw,40px)}
+.tile b{font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:clamp(1.8rem,3.4vw,3.4rem);line-height:.95;letter-spacing:-.035em}
+.tile p{margin:24px 0 0;font-size:1.1rem;font-weight:500;max-width:22em}
+
+/* ---------- amber (black) ---------- */
+.amber{background:var(--black);color:var(--bone);padding:120px 0}
+.amber .wrap{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:center}
+.amber .pic{background:var(--pink);padding:0 0 22px 22px}
+.amber .pic img{aspect-ratio:4/5;object-fit:cover;width:100%;transform:translate(0,0)}
+.amber h2{font-size:clamp(3rem,7.4vw,7rem);letter-spacing:-.045em;margin-bottom:32px}
+.amber h2 span{color:var(--pink-lite)}
+.amber p{font-size:1.15rem;max-width:34em;color:#EFE6EA}
+.amber blockquote{margin:40px 0 0;padding-top:28px;border-top:3px solid var(--pink);font-stretch:112%;font-weight:800;font-size:clamp(1.5rem,2.6vw,2.3rem);line-height:1.12;letter-spacing:-.02em;max-width:20em}
+.amber cite{display:block;font-style:normal;font-weight:500;font-stretch:100%;font-size:1rem;color:var(--pink-lite);margin-top:14px;letter-spacing:0}
+
+/* ---------- quote (pink) ---------- */
+.quote{background:var(--pink);color:#fff;padding:120px 0}
+.quote .wrap{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+.quote h2{font-size:clamp(3rem,7.4vw,7rem);letter-spacing:-.045em}
+.quote .intro p{font-size:1.15rem;font-weight:500;margin:28px 0 0;max-width:24em}
+.quote .alt{list-style:none;margin:40px 0 0;padding:28px 0 0;border-top:3px solid #fff;display:grid;gap:2px}
+.quote .alt a{display:inline-flex;min-height:46px;align-items:center;font-weight:700;font-size:1.1rem}
+form{background:var(--bone);color:var(--black);padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:1fr 1fr;gap:22px 24px}
+.full{grid-column:1/-1}
+label,legend{display:block;font-weight:800;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;padding:0}
+input,textarea{width:100%;border:2px solid var(--black);border-radius:0;background:#fff;padding:13px 14px;font:500 1.1rem/1.35 "Archivo",sans-serif;color:var(--black)}
+textarea{min-height:120px;resize:vertical}
+input:focus,textarea:focus{outline:none;border-color:var(--pink);box-shadow:inset 0 0 0 2px var(--pink)}
+input::placeholder,textarea::placeholder{color:#6E5F66}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.kinds{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:2px solid var(--black)}
+.kinds label{margin:0;letter-spacing:0;text-transform:none;font-size:1rem}
+.kinds input{position:absolute;opacity:0;width:1px;height:1px}
+.kinds span{display:flex;align-items:center;justify-content:center;text-align:center;min-height:52px;padding:6px 8px;font-weight:700;cursor:pointer;border-left:2px solid var(--black);background:#fff;transition:background-color .2s,color .2s;line-height:1.1}
+.kinds label:first-child span{border-left:0}
+.kinds label:hover span{background:#FBE1EC}
+.kinds input:checked + span{background:var(--black);color:#fff}
+.kinds input:focus-visible + span{outline:3px solid var(--pink);outline-offset:-5px}
+.send{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px}
+.send p{margin:0;font-size:.95rem;max-width:22em;line-height:1.45}
+.status{grid-column:1/-1;margin:0;font-weight:700;color:#A10A4C;min-height:1.5em}
+
+footer{background:var(--black);color:#E9DDE3;padding:56px 0}
+footer .wrap{display:grid;grid-template-columns:1fr auto;gap:24px 48px;align-items:end}
+footer b{display:block;font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:clamp(1.4rem,3vw,2.2rem);letter-spacing:-.03em;color:var(--bone);line-height:1}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0 28px}
+footer a{display:inline-flex;min-height:44px;align-items:center;color:var(--bone)}
+footer a:hover{color:var(--pink-lite)}
+footer small{grid-column:1/-1;font-size:.9rem;color:#BFAEB6}
+
+@media (max-width:1000px){
+  .hero-foot{grid-template-columns:1fr 1fr}
+  .hero-foot .act{grid-column:1/-1}
+  .amber .wrap,.quote .wrap{grid-template-columns:1fr;gap:56px}
+  .amber .pic{max-width:460px}
+  .list li{grid-template-columns:1fr}
+  .m1,.m7{grid-column:span 12}
+  .m2,.m6{grid-column:span 6;aspect-ratio:3/4}
+  .m3,.m4,.m5{grid-column:span 4}
+}
+@media (max-width:640px){
+  .wrap{width:min(1400px,100% - 32px)}
+  .logo span{display:none}
+  .logo{font-size:1rem}
+  footer .wrap{grid-template-columns:1fr}
+  .bar nav a.tel{display:none}
+  .hero-foot{grid-template-columns:1fr}
+  .services,.amber,.quote{padding:84px 0}
+  .number{padding:84px 0 80px}
+  .work{padding-bottom:84px}
+  .m2,.m6,.m3,.m4,.m5{grid-column:span 6;aspect-ratio:3/4}
+  .tile{grid-column:span 12 !important;aspect-ratio:auto !important}
+  .m1{aspect-ratio:4/3}
+  form{grid-template-columns:1fr}
+  .kinds{grid-template-columns:1fr 1fr}
+  .kinds span{border-left:0;border-top:2px solid var(--black)}
+  .kinds label:nth-child(even) span{border-left:2px solid var(--black)}
+  .kinds label:nth-child(-n+2) span{border-top:0}
+  .kinds label:last-child{grid-column:1/-1}
+  .kinds label:last-child span{border-left:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead on-pink" id="top">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="#top">Mom's Got This<span>Cleaning Co.</span></a>
+      <nav aria-label="Main">
+        <a class="tel" href="tel:+18167154322">816-715-4322</a>
+        <a class="btn btn-black" href="#quote">Free quote</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero on-pink" aria-labelledby="hero-title">
+  <div class="wrap">
+    <h1 id="hero-title">Don't worry,<span class="l2">I've got this.</span></h1>
+    <div class="hero-foot">
+      <p>House cleaning around Kansas City, by Amber, a mom of four who knows exactly how full your week is.</p>
+      <p class="sig">Weekly, biweekly, one-time and deep cleaning. Every quote is personal, and free.</p>
+      <div class="act">
+        <a class="btn btn-black" href="#quote">Get my free quote
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></a>
+        <small>or text <a class="call" href="sms:+18167154322">816-715-4322</a></small>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="services on-dark" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="top">
+        <h2 id="services-title">Pick your rhythm.</h2>
+        <p>Four ways to hand the house over. Not sure which? Tell me about your home and I'll help you choose.</p>
+      </div>
+      <ul class="list">
+        <li><h3>Weekly</h3><p>The house stays caught up, every single week.</p></li>
+        <li><h3>Biweekly</h3><p>A steady reset every other week, tailored to your home.</p></li>
+        <li><h3>One-time</h3><p>Before company, after a party, or when you just need a break.</p></li>
+        <li><h3>Deep</h3><p>The full top-to-bottom reset, when the house needs more than a once-over.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="number" aria-label="Call or text Amber">
+    <div class="wrap">
+      <p class="lead">Every home is different, so every quote is personal. And free. Call or text:</p>
+      <a class="big" href="tel:+18167154322" aria-label="Call 816-715-4322">816·715·4322</a>
+      <div class="row">
+        <a href="sms:+18167154322">Text instead</a>
+        <a href="mailto:momsgothiscleaningco@gmail.com">momsgothiscleaningco@gmail.com</a>
+        <a href="https://www.facebook.com/search/top?q=moms%20got%20this%20cleaning%20co" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <h2 id="work-title">Real homes.<br>Real clean.</h2>
+      <div class="mosaic">
+        <figure class="m1"><img src="../../images/entertaining.webp" width="1500" height="1125" loading="lazy" alt="Modern dark kitchen and bar with a lit wine wall and clean wood floors"><figcaption>Kitchen &amp; bar</figcaption></figure>
+        <div class="m2 tile"><b>Every photo, a real client's home.</b><p>Shown with the homeowner's permission. References available on request.</p></div>
+        <figure class="m3"><img src="../../images/shower.webp" width="1125" height="1500" loading="lazy" alt="Glass shower enclosure with clean tile walls"><figcaption>Shower &amp; tile</figcaption></figure>
+        <figure class="m4"><img src="../../images/theater.webp" width="1125" height="1500" loading="lazy" alt="Home theater with a large screen and a long sectional couch"><figcaption>Home theater</figcaption></figure>
+        <figure class="m5"><img src="../../images/playroom.webp" width="1125" height="1500" loading="lazy" alt="Kids' playroom with a play kitchen, dress-up rack and a red slide"><figcaption>Playroom</figcaption></figure>
+        <figure class="m6"><img src="../../images/vanity.webp" width="1125" height="1500" loading="lazy" alt="Double vanity with dark cabinets over a white marble floor"><figcaption>Vanity</figcaption></figure>
+        <figure class="m7"><img src="../../images/home-gym.webp" width="1500" height="1125" loading="lazy" alt="Basement home gym with a wood-paneled wall and clear open floor"><figcaption>Home gym</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="amber on-dark" aria-labelledby="amber-title">
+    <div class="wrap">
+      <div class="pic"><img src="../../images/owner.webp" width="880" height="1100" loading="lazy" alt="Amber, owner of Mom's Got This Cleaning Co., smiling in a white blazer"></div>
+      <div>
+        <h2 id="amber-title">I'm Amber.<br><span>Mom of four.</span></h2>
+        <p>Between work, kids, appointments and practices, I know how overwhelming keeping up with a house can feel. That's exactly why I started Mom's Got This.</p>
+        <p>I do the cleaning myself. I take pride in the details, and I treat every home with the care I'd want for my own. Want references? Just ask.</p>
+        <blockquote>“Because sometimes, even moms need someone to say, ‘Don't worry, I've got this!’”<cite>Amber, owner</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote on-pink" id="quote" aria-labelledby="quote-title">
+    <div class="wrap">
+      <div class="intro">
+        <h2 id="quote-title">Get your quote.</h2>
+        <p>Tell me a little about your home. I'll get back to you with a personal quote, free.</p>
+        <ul class="alt">
+          <li><a href="tel:+18167154322">Call 816-715-4322</a></li>
+          <li><a href="sms:+18167154322">Text 816-715-4322</a></li>
+          <li><a href="mailto:momsgothiscleaningco@gmail.com">momsgothiscleaningco@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/search/top?q=moms%20got%20this%20cleaning%20co" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+      <form id="quote-form" novalidate>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="full"><label for="f-area">City or neighborhood</label><input id="f-area" name="area" autocomplete="address-level2"></div>
+        <fieldset class="full">
+          <legend>Type of cleaning</legend>
+          <div class="kinds">
+            <label><input type="radio" name="kind" value="Weekly"><span>Weekly</span></label>
+            <label><input type="radio" name="kind" value="Biweekly"><span>Biweekly</span></label>
+            <label><input type="radio" name="kind" value="One-time"><span>One-time</span></label>
+            <label><input type="radio" name="kind" value="Deep clean"><span>Deep</span></label>
+            <label><input type="radio" name="kind" value="Not sure"><span>Not sure</span></label>
+          </div>
+        </fieldset>
+        <div class="full"><label for="f-home">Home size &amp; needs</label><textarea id="f-home" name="home" placeholder="Bedrooms, bathrooms, pets, problem spots"></textarea></div>
+        <div class="full send">
+          <button class="btn btn-pink" type="submit">Text it to Amber
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></button>
+          <p>This opens your texting app with your details filled in. Nothing is sent until you hit send.</p>
+        </div>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="on-dark">
+  <div class="wrap">
+    <div><b>Mom's Got This Cleaning Co.</b>House cleaning in the Kansas City area</div>
+    <ul>
+      <li><a href="tel:+18167154322">816-715-4322</a></li>
+      <li><a href="mailto:momsgothiscleaningco@gmail.com">momsgothiscleaningco@gmail.com</a></li>
+    </ul>
+    <small>© <span id="year">2026</span> Mom's Got This Cleaning Co.</small>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const form = document.getElementById("quote-form");
+const status = document.getElementById("status");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  // form.name is the form's own name attribute, so go through .elements
+  const f = form.elements;
+  const name = f["name"].value.trim();
+  const phone = f["phone"].value.trim();
+  if (!name || !phone) {
+    status.textContent = !name ? "Add your name first." : "Add a phone number so Amber can text you back.";
+    (!name ? f["name"] : f["phone"]).focus();
+    return;
+  }
+  const kind = form.querySelector("input[name=kind]:checked");
+  const message = "Hi Amber! I'd like a free cleaning quote.\n" +
+    `Name: ${name}\n` +
+    `Phone: ${phone}\n` +
+    `City/neighborhood: ${f["area"].value.trim() || "-"}\n` +
+    `Cleaning type: ${kind ? kind.value : "-"}\n` +
+    `Home size & needs: ${f["home"].value.trim() || "-"}`;
+  status.textContent = "Done. Your text is ready, just hit send.";
+  window.location.href = "sms:+18167154322?body=" + encodeURIComponent(message);
+});
+</script>
+</body>
+</html>
