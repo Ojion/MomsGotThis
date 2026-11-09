@@ -1,36 +1,29 @@
-# Mom’s Got This · Website preview
+# momskc.com
 
-This repository hosts a design gallery with 18 alternatives and the original layout for comparison. Every design has a link back to the gallery. Quotes and contact buttons are interactive demos, so Amber can try them with sample details.
+Static site for Mom's Got This Cleaning Co. Render publishes `public/` (see `render.yaml`).
 
-The public preview uses `noindex` in the HTML and Render response headers. Anyone with the URL can still open the gallery or its images. Keep the GitHub repository private if you want its source visible only to collaborators. The site needs no environment variables or credentials.
+## Update the live site
 
-## Deploy from GitHub to Render
+1. Copy everything in this folder (including `render.yaml` and `.gitignore`) into the root of the GitHub repo that
+   Render deploys, replacing the old `public/` folder completely so retired pages disappear.
+2. Commit and push to the branch Render watches. Render redeploys on its own within a minute or two.
+3. Open https://momskc.com and try a design and its Phone preview.
 
-1. Extract the ZIP. Copy the **contents** of `momskc-preview` into the root of your GitHub repo, including `.gitignore` and `render.yaml`. Commit and push.
-2. In Render, choose **New → Blueprint**, connect the GitHub repo and select the branch to deploy. The Blueprint creates a Static Site, publishes only `public/`, adds the response headers and registers `momskc.com` as a custom domain.
-3. Check the generated `onrender.com` URL after the first deploy. Open a design, try **Phone preview**, and verify that a sample quote stays on the page.
-4. In Render’s **Settings → Custom Domains**, use the DNS instructions for `momskc.com`. Set the records at the provider that hosts DNS, then select **Verify** in Render.
+The service name in `render.yaml` is `momskc-preview`, matching the existing Render service, so Render updates it
+instead of creating a new one.
 
-| DNS name | Type | Target |
-|---|---|---|
-| `@` | `ALIAS` or `ANAME` when supported | Your exact `onrender.com` hostname |
-| `@` | `A` if apex aliasing is unavailable | `216.24.57.1` |
-| `www` | `CNAME` | Your exact `onrender.com` hostname |
+## Right now it's a preview
 
-Use one apex option. For Cloudflare DNS, follow Render’s Cloudflare-specific setup and use a DNS-only, flattened CNAME at the apex. Replace conflicting website records for `@` and `www`, including old `AAAA` records. Render adds the `www` redirect when you add the apex domain and manages the HTTPS certificate after verification.
+`momskc.com` shows the gallery of website options. Search engines are told to stay away (`robots.txt`, a `noindex`
+meta tag, and the `X-Robots-Tag` header in `render.yaml`).
 
-After the certificate is active, verify the domain and response headers from Windows:
+When Amber picks her design and it goes live as the real site: make that design's page `public/index.html` (copy
+`sites/<chosen>/index.html` up a level, change every `../../images/` to `images/`, and its `og:image` to
+`https://momskc.com/og.jpg` after copying its `og.jpg` up too), remove the other `sites/` and `thumbs/`, and delete
+`robots.txt`, the `noindex` meta tag and the `X-Robots-Tag` header so Google can list it.
 
-```powershell
-curl.exe -I http://momskc.com/
-curl.exe -I https://momskc.com/
-curl.exe -I https://momskc.com/sites/01-impeccable-delight/index.html
-```
+## Try it on your computer
 
-The first request should redirect to HTTPS. The HTTPS responses should include `X-Robots-Tag: noindex, nofollow` and `Content-Security-Policy`. Test the gallery and phone preview at the HTTPS address before sharing it with Amber.
+    python -m http.server 8000 --directory public
 
-[Render Blueprint reference](https://render.com/docs/blueprint-spec) · [Custom domains](https://render.com/docs/custom-domains) · [DNS setup](https://render.com/docs/configure-other-dns) · [Cloudflare DNS setup](https://render.com/docs/configure-cloudflare-dns)
-
-## Preview on your computer
-
-From the repository root, run `python -m http.server 8000 --directory public` and open [localhost:8000](http://localhost:8000/). A local HTTP server lets the browser apply the same-origin policy used on Render.
+then open http://localhost:8000.

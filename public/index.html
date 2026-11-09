@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Website options for Mom's Got This Cleaning Co., house cleaning around Kansas City.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mom's Got This Cleaning Co. website options">
+<meta property="og:image" content="https://momskc.com/sites/19-original-refined/og.jpg">
+<link rel="icon" href="images/logo-640.webp">
+<title>Mom's Got This Lookbook</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: a lookbook. One intro, then each design kit as a shelf of cards; every card shows the phone view first
+   with the desktop view behind it, a swatch strip of its palette, and a heart for picking favourites. */
+:root {
+  --bg: #efefec;
+  --card: #ffffff;
+  --ink: #17191c;
+  --muted: #5d6168;
+  --line: #d9dad5;
+  --heart: #d6244f;
+  --chip: #e4e5e0;
+  --display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131416; --card: #1c1e21; --ink: #ecebe7; --muted: #a3a7ad; --line: #2d3034; --heart: #ff5d7f; --chip: #26292d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131416; --card: #1c1e21; --ink: #ecebe7; --muted: #a3a7ad; --line: #2d3034; --heart: #ff5d7f; --chip: #26292d;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--display);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 96px;
+}
+.wrap { max-width: 1180px; margin: 0 auto; }
+a { color: inherit; }
+header.intro { padding-block: 48px 28px; display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
+.kicker { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-weight: 800; font-size: clamp(2.3rem, 7vw, 4.6rem); line-height: .98; letter-spacing: -.03em; margin: 0; text-wrap: balance; }
+.lede { max-width: 62ch; margin: 0; font-size: 1.08rem; color: var(--muted); }
+.lede strong { color: var(--ink); font-weight: 600; }
+.how { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 0; padding: 0; list-style: none; }
+.how li { background: var(--chip); border-radius: 999px; padding: 8px 14px; font-size: .92rem; }
+
+.shelf { border-top: 1px solid var(--line); padding-block: 28px 12px; }
+.shelf-head { display: grid; gap: 4px 24px; grid-template-columns: minmax(0, 1fr); margin-bottom: 18px; }
+@media (min-width: 760px) { .shelf-head { grid-template-columns: 260px minmax(0, 1fr); align-items: baseline; } }
+.shelf h2 { margin: 0; font-size: 1.5rem; font-weight: 700; letter-spacing: -.01em; }
+.shelf-head p { margin: 0; color: var(--muted); max-width: 70ch; }
+.shelf-head a { color: var(--muted); }
+
+.grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.stage { position: relative; display: block; aspect-ratio: 16 / 11; background: var(--chip); overflow: hidden; text-decoration: none; }
+.stage .desk { position: absolute; left: 0; top: 0; width: 100%; height: auto; transition: transform .35s ease; transform-origin: top left; }
+.stage .phone { position: absolute; right: 14px; bottom: -40%; width: 34%; height: auto; border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.28), 0 0 0 5px #0f1012; transition: transform .35s ease; }
+.stage:hover .desk { transform: scale(1.02); }
+.stage:hover .phone { transform: translateY(-14px); }
+.stage:focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; }
+.swatches { display: flex; height: 8px; }
+.swatches span { flex: 1; }
+.body { padding: 14px 16px 16px; display: grid; gap: 8px; flex: 1; align-content: start; }
+.row { display: flex; align-items: center; gap: 10px; }
+.num { font: 500 12px/1 var(--mono); color: var(--muted); }
+.card h3 { margin: 0; font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; flex: 1; min-width: 0; }
+.card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.actions { display: flex; gap: 10px; align-items: center; margin-top: 6px; }
+.open { flex: 1; text-align: center; background: var(--ink); color: var(--bg); text-decoration: none; font-weight: 600;
+  border-radius: 10px; padding: 12px 14px; min-height: 44px; }
+.open:hover { opacity: .88; }
+.open:focus-visible, .heart:focus-visible, .tray button:focus-visible { outline: 3px solid var(--heart); outline-offset: 2px; }
+.heart { width: 48px; height: 44px; border-radius: 10px; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; display: grid; place-items: center; }
+.heart svg { width: 22px; height: 22px; }
+.heart[aria-pressed="true"] { color: var(--heart); border-color: var(--heart); }
+.heart[aria-pressed="true"] path { fill: currentColor; }
+.card.before { border-style: dashed; }
+
+.tray { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; background: var(--ink); color: var(--bg);
+  padding: 12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.tray .picks { flex: 1; min-width: 0; font-size: .95rem; }
+.tray button { background: var(--bg); color: var(--ink); border: 0; border-radius: 10px; padding: 10px 16px; font: 600 15px var(--display); min-height: 44px; cursor: pointer; }
+.copied { font-size: .9rem; opacity: .85; }
+footer { color: var(--muted); font-size: .9rem; padding-block: 28px; border-top: 1px solid var(--line); }
+@media (prefers-reduced-motion: reduce) { .stage .desk, .stage .phone { transition: none; } }
+.section { border-top: 1px solid var(--line); padding-block: 28px 12px; }
+.section h2 { margin: 0 0 6px; font-size: 1.6rem; font-weight: 800; letter-spacing: -.015em; }
+.section > p { margin: 0 0 18px; color: var(--muted); max-width: 62ch; }
+.pair { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .pair { grid-template-columns: 1fr 1fr; } }
+.tag { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 5px 8px; }
+.tag.after { color: var(--heart); border-color: var(--heart); }
+.phone-open { min-height: 44px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line); background: transparent; color: var(--ink); font: 600 14px var(--display); cursor: pointer; white-space: nowrap; }
+.phone-open:hover { border-color: var(--ink); }
+.phone-open:focus-visible { outline: 3px solid var(--heart); outline-offset: 2px; }
+@media (max-width: 520px) { .phone-open { display: none; } }
+.phone-dialog { border: 0; padding: 0; background: transparent; max-width: none; max-height: none; overflow: visible; }
+.phone-dialog::backdrop { background: rgb(12 14 16 / 78%); }
+.phone-shell { display: grid; gap: 12px; justify-items: center; }
+.phone-top { display: flex; gap: 10px; align-items: center; width: 406px; max-width: calc(100vw - 32px); color: #fff; font: 600 15px var(--display); }
+.phone-top span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.phone-top a, .phone-top button { color: #fff; background: transparent; border: 1px solid rgb(255 255 255 / 45%); border-radius: 8px; min-height: 40px; padding: 0 12px; font: inherit; text-decoration: none; display: inline-flex; align-items: center; cursor: pointer; }
+.phone-bezel { padding: 8px; border-radius: 34px; background: #0e0f11; box-shadow: 0 20px 60px rgb(0 0 0 / 45%); }
+.phone-bezel iframe { display: block; width: 390px; height: min(844px, calc(100dvh - 120px)); border: 0; border-radius: 26px; background: #fff; }
+
+[hidden]{display:none!important}
+body{margin:0}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="intro">
+    <div class="kicker">Mom's Got This Cleaning Co.</div>
+    <h1>Pick your new website.</h1>
+    <p class="lede">Amber, here's your site as it is today next to a cleaned-up version of it, then five fresh designs. All of them use <strong>your logo and colours</strong>, your real job photos, and a quote button that opens a text to you.</p>
+    <ul class="how">
+      <li>Tap a picture to open the full site</li>
+      <li>Tap ♥ on the ones you like</li>
+      <li>Copy your picks and text them back</li>
+    </ul>
+  </header>
+  <main id="shelves"></main>
+  <footer>Photos are real client homes, shown with permission. One family-name sign was replaced for privacy.</footer>
+</div>
+
+<div class="tray" role="region" aria-label="Your picks">
+  <div class="picks" id="picks" aria-live="polite">No favourites yet. Tap ♥ on any design.</div>
+  <span class="copied" id="copied" hidden>Copied. Paste it in a text.</span>
+  <button type="button" id="copy">Copy my picks</button>
+</div>
+
+<dialog class="phone-dialog" id="phone-preview" aria-labelledby="phone-title">
+  <div class="phone-shell">
+    <div class="phone-top"><span id="phone-title">Phone preview</span><a id="phone-full" href="#">Open full site</a><button type="button" id="phone-close">Close</button></div>
+    <div class="phone-bezel"><iframe id="phone-frame" title="Phone preview"></iframe></div>
+  </div>
+</dialog>
+
+<script>
+const PAIR = [
+  { n: "00", tag: "Before", slug: "00-original", name: "Your site today", heart: false,
+    blurb: "The site as it is now, for comparison.", sw: ["#E83C8D", "#087F89", "#FFFAFD", "#28342E"] },
+  { n: "19", tag: "After", slug: "19-original-refined", name: "Your site, cleaned up", heart: true,
+    blurb: "Same layout, logo and colours. Real typography instead of the template look, your photo beside a plain headline, and a one-tap text button.",
+    sw: ["#E83687", "#51B9C6", "#193955", "#FCE8F1"] },
+];
+
+const LOOKS = [
+  { n: "1", slug: "01-impeccable-delight", name: "The fridge list",
+    blurb: "A family to-do list on a pink pad, where “Clean the whole house” gets crossed off: “I've got this one.”",
+    sw: ["#F8C4DD", "#193955", "#E83687", "#51B9C6"] },
+  { n: "2", slug: "02-impeccable-distill", name: "Quiet house",
+    blurb: "Calm and spacious, very few words, one pink accent. The photos do the talking.",
+    sw: ["#FBF8F6", "#193955", "#E83687", "#51B9C6"] },
+  { n: "3", slug: "06-od-doodle", name: "A note from Amber",
+    blurb: "Hand-drawn doodles in teal and pink, taped photos and a “Dear Amber,” notebook form.",
+    sw: ["#FFFFFF", "#51B9C6", "#F47CB7", "#193955"] },
+  { n: "4", slug: "07-uipro-claymorphism", name: "Soft clay",
+    blurb: "Puffy pastel panels, your photo up front, and a clay-style bucket like the one in your logo.",
+    sw: ["#FCE8F1", "#51B9C6", "#E83687", "#193955"] },
+  { n: "5", slug: "10-taste-founders-letter", name: "The letter",
+    blurb: "The whole page is a letter from you, in your own words, signed “Talk soon.”",
+    sw: ["#F3F1EC", "#193955", "#CC095D", "#51B9C6"] },
+];
+const ALL = PAIR.concat(LOOKS);
+
+const HEART = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>';
+
+let picks = [];
+try { picks = JSON.parse(localStorage.getItem("mgt-picks2") || "[]"); } catch (e) { picks = []; }
+
+function cardHTML(s) {
+  const href = `sites/${s.slug}/index.html`;
+  const sw = s.sw.map(c => `<span style="background:${c}"></span>`).join("");
+  const heart = s.heart === false ? "" :
+    `<button type="button" class="heart" data-n="${s.n}" aria-pressed="${picks.includes(s.n)}" aria-label="Favourite ${s.name}">${HEART}</button>`;
+  const label = s.tag ? `<span class="tag${s.tag === "After" ? " after" : ""}">${s.tag}</span>` : `<span class="num">${s.n}</span>`;
+  return `<article class="card${s.heart === false ? " before" : ""}" id="s-${s.slug.slice(0, 2)}">
+    <a class="stage" href="${href}" aria-label="Open ${s.name}">
+      <img class="desk" src="thumbs/${s.slug}-desk.webp" alt="" loading="lazy" width="1000" height="625">
+      <img class="phone" src="thumbs/${s.slug}-phone.webp" alt="" loading="lazy" width="300" height="649">
+    </a>
+    <div class="swatches" aria-hidden="true">${sw}</div>
+    <div class="body">
+      <div class="row">${label}<h3>${s.name}</h3></div>
+      <p>${s.blurb}</p>
+      <div class="actions"><a class="open" href="${href}">Open the site</a><button type="button" class="phone-open" data-path="${href}" data-title="${s.name}">Phone preview</button>${heart}</div>
+    </div>
+  </article>`;
+}
+
+const shelves = document.getElementById("shelves");
+shelves.innerHTML = `<section class="section" aria-labelledby="h-pair"><h2 id="h-pair">Your site, before and after</h2>
+  <p>Your current site on the left, and the same site cleaned up on the right.</p>
+  <div class="pair">${PAIR.map(cardHTML).join("")}</div></section>
+  <section class="section" aria-labelledby="h-looks"><h2 id="h-looks">Five new looks</h2>
+  <p>Each one is a different take on your business, built from scratch.</p>
+  <div class="grid">${LOOKS.map(cardHTML).join("")}</div></section>`;
+
+const phone = document.getElementById("phone-preview");
+const phoneFrame = document.getElementById("phone-frame");
+document.getElementById("phone-close").addEventListener("click", () => phone.close());
+phone.addEventListener("close", () => phoneFrame.removeAttribute("src"));
+phone.addEventListener("click", e => { if (e.target === phone) phone.close(); });
+shelves.addEventListener("click", e => {
+  const b = e.target.closest(".phone-open");
+  if (!b) return;
+  document.getElementById("phone-title").textContent = `${b.dataset.title} on a phone`;
+  phoneFrame.title = `${b.dataset.title} on a phone`;
+  document.getElementById("phone-full").href = b.dataset.path;
+  phoneFrame.src = b.dataset.path;
+  phone.showModal();
+});
+
+function pickText() {
+  return ALL.filter(s => picks.includes(s.n)).map(s => s.tag ? s.name : `${s.n}. ${s.name}`).join(", ");
+}
+function renderPicks() {
+  document.getElementById("picks").textContent = picks.length ? `Your picks: ${pickText()}` : "No favourites yet. Tap ♥ on any design.";
+}
+shelves.addEventListener("click", e => {
+  const b = e.target.closest(".heart");
+  if (!b) return;
+  const n = b.dataset.n;
+  picks = picks.includes(n) ? picks.filter(x => x !== n) : picks.concat(n);
+  b.setAttribute("aria-pressed", picks.includes(n));
+  try { localStorage.setItem("mgt-picks2", JSON.stringify(picks)); } catch (err) {}
+  renderPicks();
+});
+document.getElementById("copy").addEventListener("click", () => {
+  const text = picks.length ? `Website picks: ${pickText()}` : "I haven't picked any yet.";
+  const done = () => { const c = document.getElementById("copied"); c.hidden = false; setTimeout(() => { c.hidden = true; }, 2500); };
+  const selectFallback = () => {
+    const el = document.getElementById("picks");
+    el.textContent = text;
+    const r = document.createRange(); r.selectNodeContents(el);
+    const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+  };
+  if (navigator.clipboard) navigator.clipboard.writeText(text).then(done).catch(selectFallback);
+  else selectFallback();
+});
+renderPicks();
+// Coming back from a site lands on its card (#s-NN); the cards are drawn by script, so scroll after render.
+if (/^#s-\d\d$/.test(location.hash)) {
+  const card = document.getElementById(location.hash.slice(1));
+  if (card) card.scrollIntoView({ block: "center" });
+}
+</script>
+
+</body>
+</html>
