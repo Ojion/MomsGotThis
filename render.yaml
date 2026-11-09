@@ -1,6 +1,6 @@
 # Render static-site blueprint, adapted from the ChatGPT package (momskc-preview). Publish the chosen site's folder as public/.
-# Changes from that version: script-src allows 'unsafe-inline' because our pages keep their small scripts inline,
-# and img-src adds blob: for the browser's own image decoding. noindex stays while it is a preview; remove the
+# Scripts must be external files (script-src 'self'); tools/build_deploy.py moves each page's inline scripts out.
+# img-src adds blob: for the browser's own image decoding. noindex stays while it is a preview; remove the
 # X-Robots-Tag header when the real site launches so Google can list it.
 services:
   - type: web
@@ -13,7 +13,7 @@ services:
     headers:
       - path: /*
         name: Content-Security-Policy
-        value: "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'self'"
+        value: "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'self'"
       - path: /*
         name: X-Frame-Options
         value: SAMEORIGIN
