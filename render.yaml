@@ -6,8 +6,8 @@ services:
   - type: web
     runtime: static
     name: momskc-preview
-    buildCommand: "test -f public/index.html"
-    staticPublishPath: ./public
+    buildCommand: "test -f docs/index.html"
+    staticPublishPath: ./docs
     domains:
       - momskc.com
     headers:
