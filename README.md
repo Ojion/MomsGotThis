@@ -1,28 +1,36 @@
-# Mom's Got This Cleaning Co. — 18 site options
+# Mom’s Got This · Website preview
 
-Open `index.html` to browse all 18 (plus the original). Each option is one self-contained page in
-`sites/NN-name/index.html` that uses the shared photos in `images/`.
+This repository hosts a design gallery with 18 alternatives and the original layout for comparison. Every design has a link back to the gallery. Quotes and contact buttons are interactive demos, so Amber can try them with sample details.
 
-## Putting the chosen one online (free)
+The public preview uses `noindex` in the HTML and Render response headers. Anyone with the URL can still open the gallery or its images. Keep the GitHub repository private if you want its source visible only to collaborators. The site needs no environment variables or credentials.
 
-1. Make a new folder, e.g. `momsgotthis-site/`.
-2. Copy the chosen `sites/NN-name/index.html` and `sites/NN-name/og.jpg` into it.
-3. Copy the `images/` folder into it.
-4. In that `index.html`, replace every `../../images/` with `images/`.
-5. Deploy the folder as-is to a free static host (no build step):
-   - **Cloudflare Pages:** dash.cloudflare.com → Workers & Pages → Create → Pages → Upload assets → drag the folder.
-   - **Netlify:** app.netlify.com/drop → drag the folder.
-6. Once it has its address (e.g. `https://momsgotthis.pages.dev`), change `content="og.jpg"` in the
-   `og:image` tag to the full address, `https://momsgotthis.pages.dev/og.jpg`. Facebook and iMessage
-   only show the preview card with a full URL. Check it with https://developers.facebook.com/tools/debug/.
+## Deploy from GitHub to Render
 
-Optional: a custom domain (~$10/year) can be pointed at either host later.
+1. Extract the ZIP. Copy the **contents** of `momskc-preview` into the root of your GitHub repo, including `.gitignore` and `render.yaml`. Commit and push.
+2. In Render, choose **New → Blueprint**, connect the GitHub repo and select the branch to deploy. The Blueprint creates a Static Site, publishes only `public/`, adds the response headers and registers `momskc.com` as a custom domain.
+3. Check the generated `onrender.com` URL after the first deploy. Open a design, try **Phone preview**, and verify that a sample quote stays on the page.
+4. In Render’s **Settings → Custom Domains**, use the DNS instructions for `momskc.com`. Set the records at the provider that hosts DNS, then select **Verify** in Render.
 
-## Notes
+| DNS name | Type | Target |
+|---|---|---|
+| `@` | `ALIAS` or `ANAME` when supported | Your exact `onrender.com` hostname |
+| `@` | `A` if apex aliasing is unavailable | `216.24.57.1` |
+| `www` | `CNAME` | Your exact `onrender.com` hostname |
 
-- The quote form opens the visitor's texting app with their details filled in, addressed to 816-715-4322.
-  Nothing is sent until they press send. It needs no server.
-- All job photos are Amber's real client homes, unretouched. The only edit: in `playroom.webp` the
-  family-name sign on the wall was replaced with a generic "play" sign for the family's privacy.
-- Files in `images/art/` are generated illustrations/props (OpenAI image API), never presented as client work.
-- `thumbs/` is only for the gallery and isn't needed on the live site.
+Use one apex option. For Cloudflare DNS, follow Render’s Cloudflare-specific setup and use a DNS-only, flattened CNAME at the apex. Replace conflicting website records for `@` and `www`, including old `AAAA` records. Render adds the `www` redirect when you add the apex domain and manages the HTTPS certificate after verification.
+
+After the certificate is active, verify the domain and response headers from Windows:
+
+```powershell
+curl.exe -I http://momskc.com/
+curl.exe -I https://momskc.com/
+curl.exe -I https://momskc.com/sites/01-impeccable-delight/index.html
+```
+
+The first request should redirect to HTTPS. The HTTPS responses should include `X-Robots-Tag: noindex, nofollow` and `Content-Security-Policy`. Test the gallery and phone preview at the HTTPS address before sharing it with Amber.
+
+[Render Blueprint reference](https://render.com/docs/blueprint-spec) · [Custom domains](https://render.com/docs/custom-domains) · [DNS setup](https://render.com/docs/configure-other-dns) · [Cloudflare DNS setup](https://render.com/docs/configure-cloudflare-dns)
+
+## Preview on your computer
+
+From the repository root, run `python -m http.server 8000 --directory public` and open [localhost:8000](http://localhost:8000/). A local HTTP server lets the browser apply the same-origin policy used on Render.
