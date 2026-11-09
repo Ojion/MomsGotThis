@@ -273,41 +273,12 @@ footer small{font-size:.9rem}
   <a class="btn btn-line" href="sms:+18167154322">Text Amber</a>
 </div>
 
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('quoteForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  const v = id => document.getElementById(id).value;
-  const msg = `Hi! I'd like a free cleaning quote.\nName: ${v('name')}${v('phone') ? `\nPhone: ${v('phone')}` : ''}\nArea: ${v('area')}\nService: ${v('service')}\nDetails: ${v('details')}`;
-  window.location.href = 'sms:+18167154322?body=' + encodeURIComponent(msg);
-});
-</script>
+<script src="page-1.js"></script>
 
 <a href="../../index.html#s-19" id="mgt-back"
  style="position:fixed;z-index:2147483647;left:max(12px,env(safe-area-inset-left,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));
  font:600 13px/1 system-ui,sans-serif;letter-spacing:.02em;background:#111;color:#fff;padding:11px 14px;border-radius:999px;
  text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.25)">&larr; All designs</a>
-<script>
-/* The artifact viewer carries the gallery's scroll into the page it opens; start every site at the top
-   like a fresh load, and stop nudging as soon as the visitor scrolls or touches anything. */
-(function () {
-  // Inside the gallery's phone preview the chip would navigate the little frame; hide it there.
-  try { if (window.parent !== window && window.parent.document.getElementById("phone-preview")) document.getElementById("mgt-back").hidden = true; } catch (e) {}
-  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-  var touched = false;
-  ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (ev) {
-    addEventListener(ev, function () { touched = true; }, { passive: true, once: true });
-  });
-  function top() {
-    if (touched || location.hash) return;
-    window.scrollTo(0, 0);
-    try { document.documentElement.scrollIntoView({ block: "start" }); } catch (e) {}
-  }
-  top();
-  addEventListener("DOMContentLoaded", top);
-  addEventListener("load", function () { top(); setTimeout(top, 120); setTimeout(top, 450); });
-  addEventListener("pageshow", function (e) { if (!e.persisted) top(); });
-})();
-</script>
+<script src="page-2.js"></script>
 </body>
 </html>

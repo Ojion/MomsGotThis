@@ -424,68 +424,12 @@
   <a class="btn" href="sms:+18167154322">Text Amber</a>
 </nav>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  const form = document.getElementById("quote-form");
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    let firstProblem = null;
-    for (const id of ["q-name", "q-city"]) {
-      const input = document.getElementById(id);
-      const missing = input.value.trim() === "";
-      input.setAttribute("aria-invalid", missing ? "true" : "false");
-      document.getElementById(id + "-err").hidden = !missing;
-      if (missing && !firstProblem) {
-        firstProblem = input;
-      }
-    }
-    if (firstProblem) {
-      firstProblem.focus();
-      return;
-    }
-    const data = new FormData(form);
-    const phone = data.get("phone").trim();
-    const lines = [
-      "Hi Amber! I'd like a free cleaning quote.",
-      `Name: ${data.get("name").trim()}`,
-      `City/neighborhood: ${data.get("city").trim()}`,
-      `Cleaning type: ${data.get("type") || "Not sure yet"}`,
-      `Home size & needs: ${data.get("needs").trim() || "-"}`
-    ];
-    if (phone) {
-      lines.splice(2, 0, `Phone: ${phone}`);
-    }
-    const message = lines.join("\n");
-    window.location.href = "sms:+18167154322?body=" + encodeURIComponent(message);
-  });
-</script>
+<script src="page-1.js"></script>
 
 <a href="../../index.html#s-07" id="mgt-back"
  style="position:fixed;z-index:2147483647;left:max(12px,env(safe-area-inset-left,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));
  font:600 13px/1 system-ui,sans-serif;letter-spacing:.02em;background:#111;color:#fff;padding:11px 14px;border-radius:999px;
  text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.25)">&larr; All designs</a>
-<script>
-/* The artifact viewer carries the gallery's scroll into the page it opens; start every site at the top
-   like a fresh load, and stop nudging as soon as the visitor scrolls or touches anything. */
-(function () {
-  // Inside the gallery's phone preview the chip would navigate the little frame; hide it there.
-  try { if (window.parent !== window && window.parent.document.getElementById("phone-preview")) document.getElementById("mgt-back").hidden = true; } catch (e) {}
-  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-  var touched = false;
-  ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (ev) {
-    addEventListener(ev, function () { touched = true; }, { passive: true, once: true });
-  });
-  function top() {
-    if (touched || location.hash) return;
-    window.scrollTo(0, 0);
-    try { document.documentElement.scrollIntoView({ block: "start" }); } catch (e) {}
-  }
-  top();
-  addEventListener("DOMContentLoaded", top);
-  addEventListener("load", function () { top(); setTimeout(top, 120); setTimeout(top, 450); });
-  addEventListener("pageshow", function (e) { if (!e.persisted) top(); });
-})();
-</script>
+<script src="page-2.js"></script>
 </body>
 </html>
