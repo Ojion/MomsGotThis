@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preview · Mom's Got This Cleaning Co. — House cleaning around Kansas City</title>
+<!-- MGT-OG -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mom's Got This Cleaning Co.">
+<meta property="og:title" content="Preview · Mom&#x27;s Got This Cleaning Co. — House cleaning around Kansas City">
+<meta property="og:description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /MGT-OG -->
+<meta name="description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;900&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --grout: #d25a24;
+    --grout-ink: #b34a1c;
+    --green: #113722;
+    --crimson: #6b1229;
+    --noir: #000000;
+    --white: #ffffff;
+    --ash: #efefef;
+    --char: #232323;
+    --fog: #d7d7d7;
+    --slate: #646464;
+    --sticker: 5px 5px 0 0 var(--crimson);
+    --sans: "Public Sans", Helvetica, Arial, sans-serif;
+    --stencil: "Saira Stencil One", "Public Sans", sans-serif;
+    /* white subway tile with light grout */
+    --tile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60'%3E%3Cpath d='M0 .5H120M0 30.5H120M.5 0V30M60.5 0V30M30.5 30V60M90.5 30V60' stroke='%23e3e3e3' fill='none'/%3E%3C/svg%3E");
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { margin: 0; background: var(--white); color: var(--noir); font: 400 18px/1.57 var(--sans); letter-spacing: 0.016em; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--grout); outline-offset: 3px; }
+  .skip { position: absolute; left: -999px; top: 8px; background: var(--white); color: var(--noir); padding: 12px 16px; z-index: 50; font-weight: 700; }
+  .skip:focus { left: 12px; }
+  .wrap { width: min(1200px, 100% - 40px); margin-inline: auto; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  h1, h2, h3 { margin: 0; text-transform: uppercase; color: var(--char); }
+  h2 { font-weight: 900; font-size: clamp(34px, 4.2vw, 48px); line-height: 1; letter-spacing: 0.02em; }
+  h3 { font-weight: 700; font-size: 24px; line-height: 1.2; letter-spacing: 0.02em; }
+  p { margin: 0 0 16px; }
+
+  /* top bar */
+  .bar { position: sticky; top: 0; z-index: 20; background: var(--noir); color: var(--white); }
+  .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
+  .mark { font-weight: 900; font-size: 22px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+  .bar ul { list-style: none; display: flex; gap: 6px; margin: 0; padding: 0; }
+  .bar ul a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; font-size: 14px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; }
+  .bar ul a:hover { text-decoration: underline; text-decoration-color: var(--grout); text-decoration-thickness: 2px; text-underline-offset: 6px; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 48px; padding: 11px 20px; border-radius: 5px; border: 0;
+    font: 600 14px/1.2 var(--sans); letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; cursor: pointer;
+  }
+  .btn-green { background: var(--green); color: var(--white); }
+  .btn-sticker { background: var(--green); color: var(--white); box-shadow: var(--sticker); transition: transform .12s ease, box-shadow .12s ease; font-size: 16px; padding: 14px 24px; }
+  .btn-sticker:hover { transform: translate(2px, 2px); box-shadow: 3px 3px 0 0 var(--crimson); }
+  .btn-sticker:active { transform: translate(5px, 5px); box-shadow: none; }
+  .btn-ghost-w { border: 1px solid var(--white); color: var(--white); background: transparent; min-height: 44px; }
+  .framed { /* bordered link: orange tile frame */
+    display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 10px 15px;
+    border: 2px solid var(--grout); border-radius: 5px; color: var(--grout-ink); background: var(--white);
+    font-weight: 600; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none;
+    transition: box-shadow .12s ease, transform .12s ease;
+  }
+  .framed:hover { box-shadow: var(--sticker); transform: translate(-2px, -2px); }
+
+  /* hero */
+  .hero { position: relative; min-height: min(760px, 88vh); display: grid; place-items: center; text-align: center; color: var(--white); overflow: hidden; background: var(--char); }
+  .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: rgba(0,0,0,0.6); }
+  .hero-in { position: relative; z-index: 2; padding: 88px 20px; }
+  .hero .kicker { display: inline-block; font-weight: 700; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid var(--white); border-radius: 5px; padding: 6px 12px; margin-bottom: 28px; }
+  .hero h1 { color: var(--white); font-family: var(--stencil); font-weight: 400; font-size: clamp(46px, 7.4vw, 104px); line-height: 0.96; letter-spacing: 0.02em; }
+  .hero h1 span { display: block; }
+  .hero h1 .o { color: var(--white); -webkit-text-stroke: 0; text-decoration: underline; text-decoration-color: var(--grout); text-decoration-thickness: 0.08em; text-underline-offset: 0.1em; }
+  .hero .proof { font-weight: 700; font-size: clamp(22px, 2.4vw, 32px); letter-spacing: 0.02em; text-transform: uppercase; margin: 32px 0 4px; }
+  .hero .proof-cap { font-size: 16px; margin: 0 0 32px; }
+  .hero .ctas { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+  /* marquee */
+  .marquee { border-top: 1px solid var(--noir); border-bottom: 1px solid var(--noir); overflow: hidden; padding: 20px 0; background: var(--white); }
+  .marquee-track { display: flex; width: max-content; }
+  .marquee p { margin: 0; white-space: nowrap; font-weight: 700; font-size: 18px; letter-spacing: 0.05em; text-transform: uppercase; padding-right: 0.6em; }
+  .marquee b { color: var(--grout-ink); padding: 0 0.6em; }
+  @media (prefers-reduced-motion: no-preference) {
+    .marquee-track { animation: slide 38s linear infinite; }
+    @keyframes slide { to { transform: translateX(-50%); } }
+  }
+
+  section { padding: 60px 0; }
+  .sec-head { display: flex; align-items: end; justify-content: space-between; gap: 20px 40px; flex-wrap: wrap; margin-bottom: 40px; }
+  .sec-head p { max-width: 46ch; margin: 0; }
+  .num { font-family: var(--stencil); color: var(--grout-ink); font-size: 18px; letter-spacing: 0.06em; display: block; margin-bottom: 12px; }
+
+  /* service tiles */
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--noir); }
+  .tile { border-right: 1px solid var(--noir); display: flex; flex-direction: column; background: var(--white); }
+  .tile:last-child { border-right: 0; }
+  .tile-img { position: relative; aspect-ratio: 1; overflow: hidden; border-bottom: 1px solid var(--noir); }
+  .tile-img img { width: 100%; height: 100%; object-fit: cover; }
+  .tile-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0) 60%); }
+  .tile-img h3 { position: absolute; left: 0; right: 0; bottom: 18px; z-index: 1; text-align: center; color: var(--white); font-size: clamp(26px, 2.6vw, 32px); letter-spacing: 0.02em; }
+  .tile-body { padding: 20px; display: flex; flex-direction: column; gap: 16px; flex: 1; }
+  .tile-body p { margin: 0; font-size: 16px; line-height: 1.5; }
+  .tile-body .framed { margin-top: auto; align-self: flex-start; }
+
+  /* spec sheet */
+  .tiled { background: var(--white) var(--tile); }
+  .spec { display: grid; grid-template-columns: 5fr 7fr; gap: 40px; align-items: start; }
+  .photo-frame { border: 2px solid var(--grout); border-radius: 5px; padding: 12px; background: var(--white); }
+  .photo-frame img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 22%; width: 100%; border-radius: 2px; }
+  .photo-frame figcaption { font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; padding-top: 12px; }
+  .spec-card { background: var(--white); border: 1px solid var(--noir); border-radius: 5px; }
+  .spec-card header { padding: 20px; border-bottom: 1px solid var(--noir); }
+  .spec-card header p { margin: 12px 0 0; }
+  .spec dl { margin: 0; }
+  .spec .r { display: grid; grid-template-columns: 200px 1fr; border-bottom: 1px solid var(--ash); }
+  .spec .r:last-child { border-bottom: 0; }
+  .spec dt, .spec dd { margin: 0; padding: 14px 20px; }
+  .spec dt { font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border-right: 1px solid var(--ash); }
+  .spec dd { font-size: 17px; }
+  .her-line { margin-top: 28px; border-left: 6px solid var(--grout); padding: 4px 0 4px 20px; font-weight: 700; font-size: 22px; line-height: 1.35; letter-spacing: 0.01em; background: none; }
+  .her-line cite { display: block; font-style: normal; font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 8px; }
+
+  /* evidence wall: photos set like tile with orange grout */
+  .wall { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 260px; gap: 4px; background: var(--grout); border: 4px solid var(--grout); border-radius: 5px; }
+  .wall figure { margin: 0; position: relative; overflow: hidden; background: var(--white); }
+  .wall img { width: 100%; height: 100%; object-fit: cover; }
+  .wall .w2 { grid-column: span 2; }
+  .wall .h2 { grid-row: span 2; }
+  .wall figcaption { position: absolute; left: 10px; bottom: 10px; background: var(--white); border: 1px solid var(--noir); border-radius: 5px; padding: 4px 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.3; }
+  .wall-note { margin: 20px 0 0; font-size: 16px; }
+
+  /* steps */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; list-style: none; padding: 0; margin: 0; }
+  .steps li { border: 2px solid var(--grout); border-radius: 5px; padding: 20px; background: var(--white); }
+  .steps .big { font-family: var(--stencil); font-size: 56px; line-height: 1; color: var(--char); display: block; margin-bottom: 16px; }
+  .steps h3 { margin-bottom: 8px; }
+  .steps p { margin: 0; font-size: 16px; line-height: 1.5; }
+
+  /* quote */
+  .quote { display: grid; grid-template-columns: 7fr 5fr; gap: 40px; align-items: start; }
+  form { border: 1px solid var(--noir); border-radius: 5px; background: var(--white); }
+  form header { background: var(--noir); color: var(--white); padding: 16px 20px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .form-body { padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .full { grid-column: 1 / -1; }
+  label { display: block; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+  input, select, textarea { width: 100%; min-height: 48px; padding: 11px 15px; border: 1px solid #8d8d8d; border-radius: 5px; font: 400 16px/1.4 var(--sans); color: var(--noir); background: var(--white); letter-spacing: 0.01em; }
+  ::placeholder { color: var(--slate); }
+  textarea { min-height: 120px; resize: vertical; }
+  input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--grout); outline-offset: 0; border-color: var(--noir); }
+  .submit-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .submit-row p { margin: 0; font-size: 15px; line-height: 1.45; flex: 1 1 220px; }
+  .side h2 { margin-bottom: 20px; }
+  .contact { list-style: none; padding: 0; margin: 24px 0 32px; display: grid; gap: 12px; }
+  .contact .framed { width: 100%; justify-content: space-between; font-size: 15px; }
+  .badge { width: 170px; height: 170px; color: var(--noir); }
+  @media (prefers-reduced-motion: no-preference) {
+    .badge .ring { transform-origin: 50% 50%; animation: spin 30s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  }
+
+  /* footer band */
+  footer { background: var(--green); color: var(--white); padding: 60px 0 40px; text-align: center; }
+  .shout { font-family: var(--stencil); font-size: clamp(32px, 5vw, 64px); line-height: 1.05; letter-spacing: 0.03em; text-transform: uppercase; margin: 0 0 12px; }
+  .foot-line { font-size: 18px; margin: 0 auto 32px; max-width: 52ch; }
+  .foot-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 28px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-size: 15px; }
+  .foot-links a { display: inline-flex; align-items: center; min-height: 44px; text-decoration-color: rgba(255,255,255,0.5); text-underline-offset: 5px; }
+  .fine { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 14px; letter-spacing: 0.04em; }
+  footer :focus-visible { outline-color: var(--white); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn-sticker, .framed { transition: none; }
+  }
+  @media (max-width: 1000px) {
+    .bar ul { display: none; }
+    .tiles { grid-template-columns: 1fr 1fr; }
+    .tile:nth-child(2) { border-right: 0; }
+    .tile:nth-child(-n+2) { border-bottom: 1px solid var(--noir); }
+    .spec, .quote { grid-template-columns: 1fr; }
+    .quote .side { order: -1; }
+    .photo-frame { max-width: 420px; }
+    .wall { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 220px; }
+  }
+  @media (max-width: 640px) {
+    body { font-size: 17px; }
+    .bar .wrap { min-height: 64px; }
+    .mark { font-size: 17px; }
+    .bar .btn { padding: 10px 12px; font-size: 13px; }
+    .hero-in { padding: 64px 4px; }
+    .hero h1 { font-size: 38px; }
+    form header span + span { display: none; }
+    .tiles { grid-template-columns: 1fr; }
+    .tile { border-right: 0; border-bottom: 1px solid var(--noir); }
+    .tile:last-child { border-bottom: 0; }
+    .tile-img { aspect-ratio: 16 / 10; }
+    .spec .r { grid-template-columns: 1fr; }
+    .spec dt { border-right: 0; padding-bottom: 0; }
+    .spec dd { padding-top: 4px; }
+    .wall { grid-auto-rows: 170px; }
+    .wall .h2 { grid-row: span 1; }
+    .steps { grid-template-columns: 1fr; }
+    .form-body { grid-template-columns: 1fr; }
+    .submit-row .btn { width: 100%; }
+  }
+/* Quote draft stays usable when the device has no SMS handler. */
+#quote-form .quote-draft { grid-column: 1 / -1; margin-block-start: 14px; }
+#quote-form .quote-fallback, #quote-form .quote-copy {
+  display: inline-flex; min-height: 44px; max-width: 100%; align-items: center;
+  padding: 5px 0; color: inherit; font: inherit; text-align: left;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+#quote-form .quote-fallback, #quote-form .quote-copy {
+  background: transparent; border: 0; box-shadow: none; cursor: pointer; margin: 0;
+}
+#quote-form .quote-draft-actions { display: flex; flex-wrap: wrap; gap: 0 20px; }
+#quote-form .quote-draft label { display: block; margin: 0 0 6px; }
+#quote-form .quote-draft textarea { display: block; width: 100%; min-height: 8em; }
+#quote-form .quote-draft [role="status"] { margin: 0; }
+#quote-form .quote-draft[hidden] { display: none; }
+#quote-form :is(.quote-fallback,.quote-copy):focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px;
+}
+#quote-form :is(input:not([type="radio"]),select,textarea) { min-width: 0; min-height: 44px; font-size: max(16px, 1em); }
+ .service-strip{margin:0;padding:15px 20px;background:#113722;color:#fff;text-align:center;font-weight:700}
+.service-strip span{margin-inline:4px}
+@media(max-width:600px){.hero{min-height:0}.hero .hero-in{padding:48px 16px}.hero h1{font-size:clamp(34px,9.5vw,54px)}}
+</style>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<link rel="stylesheet" href="../../assets/preview.css">
+</head>
+<body>
+<aside class="mgt-preview-bar" id="design-preview" aria-label="Preview navigation">
+  <a class="mgt-preview-back" href="../../index.html#s-14">← All designs</a>
+  <span>Design preview <span aria-hidden="true">·</span> Quotes are simulated</span>
+</aside>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top">Mom's Got This</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#cleaner">The cleaner</a></li>
+        <li><a href="#evidence">Evidence</a></li>
+        <li><a href="#quote">Quote</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-ghost-w" href="#design-preview" data-preview-contact>Text 816-715-4322</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title" style="padding:0">
+    <img src="../../images/shower.webp" alt="Clear glass and tile in a client’s shower" width="1125" height="1500">
+    <div class="hero-in">
+      <p class="kicker">House cleaning · Kansas City area</p>
+      <h1 id="hero-title"><span>Glass. Grout. Floors.</span><span class="o">I’ll take it from here.</span></h1>
+      <p class="proof">Get a free quote</p>
+      <p class="proof-cap">I’ll quote your home and do the cleaning myself.</p>
+      <div class="ctas">
+        <a class="btn btn-sticker" href="#quote">Get my free quote</a>
+      </div>
+    </div>
+  </section>
+
+  <p class="service-strip">Weekly <span>·</span> Biweekly <span>·</span> One-time <span>·</span> Deep cleaning</p>
+
+  <section id="services" aria-labelledby="svc-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="num">01 / Services</span><h2 id="svc-title">Choose your cleaning</h2></div>
+        <p>Four ways to get the house off your list. Not sure which one? Pick “not sure” on the form and I’ll help you choose.</p>
+      </div>
+      <div class="tiles">
+        <article class="tile">
+          <div class="tile-img"><img src="../../images/kitchen.webp" alt="An open kitchen and dining room with white cabinets and wood floors" width="1500" height="1125"><h3>Weekly</h3></div>
+          <div class="tile-body"><p>Every week. The house never gets a chance to get away from you.</p><a class="framed" href="#quote" data-type="Weekly">Ask about weekly →</a></div>
+        </article>
+        <article class="tile">
+          <div class="tile-img"><img src="../../images/bedroom.webp" alt="A bright bedroom with a neatly made bed" width="1500" height="1125"><h3>Biweekly</h3></div>
+          <div class="tile-body"><p>Every other week. A steady reset that keeps the piles from piling.</p><a class="framed" href="#quote" data-type="Biweekly">Ask about biweekly →</a></div>
+        </article>
+        <article class="tile">
+          <div class="tile-img"><img src="../../images/sitting-room.webp" alt="A sitting room with an orange sofa and a zebra-print rug" width="1125" height="1500"><h3>One-time</h3></div>
+          <div class="tile-body"><p>Guests coming, a crazy month, or you just need a break. One visit.</p><a class="framed" href="#quote" data-type="One-time">Ask about one-time →</a></div>
+        </article>
+        <article class="tile">
+          <div class="tile-img"><img src="../../images/bathtub.webp" alt="A scrubbed white jetted bathtub" width="1125" height="1500"><h3>Deep reset</h3></div>
+          <div class="tile-body"><p>The full top-to-bottom treatment for when it's been a while. A clean slate.</p><a class="framed" href="#quote" data-type="Deep clean">Ask about a deep clean →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="cleaner" class="tiled" aria-labelledby="cleaner-title">
+    <div class="wrap spec">
+      <figure class="photo-frame" style="margin:0">
+        <img src="../../images/owner.webp" alt="Amber, the owner and cleaner, smiling in a white blazer" width="880" height="1100">
+        <figcaption>Amber · owner · the one who cleans</figcaption>
+      </figure>
+      <div>
+        <div class="spec-card">
+          <header>
+            <span class="num">02 / The cleaner</span>
+            <h2 id="cleaner-title">Meet your cleaner</h2>
+            <p>I started Mom’s Got This because I know what it’s like to keep up a house when work, kids and appointments fill the week. I can take the cleaning off your plate.</p>
+          </header>
+          <dl>
+            <div class="r"><dt>Operator</dt><dd>I’m Amber, the owner and a mom of four.</dd></div>
+            <div class="r"><dt>Who cleans</dt><dd>I run the business and do the cleaning myself.</dd></div>
+            <div class="r"><dt>Service area</dt><dd>Around the Kansas City area</dd></div>
+            <div class="r"><dt>Quotes</dt><dd>Personal, for every job. Free.</dd></div>
+            <div class="r"><dt>References</dt><dd>Available on request</dd></div>
+            <div class="r"><dt>House rule</dt><dd>I treat every home the way I’d want mine treated. The details count.</dd></div>
+          </dl>
+        </div>
+        <blockquote class="her-line" style="margin-left:0">
+          "Because sometimes, even moms need someone to say, 'Don't worry, I've got this!'"
+          <cite>Amber</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="evidence" aria-labelledby="ev-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="num">03 / Client homes</span><h2 id="ev-title">Glass, tile and floors</h2></div>
+        <p>These are homes I’ve cleaned, shown with each homeowner’s permission.</p>
+      </div>
+      <div class="wall">
+        <figure class="w2 h2"><img src="../../images/entertaining.webp" alt="A modern dark kitchen and bar with a wall of wine bottles" width="1500" height="1125"><figcaption>Sample 01 · Kitchen + bar</figcaption></figure>
+        <figure class="h2"><img src="../../images/bathroom.webp" alt="A glass shower room with a freestanding tub and a black wall" width="1125" height="1500"><figcaption>Sample 02 · Bath</figcaption></figure>
+        <figure><img src="../../images/vanity.webp" alt="A double vanity above a white marble floor" width="1125" height="1500" style="object-position:50% 70%"><figcaption>Sample 03 · Vanity</figcaption></figure>
+        <figure><img src="../../images/shower.webp" alt="A glass shower with tiled walls" width="1125" height="1500"><figcaption>Sample 04 · Shower</figcaption></figure>
+        <figure class="h2"><img src="../../images/living-room.webp" alt="A tall great room with black beams and a vaulted ceiling" width="1125" height="1500"><figcaption>Sample 05 · Great room</figcaption></figure>
+        <figure class="w2"><img src="../../images/staircase.webp" alt="Looking up a modern staircase to a tall grid of windows" width="1500" height="1125"><figcaption>Sample 06 · Stairs</figcaption></figure>
+        <figure><img src="../../images/playroom.webp" alt="A kids' playroom with a red slide and a play kitchen" width="1125" height="1500"><figcaption>Sample 07 · Playroom</figcaption></figure>
+        <figure><img src="../../images/theater.webp" alt="A home theater with a screen and a big couch" width="1125" height="1500"><figcaption>Sample 08 · Theater</figcaption></figure>
+        <figure class="w2"><img src="../../images/home-gym.webp" alt="A basement home gym with a dark wood wall" width="1500" height="1125"><figcaption>Sample 09 · Home gym</figcaption></figure>
+      </div>
+      <p class="wall-note">Want a second opinion? <strong>References are available on request.</strong></p>
+    </div>
+  </section>
+
+  <section class="tiled" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="num">04 / Procedure</span><h2 id="how-title">Three steps. One less job.</h2></div></div>
+      <ol class="steps">
+        <li><span class="big" aria-hidden="true">01</span><h3>Text</h3><p>Use the form or text me directly. Tell me what your home needs.</p></li>
+        <li><span class="big" aria-hidden="true">02</span><h3>Quote</h3><p>I’ll give you a free quote based on your home.</p></li>
+        <li><span class="big" aria-hidden="true">03</span><h3>Clean</h3><p>I’ll show up and handle the details so you get that time back.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="quote" aria-labelledby="quote-title">
+    <div class="wrap quote">
+      <noscript><p>Enable JavaScript to try the sample quote form.</p></noscript>
+      <form autocomplete="off" id="quote-form">
+        <header><span>Free quote request</span><span>Mom's Got This Cleaning Co.</span></header>
+        <div class="form-body">
+          <div><label for="f-name">Name</label><input id="f-name" name="name" required></div>
+          <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" required></div>
+          <div><label for="f-city">City / neighborhood</label><input id="f-city" name="city"></div>
+          <div><label for="f-type">Cleaning type</label>
+            <select id="f-type" name="type">
+              <option>Weekly</option><option>Biweekly</option><option>One-time</option><option>Deep clean</option><option selected>Not sure</option>
+            </select>
+          </div>
+          <div class="full"><label for="f-needs">Home size &amp; needs (optional)</label><textarea id="f-needs" name="needs" placeholder="Bedrooms, bathrooms, pets, problem areas..."></textarea></div>
+          <div class="full submit-row">
+            <button class="btn btn-sticker" type="submit">Preview quote text</button>
+            <p>Use sample details to try this form. It shows a draft on this page.</p>
+          </div>
+        </div>
+      <div class="quote-draft">
+          <button type="submit" class="quote-fallback" aria-controls="quote-draft" aria-expanded="false">Preview email draft</button>
+        </div>
+        <div id="quote-draft" class="quote-draft" hidden>
+          <label for="quote-draft-text">Your quote request</label>
+          <textarea id="quote-draft-text" rows="6" readonly></textarea>
+          <div class="quote-draft-actions">
+            <button type="button" class="quote-copy">Copy sample draft</button>
+
+          </div>
+          <p class="quote-draft-status" role="status"></p>
+        </div>
+      </form>
+      <div class="side">
+        <span class="num">05 / Contact</span>
+        <h2 id="quote-title">Request a quote</h2>
+        <p>Fill in the form or get in touch with me directly.</p>
+        <ul class="contact">
+          <li><a class="framed" href="#design-preview" data-preview-contact><span>Call</span><span>816-715-4322</span></a></li>
+          <li><a class="framed" href="#design-preview" data-preview-contact><span>Text</span><span>816-715-4322</span></a></li>
+          <li><a class="framed" href="#design-preview" data-preview-contact><span>Email</span><span>Send a note →</span></a></li>
+          <li><a class="framed" href="#design-preview" data-preview-contact rel="noopener"><span>Facebook</span><span>Find me →</span></a></li>
+        </ul>
+        <svg class="badge" viewBox="0 0 200 200" role="img" aria-label="Badge: free quotes, Kansas City area">
+          <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <g class="ring"><text font-family="Public Sans, Helvetica, sans-serif" font-weight="700" font-size="13" fill="currentColor"><textPath href="#circ" textLength="484" lengthAdjust="spacing">FREE QUOTES · KANSAS CITY AREA · MOM'S GOT THIS · </textPath></text></g>
+          <path d="M72 106 L100 80 L128 106 M78 101 V128 H122 V101" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+          <path d="M93 128 V112 H107 V128" fill="none" stroke="#d25a24" stroke-width="5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="shout">Don't worry. I've got this.</p>
+    <p class="foot-line">Mom's Got This Cleaning Co. I clean homes around Kansas City.</p>
+    <div class="foot-links">
+      <a href="#design-preview" data-preview-contact>816-715-4322</a>
+      <a href="#design-preview" data-preview-contact>momsgothiscleaningco@gmail.com</a>
+      <a href="#design-preview" data-preview-contact rel="noopener">Facebook</a>
+    </div>
+    <p class="fine">© <span id="year">2026</span> Mom's Got This Cleaning Co. · Kansas City area</p>
+  </div>
+</footer>
+
+
+
+
+<script src="../../assets/preview.js" defer></script>
+<script src="page.js" defer></script>
+</body>
+</html>

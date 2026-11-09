@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en" data-type="service" data-buttons="block" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Preview · Mom's Got This Cleaning Co. — House cleaning around Kansas City</title>
+<!-- MGT-OG -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mom's Got This Cleaning Co.">
+<meta property="og:title" content="Preview · Mom&#x27;s Got This Cleaning Co. — House cleaning around Kansas City">
+<meta property="og:description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /MGT-OG -->
+<meta name="description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<meta name="page-type" content="service">
+<meta name="site-kind" content="other">
+<meta name="theme-color" content="#f7f7f7">
+<meta property="og:title" content="Preview · Mom's Got This Cleaning Co.">
+<meta property="og:description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<!-- canonical link waits for the client's domain -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23f6e016'/%3E%3Cpath d='M8 17l5 5 11-12' fill='none' stroke='%230d2a1c' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Commissioner:wght@400;500;600&display=swap">
+<style>
+/* offwhite-bottle-yellow palette, Big Shoulders Display (a condensed poster face) + Commissioner, radius round */
+:root {
+  --bg: #f7f7f7; --surface: #ebebeb; --ink: #0d2a1c; --muted: #5f6b64; --yellow: #f6e016; --action: #0d2a1c;
+  --line: color-mix(in oklab, var(--ink) 14%, transparent);
+  --line-strong: color-mix(in oklab, var(--ink) 34%, transparent);
+  --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif; --font-text: "Commissioner", Arial, sans-serif;
+  --r-lg: 20px; --r-md: 14px; --r-btn: 12px;
+  --t-h2: 64px; --t-h3: 28px; --t-lead: 20px;
+  --nav: 72px; --padt: 120px; --padb: 72px; --gut: 80px; --gap: 24px;
+  --screen: clamp(600px, 100svh, 1200px);
+  --ease: cubic-bezier(.2,.8,.2,1); --ease-enter: cubic-bezier(.22,1,.36,1);
+}
+@media (max-width: 1023px) { :root { --gut: 48px; --t-h2: 54px; } }
+@media (max-width: 639px) {
+  :root { --gut: 24px; --nav: 56px; --padt: 96px; --padb: 48px; --gap: 12px; --t-h2: 42px; --t-h3: 26px; --t-lead: 18px;
+          --screen: clamp(560px, 100svh, 900px); }
+}
+@media (max-width: 639px) { :root { --padt: 72px; --padb: 56px; } }
+@media (min-width: 640px) and (max-width: 1023px) { :root { --padt: 104px; --padb: 72px; } }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+html { scroll-padding-top: 0; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--ink); font: 400 17px/1.6 var(--font-text); }
+img { display: block; max-width: 100%; }
+h1, h2, h3, p, ul, ol, figure, blockquote, fieldset { margin: 0; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 800; color: inherit; text-wrap: balance; }
+h2 { font-size: var(--t-h2); line-height: .98; letter-spacing: -0.005em; }
+h3 { font-size: var(--t-h3); line-height: 1.1; font-weight: 700; letter-spacing: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2.5px solid var(--ink); outline-offset: 3px; }
+.wrap { width: min(100% - 2 * var(--gut), 1280px); margin-inline: auto; position: relative; z-index: 1; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gap); }
+.skip-link { position: absolute; left: 0; top: 12px; transform: translateY(-200%); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: var(--r-btn); z-index: 30; }
+.skip-link:focus-visible { transform: none; }
+
+/* buttons, block look: a yellow block with an ink edge; the secondary is a text link */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: var(--r-btn);
+  font: 500 17px/1 var(--font-text); text-decoration: none; cursor: pointer; white-space: nowrap; border: 2px solid var(--ink);
+  transition: background-color 120ms var(--ease), transform 90ms var(--ease); }
+.btn--primary { background: var(--yellow); color: var(--ink); }
+.btn--primary:hover { background: color-mix(in oklab, var(--yellow) 86%, var(--ink)); }
+.btn--secondary { border-color: transparent; background: none; padding: 0 4px; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+.btn--secondary:hover { text-decoration-thickness: 2px; }
+@media (hover: hover) and (pointer: fine) { .btn--primary:hover { transform: translateY(-1px); transition-duration: 150ms; } .btn--xl:hover { transform: translateY(-2px); } }
+.btn:active { transform: translateY(1px) scale(.985); }
+.btn--secondary:active { transform: scale(.985); }
+.btn--xl { min-height: 68px; padding: 0 40px; font-size: 20px; }
+.btn-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.link { text-decoration: none; background-image: linear-gradient(currentColor, currentColor), linear-gradient(var(--line-strong), var(--line-strong));
+  background-repeat: no-repeat; background-size: 0% 2px, 100% 1px; background-position: right 0 bottom 0, 0 100%; padding-bottom: 2px; transition: background-size 120ms var(--ease); }
+.link:is(:hover, :focus-visible) { background-size: 100% 2px, 100% 1px; background-position: left 0 bottom 0, 0 100%; transition-duration: 150ms; }
+
+/* header, nav-centre: the name left, the words in the middle, the button right */
+.nav { position: fixed; inset: 0 0 auto; height: var(--nav); background: var(--bg); border-bottom: 1px solid var(--line); z-index: 10; }
+.nav .wrap { height: 100%; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; }
+.brand { text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font: 800 25px/1 var(--font-display); letter-spacing: 0; white-space: nowrap; }
+.brand svg { width: 28px; height: 28px; flex: none; }
+.nav__words { display: flex; gap: 32px; list-style: none; padding: 0; }
+.nav__words a { text-decoration: none; font: 500 15px/1 var(--font-text); position: relative; padding: 15px 0; display: inline-block; }
+.nav__words a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 8px; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform 120ms var(--ease); }
+.nav__words a:is(:hover, :focus-visible)::after { transform: scaleX(1); transform-origin: left; transition-duration: 150ms; }
+.nav__end { display: flex; justify-content: flex-end; gap: 12px; }
+.nav .btn { min-height: 48px; }
+.nav__toggle { display: none; min-height: 48px; min-width: 48px; padding: 0 16px; border: 2px solid var(--ink); border-radius: var(--r-btn); background: var(--bg); font: 500 16px/1 var(--font-text); color: var(--ink); cursor: pointer; }
+.sheet { position: fixed; inset: var(--nav) 0 0; background: var(--bg); z-index: 9; padding: 24px var(--gut); }
+.sheet ul { list-style: none; padding: 0; }
+.sheet a { display: flex; align-items: center; min-height: 56px; font: 800 30px/1 var(--font-display); text-decoration: none; border-bottom: 1px solid var(--line); }
+@media (max-width: 1023px) { .nav .wrap { grid-template-columns: 1fr auto; } .nav__words { display: none; } .nav__toggle { display: inline-flex; align-items: center; } }
+@media (max-width: 639px) { .nav__end .btn { display: none; } .brand { font-size: 19px; } }
+
+main > section { padding: var(--padt) 0 var(--padb); position: relative; }
+/* one section per screen only from 1024 wide; below that sections size to their content */
+@media (min-width: 1024px) { main > section { min-height: calc(var(--h, 1) * var(--screen)); } }
+.head { display: grid; gap: 16px; margin-bottom: 48px; max-width: 780px; }
+.head p { font-size: var(--t-lead); line-height: 1.5; max-width: 52ch; }
+@media (max-width: 639px) { .head { margin-bottom: 32px; } }
+.frame { border-radius: var(--r-lg); overflow: hidden; background: var(--surface); }
+.frame img { width: 100%; height: 100%; object-fit: cover; }
+.m-zoom { display: block; overflow: clip; }
+.m-zoom img, .card img { transition: transform 400ms var(--ease); }
+@media (hover: hover) and (pointer: fine) { .m-zoom:hover img, .card:hover img { transform: scale(1.03); transition-duration: 600ms; } }
+.m-zoom:focus-visible img, .card:focus-visible img { transform: scale(1.03); }
+
+/* hero, editorial: the headline is the picture, two rooms set in the line */
+.hero { padding-top: calc(var(--nav) + 48px) !important; padding-bottom: 64px !important; display: grid; }
+.hero .wrap { display: grid; grid-template-rows: auto 1fr; gap: 40px; }
+.hero h1 { font-size: clamp(60px, 10.6vw, 156px); line-height: .9; letter-spacing: -0.01em; }
+.hero__photo { display: none; }
+.pill { display: inline-block; width: 1.5em; height: .68em; border-radius: 999px; overflow: hidden; vertical-align: 0; margin: 0 .04em; }
+.pill img { width: 100%; height: 100%; object-fit: cover; }
+.hero__row { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gap); align-items: end; align-content: end; }
+.hero__lead { grid-column: 1 / span 6; font-size: 22px; line-height: 1.5; max-width: 34ch; }
+.hero__lead b { font-weight: 500; }
+.hero__actions { grid-column: 8 / -1; justify-self: end; }
+
+/* the to-do list on the yellow band */
+.band { background: var(--yellow); }
+.todo { grid-column: 1 / span 7; list-style: none; padding: 0; font: 800 clamp(40px, 5.2vw, 76px)/1.05 var(--font-display); letter-spacing: 0; }
+.todo li { display: flex; align-items: baseline; gap: 18px; padding: 6px 0; border-bottom: 2px solid var(--ink); }
+.todo li::before { content: ""; width: .5em; height: .5em; border: 3px solid var(--ink); border-radius: 6px; flex: none; transform: translateY(-.02em); }
+.todo .done::before { background: var(--ink); }
+.todo .done s { text-decoration-thickness: .09em; text-decoration-color: var(--ink); }
+.todo .done em { font: 500 18px/1.2 var(--font-text); font-style: normal; letter-spacing: 0; white-space: nowrap; margin-left: auto; }
+.band .frame { grid-column: 9 / -1; aspect-ratio: 4 / 5; align-self: start; }
+
+/* cleaning: four linked cards */
+.cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap); }
+.card { display: grid; grid-template-rows: auto 1fr; text-decoration: none; background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden;
+  transition: transform 120ms var(--ease), border-color 120ms var(--ease), box-shadow 120ms var(--ease); }
+@media (hover: hover) and (pointer: fine) { .card:hover { transform: translateY(-2px); border-color: var(--line-strong); box-shadow: 0 10px 24px color-mix(in oklab, var(--ink) 9%, transparent); transition-duration: 180ms; } }
+.card__media { aspect-ratio: 4 / 3; overflow: hidden; }
+.card__media img { width: 100%; height: 100%; object-fit: cover; }
+.card__body { display: grid; gap: 8px; align-content: start; padding: 20px 22px 24px; }
+.card__label { font: 500 13px/1.2 var(--font-text); display: inline-block; justify-self: start; background: var(--yellow); padding: 5px 9px; border-radius: 6px; }
+.card p { font-size: 16px; line-height: 1.55; }
+.card__go { margin-top: 6px; font: 500 15px/1.3 var(--font-text); display: inline-flex; align-items: center; gap: 6px; }
+.card__go svg { width: 12px; height: 12px; transition: transform 120ms var(--ease); }
+@media (hover: hover) and (pointer: fine) { .card:hover .card__go svg { transform: translateX(3px); } }
+
+/* steps: pinned-chapters (live from 1024 wide); at rest a row per step */
+.mo-pc__grid { display: grid; gap: 48px; }
+.mo-pc__text { display: grid; gap: 40px; align-content: start; }
+.mo-pc__steps { list-style: none; padding: 0; display: grid; gap: 22px; }
+.mo-pc__step { display: grid; gap: 8px; padding-left: 22px; border-left: 3px solid var(--line); }
+.mo-pc__step h3 { font-size: 26px; }
+.mo-pc__step p { max-width: 42ch; font-size: 17px; }
+.mo-pc__visual { margin: 12px 0 0; border-radius: var(--r-md); overflow: hidden; background: var(--surface); }
+.mo-pc__visual img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+.mo-pc__visuals { display: none; }
+@media (min-width: 640px) {
+  section:not(.is-live) .mo-pc__step { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: var(--gap); align-items: center; border-left: 0; padding: 22px 0 0; border-top: 2px solid var(--ink); }
+  section:not(.is-live) .mo-pc__step h3 { grid-column: 1; align-self: end; }
+  section:not(.is-live) .mo-pc__step p { grid-column: 1; align-self: start; }
+  section:not(.is-live) .mo-pc__visual { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
+  section:not(.is-live) .mo-pc__visual img { max-height: 30svh; }
+}
+section.is-live { height: calc(2 * var(--screen)); padding: 0; }
+section.is-live .mo-pc__grid { position: sticky; top: 0; height: var(--screen); box-sizing: border-box; padding: calc(var(--nav) + 48px) 0 var(--padb);
+  grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gap); align-items: start; overflow: clip; }
+section.is-live .mo-pc__step h3 { color: var(--muted); transition: color 300ms ease; }
+section.is-live .mo-pc__step p { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 420ms cubic-bezier(.2,.7,.2,1), opacity 300ms ease; }
+section.is-live .mo-pc__step p > span { min-height: 0; overflow: hidden; }
+section.is-live .mo-pc__step.is-on { border-left-color: var(--ink); }
+section.is-live .mo-pc__step.is-on h3 { color: var(--ink); }
+section.is-live .mo-pc__step.is-on p { grid-template-rows: 1fr; opacity: 1; }
+section.is-live .mo-pc__visuals { position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; max-height: calc(var(--screen) - var(--nav) - 48px - var(--padb)); border-radius: var(--r-lg); overflow: hidden; background: var(--surface); }
+section.is-live .mo-pc__visual { position: absolute; inset: 0; margin: 0; border-radius: 0; opacity: 0; transform: scale(1.03); transition: opacity 480ms ease, transform 900ms cubic-bezier(.16,1,.3,1); }
+section.is-live .mo-pc__visual img { width: 100%; height: 100%; aspect-ratio: auto; max-height: none; }
+section.is-live .mo-pc__visual.is-on { opacity: 1; transform: none; z-index: 1; }
+
+/* homes: a wall from line to line */
+.wall { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; border-radius: var(--r-lg); overflow: hidden; }
+.wall a { aspect-ratio: 4 / 5; max-height: 560px; }
+.wall img { width: 100%; height: 100%; object-fit: cover; }
+
+/* amber: the dark band */
+.dark { background: var(--ink); color: var(--bg); }
+.dark :focus-visible { outline-color: var(--yellow); }
+.amber__text { grid-column: 1 / span 6; display: grid; gap: 24px; align-content: start; }
+.amber__text > p { font-size: 19px; line-height: 1.6; max-width: 44ch; }
+.amber__text blockquote { border-top: 2px solid var(--yellow); padding-top: 20px; margin-top: 8px; }
+.amber__text blockquote p { font: 700 36px/1.08 var(--font-display); max-width: 22ch; }
+.amber__text cite { display: block; margin-top: 12px; font: italic 400 16px/1.4 var(--font-text); color: color-mix(in oklab, var(--bg) 75%, var(--ink)); }
+.dark .frame { grid-column: 8 / -1; aspect-ratio: 4 / 5; max-height: 640px; background: color-mix(in oklab, var(--bg) 10%, var(--ink)); }
+.dark .frame img { object-position: 50% 25%; }
+
+/* quote: a wide form */
+.form { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px var(--gap); }
+.field { display: grid; gap: 8px; align-content: start; }
+.field--full { grid-column: 1 / -1; }
+.field label, .chips legend { font: 500 15px/1.3 var(--font-text); }
+.field input, .field textarea { width: 100%; min-height: 52px; padding: 12px 16px; font: 400 17px/1.4 var(--font-text); color: var(--ink); background: #fff;
+  border: 2px solid var(--line-strong); border-radius: var(--r-btn); transition: border-color 140ms var(--ease), box-shadow 140ms var(--ease); }
+.field textarea { min-height: 104px; resize: vertical; }
+.field :is(input, textarea):focus-visible { outline: none; border-color: var(--ink); box-shadow: 0 0 0 4px var(--yellow); }
+.field [aria-invalid="true"] { border-color: #b3261e; }
+.field__error { color: #a3221b; font-size: 15px; }
+.hint { font-size: 15px; color: var(--muted); }
+.chips { border: 0; padding: 0; grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px; }
+.chips legend { padding: 0; margin-bottom: 10px; width: 100%; }
+.chip { position: relative; }
+.chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.chip span { display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 2px solid var(--line-strong); border-radius: 999px; background: #fff; font-weight: 500; transition: background-color 120ms var(--ease), border-color 120ms var(--ease); }
+.chip input:hover + span { border-color: var(--ink); }
+.chip input:checked + span { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.chip input:focus-visible + span { outline: 2.5px solid var(--ink); outline-offset: 3px; }
+.form__foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
+.form__note { font-size: 15px; color: var(--muted); max-width: 46ch; }
+.form__status { grid-column: 1 / -1; font-size: 15px; min-height: 1em; }
+.elsewhere { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 32px; font-size: 17px; }
+.elsewhere > span { color: var(--muted); }
+.elsewhere a { min-height: 44px; display: inline-flex; align-items: center; overflow-wrap: anywhere; }
+
+/* closing: the type close on the ink, then the directory */
+footer.closing { padding: var(--padt) 0 32px; background: var(--ink); color: var(--bg); }
+footer.closing .wrap { display: grid; grid-template-rows: 1fr auto; gap: 64px; }
+@media (min-width: 1024px) { footer.closing { min-height: var(--screen); } footer.closing .wrap { min-height: calc(var(--screen) - var(--padt) - 32px); } }
+footer.closing :focus-visible { outline-color: var(--yellow); }
+.close h2 { font-size: clamp(56px, 9.6vw, 150px); line-height: .92; max-width: 10em; }
+.close p { font-size: var(--t-lead); margin: 20px 0 40px; color: color-mix(in oklab, var(--bg) 80%, var(--ink)); }
+.close .btn--primary { border-color: var(--yellow); }
+.dir { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 40px; padding-top: 28px; border-top: 1px solid color-mix(in oklab, var(--bg) 22%, transparent); font-size: 16px; }
+.dir a { text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.dir a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.dir .brand { color: var(--bg); }
+.dir__links { display: flex; flex-wrap: wrap; gap: 0 28px; }
+.legal { width: 100%; font-size: 14px; color: color-mix(in oklab, var(--bg) 72%, var(--ink)); }
+
+@media (max-width: 1279px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } .card__media { aspect-ratio: 16 / 9; } }
+@media (max-width: 1023px) {
+  .hero__lead, .hero__actions { grid-column: 1 / -1; justify-self: start; }
+  .hero .wrap { grid-template-rows: auto auto auto; gap: 32px; }
+  .hero__row { align-content: start; }
+  .hero__photo { display: block; position: relative; border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 4 / 3; }
+  .hero__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .todo { grid-column: 1 / -1; }
+  .band .frame { grid-column: 1 / span 6; aspect-ratio: 4 / 3; }
+  .amber__text, .dark .frame { grid-column: 1 / -1; }
+  .dark .frame { aspect-ratio: 4 / 3; }
+  .form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 639px) {
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .grid > * { grid-column: 1 / -1 !important; }
+  .hero__lead { font-size: 19px; }
+  .hero__actions, .hero__actions .btn--primary { width: 100%; }
+  .todo li { gap: 12px; flex-wrap: wrap; }
+  .todo .done em { margin-left: calc(.5em + 12px); width: 100%; }
+  .cards { grid-template-columns: 1fr; }
+  .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .wall a:last-child { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+  .dark .frame { aspect-ratio: 4 / 5; }
+  .form { grid-template-columns: 1fr; }
+  .form__foot .btn { width: 100%; }
+  .btn--xl { width: 100%; }
+}
+
+/* the hero's entrance */
+@media (prefers-reduced-motion: no-preference) {
+}
+@keyframes m-rise { from { transform: translateY(110%); } to { transform: none; } }
+@keyframes m-fade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0ms !important; animation: none !important; } }
+/* Quote draft stays usable when the device has no SMS handler. */
+#quote-form .quote-draft { grid-column: 1 / -1; margin-block-start: 14px; }
+#quote-form .quote-fallback, #quote-form .quote-copy {
+  display: inline-flex; min-height: 44px; max-width: 100%; align-items: center;
+  padding: 5px 0; color: inherit; font: inherit; text-align: left;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+#quote-form .quote-fallback, #quote-form .quote-copy {
+  background: transparent; border: 0; box-shadow: none; cursor: pointer; margin: 0;
+}
+#quote-form .quote-draft-actions { display: flex; flex-wrap: wrap; gap: 0 20px; }
+#quote-form .quote-draft label { display: block; margin: 0 0 6px; }
+#quote-form .quote-draft textarea { display: block; width: 100%; min-height: 8em; }
+#quote-form .quote-draft [role="status"] { margin: 0; }
+#quote-form .quote-draft[hidden] { display: none; }
+#quote-form :is(.quote-fallback,.quote-copy):focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px;
+}
+#quote-form :is(input:not([type="radio"]),select,textarea) { min-width: 0; min-height: 44px; font-size: max(16px, 1em); }
+@media(max-width:650px){.hero .pill{display:none}.hero h1{font-size:clamp(3rem,13.7vw,4.8rem)}}
+.sheet {bottom:auto;max-height:calc(100dvh - var(--nav));overflow:auto;border-bottom:1px solid currentColor}
+</style>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<link rel="stylesheet" href="../../assets/preview.css">
+</head>
+<body>
+<aside class="mgt-preview-bar mgt-preview-fixed" id="design-preview" aria-label="Preview navigation">
+  <a class="mgt-preview-back" href="../../index.html#s-11">← All designs</a>
+  <span>Design preview <span aria-hidden="true">·</span> Quotes are simulated</span>
+</aside>
+
+<!-- kind: service. deal: hero editorial (two real rooms set in the headline) · palette offwhite-bottle-yellow (bottle-green ink, highlighter yellow: the family to-do list) · type Big Shoulders Display + Commissioner · nav-centre · footer-dark · close-type · rhythm dark-band, plus the yellow list band · buttons block · mark: a ticked box · moment pinned-chapters (how a quote goes, three steps beside one frame) -->
+<header class="nav">
+  <div class="wrap">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <a class="brand" href="#top" aria-label="Mom's Got This Cleaning Co., back to the top">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><rect x="1.5" y="1.5" width="25" height="25" rx="7" fill="#f6e016" stroke="#0d2a1c" stroke-width="2"/><path d="M8 14.5l4 4 8.5-9" fill="none" stroke="#0d2a1c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Mom's Got This
+    </a>
+    <ul class="nav__words">
+      <li><a href="#cleaning">Cleaning</a></li>
+      <li><a href="#steps">Steps</a></li>
+      <li><a href="#homes">Homes</a></li>
+      <li><a href="#amber">Amber</a></li>
+    </ul>
+    <div class="nav__end">
+      <a class="btn btn--primary" href="#quote">Get a free quote</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="sheet">Menu</button>
+    </div>
+  </div>
+</header>
+<nav class="sheet" id="sheet" aria-label="Mobile navigation" hidden>
+  <ul>
+    <li><a href="#cleaning">Cleaning</a></li>
+    <li><a href="#steps">Steps</a></li>
+    <li><a href="#homes">Homes</a></li>
+    <li><a href="#amber">Amber</a></li>
+    <li><a href="#quote">Get a free quote</a></li>
+  </ul>
+</nav>
+
+<main id="top">
+  <section class="hero" data-enter aria-labelledby="hero-h">
+    <div class="wrap">
+      <h1 id="hero-h">House cleaning <span class="pill"><img src="../../images/bathtub.webp" width="1125" height="1500" fetchpriority="high" alt="" style="object-position: 50% 55%"></span> for busy Kansas City <span class="pill"><img src="../../images/staircase.webp" width="1500" height="1125" fetchpriority="high" alt=""></span> families</h1>
+      <div class="hero__row">
+        <p class="hero__lead" data-rise>Work, kids, appointments, activities, and somehow also the floors. <b>I’m Amber, a mom of four. I’ll take the floors.</b> Free quotes by text.</p>
+        <div class="hero__actions btn-row" data-rise>
+          <a class="btn btn--primary" href="#quote">Get a free quote</a>
+          <a class="btn btn--secondary" href="#design-preview" data-preview-contact>Text me</a>
+        </div>
+      </div>
+      <figure class="hero__photo"><img src="../../images/bedroom.webp" width="1500" height="1125" alt="A bright bedroom after cleaning, with a made bed and grey carpet"></figure>
+    </div>
+  </section>
+
+  <section id="list" class="band" aria-labelledby="list-h">
+    <div class="wrap">
+      <div class="head"><h2 id="list-h">Your week, minus one job</h2></div>
+      <div class="grid">
+        <ul class="todo">
+          <li>Work</li>
+          <li>Kids</li>
+          <li>Appointments</li>
+          <li>Activities</li>
+          <li class="done"><s>Clean the house</s> <em>I’ve got it</em></li>
+        </ul>
+        <a class="frame m-zoom" href="../../images/playroom.webp">
+          <img src="../../images/playroom.webp" width="1125" height="1500" style="object-position: 50% 70%" alt="A kids' playroom after cleaning: toys back on the shelves, a play kitchen and a red slide">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="cleaning" aria-labelledby="cleaning-h">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="cleaning-h">How often I come is up to you</h2>
+        <p>I quote each house myself, and the quote is free. Tell me what you need and how often you’d like me to come.</p>
+      </div>
+      <div class="cards">
+        <a class="card" href="#quote" data-type="Weekly">
+          <div class="card__media"><img src="../../images/kitchen.webp" width="1500" height="1125" alt="An open kitchen and dining room with wood floors and white cabinets"></div>
+          <div class="card__body"><span class="card__label">Weekly</span><h3>Shows up every week</h3><p>For houses that get lived in hard. The crumbs never get a head start.</p>
+            <span class="card__go">Pick weekly <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        </a>
+        <a class="card" href="#quote" data-type="Biweekly">
+          <div class="card__media"><img src="../../images/shower.webp" width="1125" height="1500" alt="A glass shower with clean tile"></div>
+          <div class="card__body"><span class="card__label">Biweekly</span><h3>Comes every other week</h3><p>For houses that are mostly fine and slowly losing to the bathroom.</p>
+            <span class="card__go">Pick biweekly <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        </a>
+        <a class="card" href="#quote" data-type="One-time">
+          <div class="card__media"><img src="../../images/sitting-room.webp" width="1125" height="1500" style="object-position: 50% 65%" alt="A sitting room with an orange sofa, a zebra rug and French doors"></div>
+          <div class="card__body"><span class="card__label">One-time</span><h3>Comes once, when you need it</h3><p>Before the party, after the party, or before anyone sees what the party did to the kitchen.</p>
+            <span class="card__go">Pick one-time <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        </a>
+        <a class="card" href="#quote" data-type="Deep cleaning">
+          <div class="card__media"><img src="../../images/home-gym.webp" width="1500" height="1125" alt="A basement home gym with a wood-paneled wall and a dark carpet"></div>
+          <div class="card__body"><span class="card__label">Deep cleaning</span><h3>Resets the whole house</h3><p>For when the house got away from you. Everybody's has, at some point.</p>
+            <span class="card__go">Pick deep cleaning <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="steps" data-moment="pinned-chapters" aria-labelledby="steps-h">
+    <div class="wrap mo-pc__grid">
+      <div class="mo-pc__text">
+        <h2 id="steps-h">How a quote works, start to clean kitchen</h2>
+        <ol class="mo-pc__steps">
+          <li class="mo-pc__step">
+            <h3>Tell me about the house</h3>
+            <p>Use sample details to try this form. It shows a draft on this page.</p>
+            <figure class="mo-pc__visual"><img src="../../images/vanity.webp" width="1125" height="1500" style="object-position: 50% 70%" alt="A double vanity above a white marble floor"></figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Get a quote made for your house</h3>
+            <p>I quote every home myself. If you’re unsure what kind of cleaning you need, pick “Not sure yet” and I’ll help.</p>
+            <figure class="mo-pc__visual"><img src="../../images/living-room.webp" width="1125" height="1500" alt="A tall great room with black beams, a stone fireplace and a long dining table"></figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Come home to it</h3>
+            <p>Weekly, every other week, once, or a deep reset. The part where you walk in and nobody has to say anything about the kitchen.</p>
+            <figure class="mo-pc__visual"><img src="../../images/entertaining.webp" width="1500" height="1125" style="object-position: 40% 50%" alt="A dark modern kitchen and bar with a wall of wine bottles"></figure>
+          </li>
+        </ol>
+      </div>
+      <div class="mo-pc__visuals"></div>
+    </div>
+  </section>
+
+  <section id="homes" aria-labelledby="homes-h">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="homes-h">Real homes, toys and all</h2>
+        <p>Every photo on this page is a client's home, shown with their permission. Want to hear from someone I’ve cleaned for? Ask me for references.</p>
+      </div>
+      <div class="wall">
+        <a class="m-zoom" href="../../images/bathroom.webp"><img src="../../images/bathroom.webp" width="1125" height="1500" alt="A glass shower room with a freestanding tub and a black tiled wall"></a>
+        <a class="m-zoom" href="../../images/theater.webp"><img src="../../images/theater.webp" width="1125" height="1500" alt="A home theater with a projection screen and a sectional couch"></a>
+        <a class="m-zoom" href="../../images/portfolio.webp"><img src="../../images/portfolio.webp" width="1086" height="1448" style="object-position: 50% 0%" alt="A collage of more client rooms: a great room, a black accent wall, a kitchen island and a laundry room"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="amber" class="dark" aria-labelledby="amber-h">
+    <div class="wrap">
+      <div class="grid">
+        <div class="amber__text">
+          <h2 id="amber-h">I do the cleaning myself</h2>
+          <p>I’m a mom of four. I know how much a house asks of you when work, kids and appointments fill the week. I started Mom’s Got This to take that job off your plate.</p>
+          <p>Want references? Just ask me.</p>
+          <blockquote>
+            <p>“Because sometimes, even moms need someone to say, ‘Don't worry, I've got this!’”</p>
+            <cite>Amber, owner</cite>
+          </blockquote>
+        </div>
+        <figure class="frame">
+          <img src="../../images/owner.webp" width="880" height="1100" alt="Amber, owner of Mom's Got This Cleaning Co., smiling in a white blazer">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="quote" aria-labelledby="quote-h">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="quote-h">Tell me about your house</h2>
+        <p>Use sample details to try this form. It shows a draft on this page.</p>
+      </div>
+      <noscript><p>Enable JavaScript to try the sample quote form.</p></noscript>
+      <form autocomplete="off" class="form" id="quote-form" novalidate>
+        <div class="field"><label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" required aria-describedby="f-name-err">
+          <p class="field__error" id="f-name-err" hidden>Add your name so I know who I’m texting.</p></div>
+        <div class="field"><label for="f-phone">Phone number</label>
+          <input id="f-phone" name="phone" type="tel" required aria-describedby="f-phone-err">
+          <p class="field__error" id="f-phone-err" hidden>That number looks short. Include the area code.</p></div>
+        <div class="field"><label for="f-area">City or neighborhood</label>
+          <input id="f-area" name="area" type="text" required aria-describedby="f-area-err">
+          <p class="field__error" id="f-area-err" hidden>Write the city or neighborhood the house is in.</p></div>
+        <fieldset class="chips">
+          <legend>Type of cleaning</legend>
+          <label class="chip"><input type="radio" name="type" value="Weekly"><span>Weekly</span></label>
+          <label class="chip"><input type="radio" name="type" value="Biweekly"><span>Biweekly</span></label>
+          <label class="chip"><input type="radio" name="type" value="One-time"><span>One-time</span></label>
+          <label class="chip"><input type="radio" name="type" value="Deep cleaning"><span>Deep cleaning</span></label>
+          <label class="chip"><input type="radio" name="type" value="Not sure yet" checked><span>Not sure yet</span></label>
+        </fieldset>
+        <div class="field field--full"><label for="f-details">Home size and what you need (optional)</label>
+          <textarea id="f-details" name="details" aria-describedby="f-details-hint"></textarea>
+          <p class="hint" id="f-details-hint">Bedrooms, bathrooms, pets, and the room you’d like me to see first.</p>
+          </div>
+        <div class="form__foot">
+          <button class="btn btn--primary" type="submit">Preview quote text</button>
+          <p class="form__note">Use sample details to try this form. It shows a draft on this page.</p>
+        </div>
+        <p class="form__status" role="status" data-form-status></p>
+      <div class="quote-draft">
+          <button type="submit" class="quote-fallback" aria-controls="quote-draft" aria-expanded="false">Preview email draft</button>
+        </div>
+        <div id="quote-draft" class="quote-draft" hidden>
+          <label for="quote-draft-text">Your quote request</label>
+          <textarea id="quote-draft-text" rows="6" readonly></textarea>
+          <div class="quote-draft-actions">
+            <button type="button" class="quote-copy">Copy sample draft</button>
+
+          </div>
+          <p class="quote-draft-status" role="status"></p>
+        </div>
+      </form>
+      <p class="elsewhere"><span>Rather not type?</span>
+        <a class="link" href="#design-preview" data-preview-contact>Call 816-715-4322</a>
+        <a class="link" href="#design-preview" data-preview-contact>momsgothiscleaningco@gmail.com</a>
+        <a class="link" href="#design-preview" data-preview-contact rel="noopener">Facebook</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="closing" id="contact">
+  <div class="wrap">
+    <div class="close">
+      <h2>Don’t worry. I’ve got the house.</h2>
+      <p>Free quotes for homes around Kansas City.</p>
+      <a class="btn btn--primary btn--xl" href="#quote">Get a free quote</a>
+    </div>
+    <div class="dir">
+      <span class="brand">Mom's Got This Cleaning Co.</span>
+      <div class="dir__links">
+        <span style="display:inline-flex;align-items:center;min-height:44px">Kansas City area</span>
+        <a href="#design-preview" data-preview-contact>816-715-4322</a>
+        <a href="#design-preview" data-preview-contact>momsgothiscleaningco@gmail.com</a>
+        <a href="#design-preview" data-preview-contact rel="noopener">Facebook</a>
+      </div>
+      <p class="legal">© <span id="year">2026</span> Mom's Got This Cleaning Co.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../assets/preview.js" defer></script>
+<script src="page.js" defer></script>
+</body>
+</html>

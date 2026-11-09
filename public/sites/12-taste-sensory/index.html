@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en" data-type="service" data-buttons="arrow" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Preview · Mom's Got This Cleaning Co. — House cleaning around Kansas City</title>
+<!-- MGT-OG -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mom's Got This Cleaning Co.">
+<meta property="og:title" content="Preview · Mom&#x27;s Got This Cleaning Co. — House cleaning around Kansas City">
+<meta property="og:description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /MGT-OG -->
+<meta name="description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<meta name="page-type" content="service">
+<meta name="site-kind" content="other">
+<meta name="theme-color" content="#eeecea">
+<meta property="og:title" content="Preview · Mom's Got This Cleaning Co.">
+<meta property="og:description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<!-- canonical link waits for the client's domain -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='2' fill='%235c6b54'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='22' fill='%23eeecea' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Red+Hat+Text:wght@400;500&display=swap">
+<style>
+/* three-stones palette, Gloock (an inky, high-contrast serif) + Red Hat Text, radius sharp */
+:root {
+  --bg: #eeecea; --surface: #e4e1dd; --ink: #333231; --muted: #6b6763; --action: #5c6b54; --action-ink: #ffffff; --dark: #333231;
+  --line: color-mix(in oklab, var(--ink) 15%, transparent);
+  --line-strong: color-mix(in oklab, var(--ink) 34%, transparent);
+  --font-display: "Gloock", Georgia, serif; --font-text: "Red Hat Text", Arial, sans-serif;
+  --r: 2px;
+  --t-h1: 72px; --t-h2: 46px; --t-h3: 26px; --t-lead: 20px;
+  --nav: 72px; --padt: 120px; --padb: 72px; --gut: 80px; --gap: 24px;
+  --screen: clamp(600px, 100svh, 1200px);
+  --ease: cubic-bezier(.2,.8,.2,1); --ease-enter: cubic-bezier(.22,1,.36,1);
+}
+@media (max-width: 1023px) { :root { --gut: 48px; --t-h1: 60px; --t-h2: 40px; } }
+@media (max-width: 639px) {
+  :root { --gut: 24px; --nav: 56px; --padt: 96px; --padb: 48px; --gap: 12px; --t-h1: 40px; --t-h2: 31px; --t-h3: 23px; --t-lead: 18px;
+          --screen: clamp(560px, 100svh, 900px); }
+}
+@media (max-width: 639px) { :root { --padt: 72px; --padb: 56px; } }
+@media (min-width: 640px) and (max-width: 1023px) { :root { --padt: 104px; --padb: 72px; } }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+html { scroll-padding-top: 0; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--ink); font: 400 17px/1.65 var(--font-text); }
+img { display: block; max-width: 100%; }
+h1, h2, h3, p, ul, ol, figure, dl, dd { margin: 0; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; color: inherit; text-wrap: balance; }
+h1 { font-size: var(--t-h1); line-height: 1.02; letter-spacing: -0.02em; }
+h2 { font-size: var(--t-h2); line-height: 1.08; letter-spacing: -0.015em; }
+h3 { font-size: var(--t-h3); line-height: 1.1; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
+.wrap { width: min(100% - 2 * var(--gut), 1280px); margin-inline: auto; position: relative; z-index: 1; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gap); }
+.skip-link { position: absolute; left: 0; top: 12px; transform: translateY(-200%); background: var(--ink); color: var(--bg); padding: 10px 16px; z-index: 30; }
+.skip-link:focus-visible { transform: none; }
+
+/* buttons, arrow look: the filled sage primary carries the drawn arrow; the secondary is a text link */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 48px; padding: 0 24px; border-radius: var(--r);
+  font: 500 16px/1 var(--font-text); text-decoration: none; cursor: pointer; border: 0; white-space: nowrap;
+  transition: background-color 120ms var(--ease), transform 90ms var(--ease); }
+.btn--primary { background: var(--action); color: var(--action-ink); }
+.btn--primary:hover { background: color-mix(in oklab, var(--action) 84%, var(--ink)); }
+.btn--secondary { background: none; color: var(--ink); padding: 0 2px; }
+.btn--secondary span { background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat; background-size: 100% 1px; background-position: 0 100%; padding-bottom: 3px; }
+@media (hover: hover) and (pointer: fine) { .btn--primary:hover { transform: translateY(-1px); transition-duration: 150ms; } .btn--xl:hover { transform: translateY(-2px); } }
+.btn:active { transform: translateY(1px) scale(.985); }
+.btn--secondary:active { transform: scale(.985); }
+.btn--xl { min-height: 64px; padding: 0 32px; font-size: 18px; }
+.btn-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
+.m-arrow { width: 12px; height: 12px; flex: none; overflow: visible; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.m-arrow__stem { opacity: 0; transform: scaleX(.2); transform-origin: 1px 50%; transform-box: fill-box; transition: opacity 120ms var(--ease), transform 120ms var(--ease); }
+.m-arrow__head { transition: transform 120ms var(--ease); }
+:is(a, button):is(:hover, :focus-visible) > .m-arrow .m-arrow__stem { opacity: 1; transform: none; transition-duration: 150ms; }
+:is(a, button):is(:hover, :focus-visible) > .m-arrow .m-arrow__head { transform: translateX(3px); transition-duration: 150ms; }
+.link { text-decoration: none; background-image: linear-gradient(currentColor, currentColor), linear-gradient(var(--line-strong), var(--line-strong));
+  background-repeat: no-repeat; background-size: 0% 1px, 100% 1px; background-position: right 0 bottom 0, 0 100%; padding-bottom: 2px; transition: background-size 120ms var(--ease); }
+.link:is(:hover, :focus-visible) { background-size: 100% 1px, 100% 1px; background-position: left 0 bottom 0, 0 100%; transition-duration: 150ms; }
+
+/* header: the name on the left line, the words and the button on the right */
+.nav { position: fixed; inset: 0 0 auto; height: var(--nav); background: var(--bg); border-bottom: 1px solid var(--line); z-index: 10; }
+.nav .wrap { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { text-decoration: none; display: inline-flex; align-items: baseline; gap: 8px; white-space: nowrap; }
+.brand__name { font: 400 23px/1 var(--font-display); }
+.brand__sub { font: 400 14px/1 var(--font-text); color: var(--muted); }
+.nav__end { display: flex; align-items: center; gap: 36px; }
+.nav__words { display: flex; gap: 28px; list-style: none; padding: 0; }
+.nav__words a { text-decoration: none; font: 500 15px/1 var(--font-text); position: relative; padding: 15px 0; display: inline-block; }
+.nav__words a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 8px; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform 120ms var(--ease); }
+.nav__words a:is(:hover, :focus-visible)::after { transform: scaleX(1); transform-origin: left; transition-duration: 150ms; }
+.nav__toggle { display: none; min-height: 48px; min-width: 48px; padding: 0 16px; border: 1px solid var(--line-strong); border-radius: var(--r); background: var(--bg); color: var(--ink); font: 500 16px/1 var(--font-text); cursor: pointer; }
+.sheet { position: fixed; inset: var(--nav) 0 0; background: var(--bg); z-index: 9; padding: 24px var(--gut); }
+.sheet ul { list-style: none; padding: 0; }
+.sheet a { display: flex; align-items: center; min-height: 56px; font: 400 25px/1 var(--font-display); text-decoration: none; border-bottom: 1px solid var(--line); }
+@media (max-width: 1023px) { .nav__words { display: none; } .nav__toggle { display: inline-flex; align-items: center; } .nav__end { gap: 12px; } }
+@media (max-width: 639px) { .nav__end .btn { display: none; } .brand__sub { display: none; } }
+
+main > section { padding: var(--padt) 0 var(--padb); position: relative; }
+/* one section per screen only from 1024 wide; below that sections size to their content */
+@media (min-width: 1024px) { main > section { min-height: calc(var(--h, 1) * var(--screen)); } }
+.head { display: grid; gap: 16px; margin-bottom: 48px; max-width: 760px; }
+.head p { font-size: var(--t-lead); line-height: 1.5; max-width: 50ch; }
+@media (max-width: 639px) { .head { margin-bottom: 32px; } }
+.frame { overflow: hidden; background: var(--surface); border-radius: var(--r); position: relative; }
+.frame img { width: 100%; height: 100%; object-fit: cover; }
+.m-zoom { display: block; overflow: clip; }
+.m-zoom img { transition: transform 400ms var(--ease); }
+@media (hover: hover) and (pointer: fine) { .m-zoom:hover img { transform: scale(1.03); transition-duration: 600ms; } }
+.m-zoom:focus-visible img { transform: scale(1.03); }
+
+/* hero, photo: the kitchen full bleed, the words in a solid box on its lower left */
+.hero { padding: 0 !important; display: grid; }
+@media (min-width: 640px) and (max-width: 1023px) { .hero { min-height: min(92svh, 1000px); } }
+.hero__bg { position: absolute; inset: var(--nav) 0 0; overflow: hidden; }
+.hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; }
+.hero .wrap { display: flex; align-items: flex-end; padding: calc(var(--nav) + 48px) 0 64px; }
+.hero__box { background: var(--bg); padding: 40px 44px 44px; width: min(660px, 100%); display: grid; gap: 20px; border-radius: var(--r); }
+.hero__notice { font-size: 14px; color: var(--muted); }
+.hero__lead { font-size: var(--t-lead); line-height: 1.55; max-width: 36ch; }
+
+/* bathroom: words beside one photograph that develops */
+.split-text { grid-column: 1 / span 5; display: grid; gap: 22px; align-content: start; }
+.sense { list-style: none; padding: 0; display: grid; gap: 0; }
+.sense li { font: 400 22px/1.35 var(--font-display); padding: 18px 0; border-bottom: 1px solid var(--line); }
+.sense li:first-child { border-top: 1px solid var(--line); }
+.split-photo { grid-column: 7 / -1; aspect-ratio: 8 / 9; max-height: calc(var(--screen) - var(--padt) - var(--padb)); }
+.develop img { transform-origin: 50% 60%; }
+.develop.is-armed img { filter: grayscale(1) contrast(.55) brightness(1.32); transform: scale(1.06); }
+.develop.is-developing img { animation: develop 1600ms var(--ease-enter) both; }
+@keyframes develop {
+  0% { filter: grayscale(1) contrast(.55) brightness(1.32); transform: scale(1.06); }
+  55% { filter: grayscale(.8) contrast(1) brightness(1); }
+  100% { filter: none; transform: none; }
+}
+
+/* rooms: photo-chapters on the dark band */
+.dark { background: var(--dark); color: var(--bg); }
+.dark :focus-visible { outline-color: var(--bg); }
+.dark .head p { color: color-mix(in oklab, var(--bg) 82%, var(--dark)); }
+.ph__list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.ph__ch { display: grid; gap: 8px; align-content: start; }
+.ph__pic { margin: 0 0 12px; overflow: hidden; border-radius: var(--r); background: color-mix(in oklab, var(--bg) 10%, var(--dark)); }
+.ph__pic img { width: 100%; height: auto; aspect-ratio: 4 / 5; max-height: 52svh; object-fit: cover; }
+.ph__ch h3 { font-size: 25px; }
+.ph__ch p { max-width: 40ch; }
+[data-moment="photo-chapters"].is-live { height: calc(3 * var(--screen)); padding: 0; }
+.is-live .ph { position: sticky; top: 0; height: var(--screen); padding: calc(var(--nav) + 40px) 0 40px; display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 32px; overflow: clip; }
+.is-live .head { margin-bottom: 0; }
+.is-live .ph__stage { position: relative; min-height: 0; overflow: clip; border-radius: var(--r); background: color-mix(in oklab, var(--bg) 10%, var(--dark)); }
+.is-live .ph__stage > .ph__pic { position: absolute; inset: 0; margin: 0; clip-path: inset(var(--c, 0%) 0 0 0); }
+.is-live .ph__stage > .ph__pic img { width: 100%; height: 100%; aspect-ratio: auto; max-height: none; transform: scale(var(--z, 1)); transform-origin: 50% 100%; }
+.is-live .ph__panel { position: absolute; z-index: 1; left: 24px; bottom: 24px; width: min(440px, calc(100% - 48px)); padding: 28px 32px 32px; background: var(--bg); color: var(--ink); border-radius: var(--r); display: grid; gap: 12px; }
+.ph__count { font: 500 14px/1 var(--font-text); font-variant-numeric: tabular-nums; color: var(--muted); }
+.is-live .ph__list { display: grid; grid-template-columns: 1fr; gap: 0; }
+.is-live .ph__ch { grid-area: 1 / 1; }
+.is-live .ph__words { opacity: 0; transform: translateY(8px); transition: opacity 220ms ease, transform 220ms ease; }
+.is-live .ph__ch.is-on .ph__words { opacity: 1; transform: none; transition: opacity 420ms var(--ease-enter) 60ms, transform 520ms var(--ease-enter) 60ms; }
+.ph__words { display: grid; gap: 8px; }
+
+/* cleaning: tall-small, the tall photograph on the left line, the words and a small one at the right */
+.tall { grid-column: 1 / span 5; aspect-ratio: 4 / 5; max-height: calc(var(--screen) - var(--padt) - var(--padb)); }
+.tall-side { grid-column: 7 / -1; display: grid; grid-template-rows: auto 1fr; gap: 32px; }
+.rows { display: grid; }
+.row { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.row:first-child { border-top: 1px solid var(--line); }
+.row dt { font-weight: 500; }
+.tall-foot { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--gap); align-items: end; }
+.tall-foot p { grid-column: 1 / span 3; font-size: 15px; color: var(--muted); }
+.tall-foot .frame { grid-column: 4 / -1; aspect-ratio: 1 / 1; }
+
+/* amber */
+.amber-text { grid-column: 1 / span 6; display: grid; gap: 22px; align-content: start; }
+.amber-text > p { font-size: 19px; line-height: 1.6; max-width: 42ch; }
+.amber-text blockquote { margin: 8px 0 0; font: 400 24px/1.3 var(--font-display); max-width: 26ch; }
+.amber-photo { grid-column: 7 / -1; aspect-ratio: 8 / 9; max-height: calc(var(--screen) - var(--padt) - var(--padb)); }
+.amber-photo img { object-position: 50% 20%; }
+
+/* quote: the form on the page ground, underlined fields */
+.quote-main { grid-column: 1 / span 7; }
+.quote-side { grid-column: 9 / -1; display: grid; gap: 24px; align-content: start; }
+.form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px var(--gap); }
+.field { display: grid; gap: 4px; align-content: start; }
+.field--full { grid-column: 1 / -1; }
+.field label { font: 500 14px/1.3 var(--font-text); color: var(--muted); }
+.field input, .field select, .field textarea { width: 100%; min-height: 48px; padding: 10px 0; font: 400 18px/1.4 var(--font-text); color: var(--ink);
+  background: transparent; border: 0; border-bottom: 1px solid var(--line-strong); border-radius: 0; transition: border-color 140ms var(--ease), box-shadow 140ms var(--ease); }
+.field select { appearance: auto; }
+.field textarea { min-height: 88px; resize: vertical; }
+.field :is(input, select, textarea):focus-visible { outline: none; border-bottom-color: var(--action); box-shadow: 0 2px 0 0 var(--action); }
+.field [aria-invalid="true"] { border-bottom-color: #a3302a; }
+.field__error { color: #9a2c25; font-size: 15px; }
+.form__foot { grid-column: 1 / -1; display: grid; gap: 10px; }
+.form__note { font-size: 15px; color: var(--muted); }
+.form__status { font-size: 15px; min-height: 1em; }
+.contacts { display: grid; }
+.contacts a { display: grid; gap: 2px; padding: 14px 0; border-bottom: 1px solid var(--line); text-decoration: none; min-height: 44px; overflow-wrap: anywhere; }
+.contacts a:first-child { border-top: 1px solid var(--line); }
+.contacts small { font-size: 14px; color: var(--muted); }
+.contacts span { font-size: 18px; }
+.contacts a:hover span { text-decoration: underline; text-underline-offset: 4px; }
+.quote-side .frame { aspect-ratio: 4 / 3; }
+
+/* closing: close-photo, then the directory */
+footer.closing { padding: var(--padt) 0 32px; }
+footer.closing > .wrap { display: grid; grid-template-rows: auto 1fr auto; gap: 40px; }
+.close-photo { aspect-ratio: 16 / 7; }
+@media (min-width: 1024px) { footer.closing { min-height: var(--screen); } footer.closing > .wrap { min-height: calc(var(--screen) - var(--padt) - 32px); } .close-photo { aspect-ratio: auto; min-height: 240px; } }
+.close-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px; }
+.close-head h2 { font-size: clamp(38px, 4.8vw, 68px); }
+.close-head p { font-size: var(--t-lead); margin-top: 12px; }
+.close-photo { width: 100%; }
+.close-photo img { position: absolute; inset: 0; object-position: 50% 45%; }
+.dir { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 32px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 15px; }
+.dir__links { display: flex; flex-wrap: wrap; gap: 0 24px; }
+.dir a { text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.dir a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.dir .place { display: inline-flex; align-items: center; min-height: 44px; }
+.legal { width: 100%; font-size: 14px; color: var(--muted); }
+
+@media (max-width: 1023px) {
+  .split-text, .split-photo, .tall, .tall-side, .amber-text, .amber-photo, .quote-main, .quote-side { grid-column: 1 / -1; }
+  .split-photo, .amber-photo { aspect-ratio: 4 / 3; }
+  .tall { aspect-ratio: 4 / 3; order: 2; }
+  .ph__list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .quote-side .frame { display: none; }
+}
+@media (max-width: 639px) {
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .grid > * { grid-column: 1 / -1 !important; }
+  .hero__bg { position: relative; inset: auto; margin-top: var(--nav); height: 40svh; min-height: 260px; }
+  .hero .wrap { padding: 0 0 32px; }
+  .hero__box { padding: 28px 0 0; }
+  .hero .btn-row .btn--primary { width: 100%; }
+  .sense li { font-size: 22px; }
+  .split-photo, .amber-photo { aspect-ratio: 4 / 5; }
+  .ph__list { grid-template-columns: 1fr; gap: 40px; }
+  .ph__pic img { aspect-ratio: 4 / 3; max-height: none; }
+  .row { grid-template-columns: 1fr; gap: 2px; }
+  .tall-foot { grid-template-columns: 1fr 1fr; }
+  .tall-foot p { grid-column: 1 / -1; }
+  .tall-foot .frame { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+  .form { grid-template-columns: 1fr; }
+  .form__foot .btn { width: 100%; }
+  .is-live .ph__panel { left: 12px; right: 12px; bottom: 12px; width: auto; padding: 20px; }
+  .close-head .btn { width: 100%; }
+}
+
+/* the hero's entrance */
+@media (prefers-reduced-motion: no-preference) {
+  .hero__bg img { animation: m-settle 1100ms var(--ease-enter) both; }
+}
+@keyframes m-rise { from { transform: translateY(110%); } to { transform: none; } }
+@keyframes m-fade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes m-settle { from { transform: scale(1.05); } to { transform: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0ms !important; animation: none !important; } }
+/* Quote draft stays usable when the device has no SMS handler. */
+#quote-form .quote-draft { grid-column: 1 / -1; margin-block-start: 14px; }
+#quote-form .quote-fallback, #quote-form .quote-copy {
+  display: inline-flex; min-height: 44px; max-width: 100%; align-items: center;
+  padding: 5px 0; color: inherit; font: inherit; text-align: left;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+#quote-form .quote-fallback, #quote-form .quote-copy {
+  background: transparent; border: 0; box-shadow: none; cursor: pointer; margin: 0;
+}
+#quote-form .quote-draft-actions { display: flex; flex-wrap: wrap; gap: 0 20px; }
+#quote-form .quote-draft label { display: block; margin: 0 0 6px; }
+#quote-form .quote-draft textarea { display: block; width: 100%; min-height: 8em; }
+#quote-form .quote-draft [role="status"] { margin: 0; }
+#quote-form .quote-draft[hidden] { display: none; }
+#quote-form :is(.quote-fallback,.quote-copy):focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px;
+}
+#quote-form :is(input:not([type="radio"]),select,textarea) { min-width: 0; min-height: 44px; font-size: max(16px, 1em); }
+.hero__bg img{object-position:50% 54%}
+#quote-form :is(input,select,textarea){border-color:#69645e}
+@media(max-width:639px){.hero .wrap{order:-1;padding-top:calc(var(--nav) + 24px)}.hero__bg{margin-top:0;min-height:200px;height:32svh}}
+
+.sheet {bottom:auto;max-height:calc(100dvh - var(--nav));overflow:auto;border-bottom:1px solid currentColor}
+</style>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<link rel="stylesheet" href="../../assets/preview.css">
+</head>
+<body>
+<aside class="mgt-preview-bar mgt-preview-fixed" id="design-preview" aria-label="Preview navigation">
+  <a class="mgt-preview-back" href="../../index.html#s-12">← All designs</a>
+  <span>Design preview <span aria-hidden="true">·</span> Quotes are simulated</span>
+</aside>
+
+<!-- kind: service. deal: hero photo (the kitchen full bleed, words in a solid box) · palette three-stones (stone, marble and a sage accent, the greys of the client's own rooms) · type Gloock + Red Hat Text · nav: words beside the button, no panel · footer-columns · close-photo · rhythm dark-band · buttons arrow · mark wordmark · moments picture-develops (the scrubbed tub comes up out of grey) and photo-chapters (a walk through three rooms) -->
+<header class="nav">
+  <div class="wrap">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <a class="brand" href="#top" aria-label="Mom's Got This Cleaning Co., back to the top"><span class="brand__name">Mom's Got This</span><span class="brand__sub">Cleaning Co.</span></a>
+    <div class="nav__end">
+      <ul class="nav__words">
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#cleaning">Cleaning</a></li>
+        <li><a href="#amber">Amber</a></li>
+      </ul>
+      <a class="btn btn--primary" href="#quote">Get a free quote <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h9"/><path class="m-arrow__head" d="M6.5 2.5L10 6l-3.5 3.5"/></svg></a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="sheet">Menu</button>
+    </div>
+  </div>
+</header>
+<nav class="sheet" id="sheet" aria-label="Mobile navigation" hidden>
+  <ul>
+    <li><a href="#rooms">Rooms</a></li>
+    <li><a href="#cleaning">Cleaning</a></li>
+    <li><a href="#amber">Amber</a></li>
+    <li><a href="#quote">Get a free quote</a></li>
+  </ul>
+</nav>
+
+<main id="top">
+  <section class="hero" data-enter aria-labelledby="hero-h">
+    <div class="hero__bg"><img src="../../images/bathroom.webp" width="1125" height="1500" fetchpriority="high" alt="A client’s bathroom with clear shower glass, a freestanding tub and a clean tile floor"></div>
+    <div class="wrap">
+      <div class="hero__box">
+        <h1 id="hero-h">House cleaning around Kansas City</h1>
+        <p class="hero__lead" data-rise>You open the door and the counters are clear, the floors are clean, and the mirror shows you instead of toothpaste. I’ll take care of it.</p>
+        <div class="btn-row" data-rise>
+          <a class="btn btn--primary" href="#quote">Get a free quote <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h9"/><path class="m-arrow__head" d="M6.5 2.5L10 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="#design-preview" data-preview-contact><span>Call 816-715-4322</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bath" aria-labelledby="bath-h">
+    <div class="wrap grid">
+      <div class="split-text">
+        <h2 id="bath-h">Your bathroom, after</h2>
+        <ul class="sense">
+          <li>You switch on the light and the tub is white all the way down, jets included.</li>
+          <li>The shower glass is clear enough to forget it's there.</li>
+          <li>The floor is dry under your feet.</li>
+          <li>You brush your teeth without moving anything first.</li>
+        </ul>
+      </div>
+      <a class="split-photo frame m-zoom develop" data-moment="picture-develops" href="../../images/bathtub.webp">
+        <img src="../../images/bathtub.webp" width="1125" height="1500" style="object-position: 50% 55%" alt="A scrubbed white jetted bathtub in a client's bathroom">
+      </a>
+    </div>
+  </section>
+
+  <section id="rooms" class="dark" data-moment="photo-chapters" aria-labelledby="rooms-h">
+    <div class="wrap ph">
+      <div class="head">
+        <h2 id="rooms-h">Three rooms after I’ve cleaned</h2>
+        <p>Real client homes, shown with the homeowners' permission.</p>
+      </div>
+      <ol class="ph__list">
+        <li class="ph__ch">
+          <figure class="ph__pic"><img src="../../images/living-room.webp" width="1125" height="1500" alt="A tall great room with black beams over a long, clear wood floor"></figure>
+          <h3>The great room</h3>
+          <p>You can see the floor all the way to the back windows. Nothing crunches on the way.</p>
+        </li>
+        <li class="ph__ch">
+          <figure class="ph__pic"><img src="../../images/bedroom.webp" width="1500" height="1125" style="object-position: 35% 50%" alt="A bright bedroom with a made bed and grey carpet"></figure>
+          <h3>The bedroom</h3>
+          <p>The bed is made. The carpet has lines in it, and you're the first one to walk on them.</p>
+        </li>
+        <li class="ph__ch">
+          <figure class="ph__pic"><img src="../../images/playroom.webp" width="1125" height="1500" style="object-position: 50% 65%" alt="A kids' playroom with toys on the shelves, a play kitchen and a red slide"></figure>
+          <h3>The playroom</h3>
+          <p>The toys are back on their shelves and the play kitchen is open again. It won't last. It's nice while it does.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="cleaning" aria-labelledby="cleaning-h">
+    <div class="wrap grid">
+      <a class="tall frame m-zoom" href="../../images/vanity.webp"><img src="../../images/vanity.webp" width="1125" height="1500" style="object-position: 50% 60%" alt="A double vanity and a white marble floor"></a>
+      <div class="tall-side">
+        <div>
+          <div class="head">
+            <h2 id="cleaning-h">Cleaning plans I quote for your home</h2>
+            <p>Every house is quoted on its own, and the quote is free.</p>
+          </div>
+          <dl class="rows">
+            <div class="row"><dt>Weekly</dt><dd>The same visit every week.</dd></div>
+            <div class="row"><dt>Biweekly</dt><dd>Every other week.</dd></div>
+            <div class="row"><dt>One-time</dt><dd>One visit, when you need it.</dd></div>
+            <div class="row"><dt>Deep cleaning</dt><dd>A full reset for the whole house.</dd></div>
+          </dl>
+        </div>
+        <div class="tall-foot">
+          <p>Not sure which one fits? Tell me on the form and I’ll help you choose.</p>
+          <a class="frame m-zoom" href="../../images/shower.webp"><img src="../../images/shower.webp" width="1125" height="1500" style="object-position: 50% 45%" alt="A glass shower with clean tile"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="amber" aria-labelledby="amber-h">
+    <div class="wrap grid">
+      <div class="amber-text">
+        <h2 id="amber-h">I’m the person at your door</h2>
+        <p>I’m Amber. I own Mom’s Got This and do the cleaning myself. With four kids, I know what a full week does to a house.</p>
+        <p>I treat your home the way I’d want mine treated. Ask me for references if you’d like to speak with a client.</p>
+        <blockquote>“Because sometimes, even moms need someone to say, ‘Don't worry, I've got this!’”</blockquote>
+      </div>
+      <figure class="amber-photo frame"><img src="../../images/owner.webp" width="880" height="1100" alt="Amber, owner of Mom's Got This Cleaning Co., smiling in a white blazer"></figure>
+    </div>
+  </section>
+
+  <section id="quote" aria-labelledby="quote-h">
+    <div class="wrap grid">
+      <div class="quote-main">
+        <div class="head">
+          <h2 id="quote-h">Your house, described in one text</h2>
+          <p>Use sample details to try this form. It shows a draft on this page.</p>
+        </div>
+        <noscript><p>Enable JavaScript to try the sample quote form.</p></noscript>
+      <form autocomplete="off" class="form" id="quote-form" novalidate>
+          <div class="field"><label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" required aria-describedby="f-name-err">
+            <p class="field__error" id="f-name-err" hidden>Write your name.</p></div>
+          <div class="field"><label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" required aria-describedby="f-phone-err">
+            <p class="field__error" id="f-phone-err" hidden>Write a phone number with the area code.</p></div>
+          <div class="field"><label for="f-area">City or neighborhood</label>
+            <input id="f-area" name="area" type="text" required aria-describedby="f-area-err">
+            <p class="field__error" id="f-area-err" hidden>Write the city or neighborhood the house is in.</p></div>
+          <div class="field"><label for="f-type">Type of cleaning</label>
+            <select id="f-type" name="type">
+              <option>Weekly</option><option>Biweekly</option><option>One-time</option><option>Deep cleaning</option><option selected>Not sure yet</option>
+            </select></div>
+          <div class="field field--full"><label for="f-details">Home size and what you need (optional)</label>
+            <textarea id="f-details" name="details" aria-describedby="f-details-hint"></textarea>
+            <p class="hint" id="f-details-hint">Bedrooms, bathrooms, pets, or a room that needs extra attention.</p></div>
+          <div class="form__foot">
+            <div class="btn-row"><button class="btn btn--primary" type="submit">Preview quote text <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h9"/><path class="m-arrow__head" d="M6.5 2.5L10 6l-3.5 3.5"/></svg></button></div>
+            <p class="form__note">Use sample details to try this form. It shows a draft on this page.</p>
+            <p class="form__status" role="status" data-form-status></p>
+          </div>
+        <div class="quote-draft">
+          <button type="submit" class="quote-fallback" aria-controls="quote-draft" aria-expanded="false">Preview email draft</button>
+        </div>
+        <div id="quote-draft" class="quote-draft" hidden>
+          <label for="quote-draft-text">Your quote request</label>
+          <textarea id="quote-draft-text" rows="6" readonly></textarea>
+          <div class="quote-draft-actions">
+            <button type="button" class="quote-copy">Copy sample draft</button>
+
+          </div>
+          <p class="quote-draft-status" role="status"></p>
+        </div>
+      </form>
+      </div>
+      <div class="quote-side">
+        <div class="contacts">
+          <a href="#design-preview" data-preview-contact><small>Call</small><span>816-715-4322</span></a>
+          <a href="#design-preview" data-preview-contact><small>Text</small><span>Text me directly</span></a>
+          <a href="#design-preview" data-preview-contact><small>Email</small><span>momsgothiscleaningco@gmail.com</span></a>
+          <a href="#design-preview" data-preview-contact rel="noopener"><small>Facebook</small><span>Mom's Got This Cleaning Co.</span></a>
+        </div>
+        <a class="frame m-zoom" href="../../images/bathroom.webp"><img src="../../images/bathroom.webp" width="1125" height="1500" style="object-position: 50% 55%" alt="A glass shower room with a freestanding tub and a black tiled wall"></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="closing" id="contact">
+  <div class="wrap">
+    <div class="close-head">
+      <div>
+        <h2>Come home to a finished house</h2>
+        <p>Free quotes for homes around Kansas City.</p>
+      </div>
+      <a class="btn btn--primary btn--xl" href="#quote">Get a free quote <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h9"/><path class="m-arrow__head" d="M6.5 2.5L10 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="close-photo frame"><img src="../../images/staircase.webp" width="1500" height="1125" alt="Looking up a modern staircase toward a tall grid of windows"></div>
+    <div class="dir">
+      <span class="brand"><span class="brand__name">Mom's Got This Cleaning Co.</span></span>
+      <div class="dir__links">
+        <span class="place">Kansas City area</span>
+        <a href="#design-preview" data-preview-contact>816-715-4322</a>
+        <a href="#design-preview" data-preview-contact>momsgothiscleaningco@gmail.com</a>
+        <a href="#design-preview" data-preview-contact rel="noopener">Facebook</a>
+      </div>
+      <p class="legal">© <span id="year">2026</span> Mom's Got This Cleaning Co.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../assets/preview.js" defer></script>
+<script src="page.js" defer></script>
+</body>
+</html>

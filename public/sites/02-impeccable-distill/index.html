@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preview · Mom's Got This Cleaning Co. — House cleaning around Kansas City</title>
+<!-- MGT-OG -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mom's Got This Cleaning Co.">
+<meta property="og:title" content="Preview · Mom&#x27;s Got This Cleaning Co. — House cleaning around Kansas City">
+<meta property="og:description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /MGT-OG -->
+<meta name="description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..600;1,300..400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#EFEFEA;
+  --stone:#E2E3DC;
+  --ink:#1C201E;
+  --quiet:#555B57;
+  --line:#C3C6BE;
+  --moss:#2F4A3F;
+  --ease:cubic-bezier(.25,1,.5,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 1.0625rem/1.7 "Jost","Segoe UI",sans-serif;caret-color:var(--moss)}
+::selection{background:var(--ink);color:var(--ground)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.3em;text-decoration-color:var(--line);transition:text-decoration-color .3s}
+a:hover{text-decoration-color:var(--ink)}
+:focus-visible{outline:2px solid var(--moss);outline-offset:4px}
+h1,h2{font-weight:300;line-height:1.08;letter-spacing:-.02em;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--ground);padding:10px 16px;z-index:10}
+.skip:focus{left:8px}
+
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-block:28px}
+.mark{font-weight:500;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+header nav a{font-size:.95rem;min-height:44px;display:inline-flex;align-items:center}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 2em;background:var(--ink);color:var(--ground);border:1px solid var(--ink);border-radius:0;font:500 1rem/1 "Jost",sans-serif;letter-spacing:.04em;text-decoration:none;cursor:pointer;transition:background-color .4s var(--ease),color .4s var(--ease)}
+.btn:hover{background:var(--moss);border-color:var(--moss);color:#fff}
+
+/* first view */
+.intro{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:end;padding:72px 0 64px}
+.intro h1{font-size:clamp(2.7rem,6vw,5.4rem)}
+.intro .aside p{color:var(--quiet);max-width:24em;margin-bottom:28px}
+.hero-img{width:100%;height:min(78vh,760px);object-fit:cover;object-position:50% 72%;animation:settle 2.2s var(--ease) both}
+@keyframes settle{from{transform:scale(1.035);filter:saturate(.6)}to{transform:none;filter:none}}
+.hero-frame{overflow:hidden}
+
+section{padding:136px 0}
+.services{display:grid;grid-template-columns:1fr 2fr;gap:48px}
+.photos h2{margin-bottom:20px}
+.pair.first{margin-top:56px}
+.services h2,.photos h2,.amber h2,.quote h2{font-size:clamp(2rem,3.6vw,3.1rem)}
+.services dl{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 48px;margin:0}
+.services dl div{border-top:1px solid var(--line);padding-top:18px}
+.services dt{font-weight:500;font-size:1.15rem}
+.services dd{margin:4px 0 0;color:var(--quiet)}
+.services .fine{grid-column:2;color:var(--quiet);margin:0}
+
+/* photographs */
+.photos{padding-top:0}
+.photos figure{margin:0}
+.photos figcaption{font-size:.9rem;color:var(--quiet);margin-top:12px}
+.pair{display:grid;grid-template-columns:7fr 5fr;gap:24px;align-items:end;margin-bottom:120px}
+.pair .tall img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.pair .wide img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.pair.flip{grid-template-columns:5fr 7fr}
+.pair img.bed{object-position:22% 70%}
+.bleed img{width:100%;height:min(86vh,820px);object-fit:cover;object-position:50% 40%}
+.photos .bleed{margin-bottom:120px}
+.bleed figcaption{width:min(1240px,100% - 48px);margin-inline:auto}
+.permission{color:var(--quiet);font-size:.95rem;max-width:30em}
+
+.amber{background:var(--stone)}
+.amber .wrap{display:grid;grid-template-columns:5fr 6fr;gap:9%;align-items:center}
+.amber img{aspect-ratio:4/5;object-fit:cover;width:100%;max-width:460px}
+.amber h2{margin-bottom:28px}
+.amber p{max-width:32em}
+.amber blockquote{margin:40px 0 0;font-style:italic;font-weight:300;font-size:clamp(1.3rem,2vw,1.6rem);line-height:1.45;max-width:24em}
+.amber cite{display:block;font-style:normal;font-size:.95rem;color:var(--quiet);margin-top:10px}
+
+.quote .wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:48px}
+.quote .lead{color:var(--quiet);max-width:22em;margin-top:20px}
+.quote .other{margin-top:36px;font-size:.98rem;line-height:2.2}
+.quote .other a{display:inline-flex;min-height:44px;align-items:center}
+form{display:grid;grid-template-columns:1fr 1fr;gap:34px 40px}
+.full{grid-column:1/-1}
+label,legend{display:block;font-size:.88rem;letter-spacing:.06em;color:var(--quiet);padding:0;margin-bottom:6px}
+input,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid #8C918B;border-radius:0;padding:8px 0 10px;font:400 1.15rem/1.4 "Jost",sans-serif;color:var(--ink);transition:border-color .3s}
+textarea{min-height:110px;resize:vertical}
+input:focus,textarea:focus{outline:none;border-bottom-color:var(--ink);box-shadow:0 1px 0 var(--ink)}
+input::placeholder,textarea::placeholder{color:#646A65}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.kinds{display:flex;flex-wrap:wrap;gap:10px}
+.kinds input{position:absolute;opacity:0;width:1px;height:1px}
+.kinds span{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border:1px solid var(--line);font-size:1rem;color:var(--ink);cursor:pointer;transition:border-color .3s,background-color .3s,color .3s}
+.kinds label{margin:0;letter-spacing:0}
+.kinds label:hover span{border-color:var(--ink)}
+.kinds input:checked + span{background:var(--ink);border-color:var(--ink);color:var(--ground)}
+.kinds input:focus-visible + span{outline:2px solid var(--moss);outline-offset:3px}
+.send{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px}
+.send p{margin:0;font-size:.92rem;color:var(--quiet);max-width:24em;line-height:1.5}
+.status{grid-column:1/-1;margin:0;min-height:1.7em;color:var(--moss)}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;padding-block:40px;font-size:.92rem;color:var(--quiet)}
+footer a{display:inline-flex;min-height:44px;align-items:center}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0 24px}
+footer p{margin:0;display:flex;align-items:center;min-height:44px}
+
+@media (max-width:900px){
+  .intro,.services,.amber .wrap,.quote .wrap{grid-template-columns:1fr}
+  .services .fine{grid-column:1}
+  .intro{padding:40px 0 44px;gap:28px}
+  section{padding:96px 0}
+  .pair,.pair.flip{grid-template-columns:1fr;gap:56px;margin-bottom:72px}
+  .photos .bleed{margin-bottom:72px}
+}
+@media (max-width:600px){
+  .wrap{width:min(1240px,100% - 40px)}
+  header .wrap{padding-block:16px}
+  .mark{font-size:.74rem;letter-spacing:.12em}
+  .hero-img{height:auto;aspect-ratio:4/5;max-height:560px;object-position:58% 74%}
+  .intro .aside p{margin-bottom:22px}
+  .services dl{grid-template-columns:1fr;gap:28px}
+  form{grid-template-columns:1fr;gap:30px}
+  .bleed img{height:auto;aspect-ratio:4/5}
+  section{padding:80px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+/* Quote draft stays usable when the device has no SMS handler. */
+#quote-form .quote-draft { grid-column: 1 / -1; margin-block-start: 14px; }
+#quote-form .quote-fallback, #quote-form .quote-copy {
+  display: inline-flex; min-height: 44px; max-width: 100%; align-items: center;
+  padding: 5px 0; color: inherit; font: inherit; text-align: left;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+#quote-form .quote-fallback, #quote-form .quote-copy {
+  background: transparent; border: 0; box-shadow: none; cursor: pointer; margin: 0;
+}
+#quote-form .quote-draft-actions { display: flex; flex-wrap: wrap; gap: 0 20px; }
+#quote-form .quote-draft label { display: block; margin: 0 0 6px; }
+#quote-form .quote-draft textarea { display: block; width: 100%; min-height: 8em; }
+#quote-form .quote-draft [role="status"] { margin: 0; }
+#quote-form .quote-draft[hidden] { display: none; }
+#quote-form :is(.quote-fallback,.quote-copy):focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px;
+}
+#quote-form :is(input:not([type="radio"]),select,textarea) { min-width: 0; min-height: 44px; font-size: max(16px, 1em); }
+</style>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<link rel="stylesheet" href="../../assets/preview.css">
+</head>
+<body>
+<aside class="mgt-preview-bar" id="design-preview" aria-label="Preview navigation">
+  <a class="mgt-preview-back" href="../../index.html#s-02">← All designs</a>
+  <span>Design preview <span aria-hidden="true">·</span> Quotes are simulated</span>
+</aside>
+
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <a class="mark" href="#main">Mom's Got This Cleaning Co.</a>
+    <nav aria-label="Main"><a href="#quote">Get a free quote</a></nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap intro">
+    <h1>The cleaning’s done. Take a minute.</h1>
+    <div class="aside">
+      <p>I’m Amber. I clean homes around Kansas City. Ask me for a free quote for regular cleaning or a single visit.</p>
+      <a class="btn" href="#quote">Get a free quote</a>
+    </div>
+  </div>
+  <div class="hero-frame">
+    <img class="hero-img" src="../../images/bathroom.webp" width="1125" height="1500" alt="A quiet, spotless bathroom: glass shower walls, white marble floor and a freestanding tub against a dark tiled wall">
+  </div>
+
+  <section aria-labelledby="services-title">
+    <div class="wrap services">
+      <h2 id="services-title">How often would you like help?</h2>
+      <dl>
+        <div><dt>Weekly</dt><dd>The house kept, every week.</dd></div>
+        <div><dt>Biweekly</dt><dd>A steady reset, every other week.</dd></div>
+        <div><dt>One-time</dt><dd>Once, whenever you need it.</dd></div>
+        <div><dt>Deep</dt><dd>Top to bottom. A full reset.</dd></div>
+      </dl>
+      <p class="fine">Every home is different, so every quote is made for yours.</p>
+    </div>
+  </section>
+
+  <section class="photos" aria-labelledby="photos-title">
+    <div class="wrap">
+      <h2 id="photos-title">After I’ve been through.</h2>
+      <p class="permission">Every photograph is a client's own home, shown with the homeowner's permission.</p>
+    </div>
+    <div class="wrap pair first">
+      <figure class="tall"><img src="../../images/bathtub.webp" width="1125" height="1500" loading="lazy" alt="Close view of a spotless white jetted tub"><figcaption>Tub</figcaption></figure>
+      <figure class="wide"><img class="bed" src="../../images/bedroom.webp" width="1500" height="1125" loading="lazy" alt="A bright bedroom with a freshly made white bed and clean grey carpet"><figcaption>Bedroom</figcaption></figure>
+    </div>
+    <figure class="bleed"><img src="../../images/living-room.webp" width="1125" height="1500" loading="lazy" alt="Tall great room with black beams, a vaulted ceiling and long clean wood floors"><figcaption>Great room</figcaption></figure>
+    <div class="wrap pair flip">
+      <figure class="wide"><img src="../../images/vanity.webp" width="1125" height="1500" loading="lazy" alt="Double vanity with dark cabinets above a white marble floor"><figcaption>Vanity</figcaption></figure>
+      <figure class="tall"><img src="../../images/sitting-room.webp" width="1125" height="1500" loading="lazy" alt="Sitting room with an orange sofa, zebra rug and French doors"><figcaption>Sitting room</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="amber" aria-labelledby="amber-title">
+    <div class="wrap">
+      <img src="../../images/owner.webp" width="880" height="1100" loading="lazy" alt="Portrait of Amber, owner of Mom's Got This Cleaning Co., smiling, in a white blazer">
+      <div>
+        <h2 id="amber-title">I do the cleaning myself.</h2>
+        <p>I’m a mom of four. I know how full a week gets. I started Mom’s Got This so you could come home to a clean house instead of one more list.</p>
+        <p>I take care of the details I’d want someone to notice in my own home. Ask me for references if you’d like them.</p>
+        <blockquote>“Because sometimes, even moms need someone to say, ‘Don't worry, I've got this!’”<cite>Amber</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote" id="quote" aria-labelledby="quote-title">
+    <div class="wrap">
+      <div>
+        <h2 id="quote-title">Request a quote.</h2>
+        <p class="lead">Tell me a little about your home and I’ll reply with a free quote.</p>
+        <p class="other">Or <a href="#design-preview" data-preview-contact>call 816-715-4322</a> or <a href="#design-preview" data-preview-contact>text me</a><br>
+          <a href="#design-preview" data-preview-contact>momsgothiscleaningco@gmail.com</a><br>
+          <a href="#design-preview" data-preview-contact rel="noopener">Facebook</a></p>
+      </div>
+      <noscript><p>Enable JavaScript to try the sample quote form.</p></noscript>
+      <form autocomplete="off" id="quote-form" novalidate>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" required></div>
+        <div class="full"><label for="f-area">City or neighborhood</label><input id="f-area" name="area"></div>
+        <fieldset class="full">
+          <legend>Cleaning</legend>
+          <div class="kinds">
+            <label><input type="radio" name="kind" value="Weekly"><span>Weekly</span></label>
+            <label><input type="radio" name="kind" value="Biweekly"><span>Biweekly</span></label>
+            <label><input type="radio" name="kind" value="One-time"><span>One-time</span></label>
+            <label><input type="radio" name="kind" value="Deep clean"><span>Deep</span></label>
+            <label><input type="radio" name="kind" value="Not sure"><span>Not sure</span></label>
+          </div>
+        </fieldset>
+        <div class="full"><label for="f-home">Home size and needs (optional)</label><textarea id="f-home" name="home" placeholder="Bedrooms, bathrooms, anything to know"></textarea></div>
+        <div class="full send">
+          <button class="btn" type="submit">Preview quote text</button>
+          <p>Use sample details to try this form. It shows a draft on this page.</p>
+        </div>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      <div class="quote-draft">
+          <button type="submit" class="quote-fallback" aria-controls="quote-draft" aria-expanded="false">Preview email draft</button>
+        </div>
+        <div id="quote-draft" class="quote-draft" hidden>
+          <label for="quote-draft-text">Your quote request</label>
+          <textarea id="quote-draft-text" rows="6" readonly></textarea>
+          <div class="quote-draft-actions">
+            <button type="button" class="quote-copy">Copy sample draft</button>
+
+          </div>
+          <p class="quote-draft-status" role="status"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Mom's Got This Cleaning Co. · Kansas City area</p>
+    <ul>
+      <li><a href="#design-preview" data-preview-contact>816-715-4322</a></li>
+      <li><a href="#design-preview" data-preview-contact>momsgothiscleaningco@gmail.com</a></li>
+    </ul>
+    <p>© <span id="year">2026</span></p>
+  </div>
+</footer>
+
+
+
+
+<script src="../../assets/preview.js" defer></script>
+<script src="page.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preview · Mom's Got This Cleaning Co. — House cleaning around Kansas City</title>
+<!-- MGT-OG -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mom's Got This Cleaning Co.">
+<meta property="og:title" content="Preview · Mom&#x27;s Got This Cleaning Co. — House cleaning around Kansas City">
+<meta property="og:description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /MGT-OG -->
+<meta name="description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F4F3EE;
+    --paper-light: #FAFAF7;
+    --stone: #DCDED6;
+    --stone-dark: #C3C8BE;
+    --river: #8A938C;
+    --moss: #3F5B45;
+    --pine: #1F3A30;
+    --pine-dark: #162A22;
+    --lichen: #C9D3B8;
+    --ink: #1E2622;
+    --ink-soft: #4A554F;
+    --error: #A3261B;
+    --head: "Archivo", "Arial", sans-serif;
+    --body: "Source Sans 3", "Segoe UI", sans-serif;
+    --ease: cubic-bezier(.22, .61, .36, 1);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-bottom: 90px; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    font: 400 1.125rem/1.6 var(--body);
+    overflow-x: hidden;
+    /* stone grain lives in the page background only, never over photos */
+    background-color: var(--paper);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .12 0 0 0 0 .16 0 0 0 0 .14 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--moss); text-underline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--head); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; margin: 0; color: var(--pine); }
+  h2 { font-size: clamp(1.9rem, 3.8vw, 3rem); }
+  p { margin: 0; }
+  :focus-visible { outline: 3px solid var(--moss); outline-offset: 3px; }
+  .skip { position: absolute; left: 16px; top: -60px; background: var(--pine); color: var(--paper); padding: 12px 18px; z-index: 200; }
+  .skip:focus { top: 12px; }
+  .wrap { width: min(1220px, 100% - 32px); margin-inline: auto; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 52px; padding: 12px 26px; border-radius: 999px; border: 2px solid var(--pine);
+    background: var(--pine); color: var(--paper-light);
+    font: 600 1.05rem/1.2 var(--head); text-decoration: none; cursor: pointer;
+    transition: background-color .25s var(--ease), color .25s var(--ease);
+  }
+  .btn:hover { background: var(--moss); border-color: var(--moss); color: var(--paper-light); }
+  .btn-line { background: transparent; color: var(--pine); }
+  .btn-line:hover { background: var(--pine); border-color: var(--pine); }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+
+  /* header */
+  .masthead { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
+  .mark { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; text-decoration: none; color: var(--pine); font: 700 1.2rem/1.1 var(--head); letter-spacing: -.02em; }
+  .mark svg { width: 34px; height: 34px; flex: none; }
+  .masthead nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; align-items: center; }
+  .masthead nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; color: var(--ink); text-decoration: none; font-weight: 600; }
+  .masthead nav a:hover { color: var(--moss); text-decoration: underline; }
+  .masthead nav .btn { color: var(--paper-light); min-height: 46px; padding: 8px 20px; margin-left: 8px; text-decoration: none; }
+
+  /* hero */
+  .hero { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 88px); align-items: center; padding: 40px 0 80px; }
+  .hero h1 { font-size: clamp(2.2rem, 4.8vw, 4.1rem); }
+  .hero .lede { font-size: 1.22rem; color: var(--ink-soft); max-width: 40ch; margin-top: 20px; }
+  .who { display: flex; align-items: center; gap: 14px; margin-top: 24px; }
+  .who img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; object-position: 50% 18%; flex: none; border: 2px solid var(--stone-dark); }
+  .who p { line-height: 1.35; color: var(--ink-soft); }
+  .who b { color: var(--pine); }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px 14px; margin-top: 28px; }
+  /* arch + round photo, placed side by side so neither covers the other */
+  .hero-art { display: grid; grid-template-columns: .42fr 1fr; gap: 16px; align-items: end; }
+  .arch { border-radius: 50% 50% 22px 22px / 34% 34% 22px 22px; overflow: hidden; aspect-ratio: 3 / 4; background: var(--stone); }
+  .arch img { width: 100%; height: 100%; object-fit: cover; }
+  .round { border-radius: 50%; overflow: hidden; aspect-ratio: 1; background: var(--stone); }
+  .round img { width: 100%; height: 100%; object-fit: cover; }
+  .art-cap { grid-column: 1 / -1; text-align: right; margin-top: -4px; }
+  .hero-art figcaption, .caption { font-size: .98rem; color: var(--ink-soft); line-height: 1.35; }
+
+  section { padding: 88px 0; }
+
+  .why { background: var(--stone); }
+  .why-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px, 5vw, 72px); align-items: center; }
+  .why h2 { font-size: clamp(1.7rem, 3.2vw, 2.6rem); line-height: 1.2; font-weight: 500; }
+  .why p { margin-top: 22px; font-size: 1.15rem; color: var(--ink-soft); max-width: 56ch; }
+  .why .round { max-width: 380px; justify-self: center; width: 100%; }
+  .why .round img { object-position: 50% 30%; }
+
+  .amber { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(28px, 5vw, 72px); align-items: center; }
+  .amber .arch { aspect-ratio: 4 / 5; }
+  .amber .arch img { object-position: 50% 15%; }
+  .amber-text { display: grid; gap: 18px; }
+  .amber-text p { max-width: 58ch; }
+  .her-line { margin: 10px 0 0; padding: 22px 26px; background: var(--paper-light); border-left: 5px solid var(--moss); border-radius: 0 18px 18px 0; font: 500 clamp(1.25rem, 2.2vw, 1.6rem)/1.4 var(--head); color: var(--pine); letter-spacing: -.01em; }
+  .facts { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 4px 0 0; padding: 0; }
+  .facts li { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: var(--stone); font-weight: 600; font-size: 1rem; color: var(--pine); }
+  .facts svg { width: 18px; height: 18px; flex: none; }
+
+  .rooms-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 14px 48px; margin-bottom: 36px; }
+  .rooms-head p { max-width: 44ch; color: var(--ink-soft); }
+  .rooms { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; }
+  .rooms figure { margin: 0; display: grid; gap: 8px; align-content: start; }
+  .rooms img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; background: var(--stone); }
+  .r-stair { grid-column: 1 / 5; }
+  .r-stair img { aspect-ratio: 16 / 10; }
+  .r-shower { grid-column: 5 / 7; }
+  .r-shower img { aspect-ratio: 3 / 4.15; border-radius: 160px 160px 18px 18px; }
+  .r-kitchen { grid-column: 1 / 3; }
+  .r-play { grid-column: 3 / 5; }
+  .r-vanity { grid-column: 5 / 7; }
+  .r-kitchen img, .r-play img, .r-vanity img { aspect-ratio: 4 / 5; }
+  .r-kitchen img { object-position: 30% 50%; }
+  .r-bed { grid-column: 1 / 4; }
+  .r-sitting { grid-column: 4 / 7; }
+  .r-bed img, .r-sitting img { aspect-ratio: 3 / 2; }
+
+  .ways-band { background: var(--pine); color: var(--paper); }
+  .ways-band h2 { color: var(--paper-light); }
+  .ways-band .sub { color: var(--lichen); margin-top: 14px; font-size: 1.15rem; }
+  .ways { margin: 40px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .ways div { padding: 26px 24px 28px; border-radius: 22px; background: rgba(244, 243, 238, .07); border: 1px solid rgba(201, 211, 184, .35); display: grid; gap: 10px; align-content: start; }
+  .ways dt { font: 600 1.4rem/1.2 var(--head); color: var(--paper-light); letter-spacing: -.01em; }
+  .ways dd { margin: 0; color: #E3E8DC; }
+  .ways svg { width: 38px; height: 38px; }
+  .ways-cta { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .ways-band .btn { background: var(--lichen); border-color: var(--lichen); color: var(--pine-dark); }
+  .ways-band .btn:hover { background: var(--paper-light); border-color: var(--paper-light); }
+
+  /* quote */
+  .quote-panel { background: var(--stone); border-radius: 36px 36px 36px 110px; padding: clamp(24px, 5vw, 60px); display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(28px, 5vw, 64px); }
+  .quote-side { display: grid; gap: 16px; align-content: start; }
+  .quote-side > p { color: var(--ink-soft); }
+  .reach { list-style: none; margin: 8px 0 0; padding: 0; border-top: 1px solid var(--river); }
+  .reach li { border-bottom: 1px solid var(--river); }
+  .reach a { display: grid; grid-template-columns: 76px 1fr; align-items: center; gap: 10px; min-height: 56px; padding: 8px 0; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+  .reach a span { font-weight: 700; color: var(--moss); }
+  .reach a b { font-weight: 600; }
+  .reach a:hover b { text-decoration: underline; color: var(--moss); }
+  form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-content: start; }
+  .field { display: grid; gap: 7px; }
+  .field.full { grid-column: 1 / -1; }
+  label { font-weight: 700; }
+  .opt { font-weight: 400; color: var(--ink-soft); }
+  input, select, textarea {
+    font: inherit; color: var(--ink); width: 100%; min-height: 52px; padding: 12px 16px;
+    background: var(--paper-light); border: 1.5px solid var(--river); border-radius: 14px;
+  }
+  select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%231F3A30' stroke-width='2'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 18px center; padding-right: 44px; }
+  textarea { min-height: 120px; resize: vertical; }
+  input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--moss); outline-offset: 1px; border-color: var(--moss); }
+  input[aria-invalid=true] { border-color: var(--error); }
+  .err { color: var(--error); font-weight: 700; font-size: 1rem; }
+  .send { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+  .send p { font-size: 1rem; color: var(--ink-soft); max-width: 40ch; }
+
+  footer { background: var(--pine-dark); color: var(--paper); padding: 52px 0 44px; }
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px 48px; }
+  .foot b { font: 700 1.3rem/1.2 var(--head); display: block; margin-bottom: 6px; color: var(--paper-light); }
+  .foot a { color: var(--paper-light); }
+  .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+  .foot li a { display: inline-flex; min-height: 44px; align-items: center; overflow-wrap: anywhere; }
+  .foot small { display: block; margin-top: 12px; color: var(--lichen); font-size: 1rem; }
+
+  /* phone action bar */
+  .bar { display: none; }
+
+  @media (max-width: 1000px) {
+    .ways { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 860px) {
+    .masthead nav li:not(:last-child) { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 6px 0 48px; gap: 32px; }
+    .hero-art { max-width: 520px; }
+    .why-grid, .amber { grid-template-columns: 1fr; }
+    .amber .arch { max-width: 300px; }
+    .quote-panel { grid-template-columns: 1fr; border-radius: 28px 28px 28px 64px; }
+    section { padding: 56px 0; }
+  }
+  @media (max-width: 640px) {
+    body { font-size: 1.0625rem; padding-bottom: 76px; }
+    .masthead { padding: 8px 0; }
+    .masthead nav .btn { padding: 8px 16px; }
+    .mark { font-size: 1.05rem; }
+    .mark svg { width: 28px; height: 28px; }
+    .hero h1 { font-size: 2.05rem; }
+    .hero .lede { font-size: 1.08rem; margin-top: 12px; }
+    .who { margin-top: 16px; }
+    .who img { width: 52px; height: 52px; }
+    .hero-cta { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .hero-cta .btn { padding: 12px 10px; }
+    .why .round { max-width: 260px; }
+    .rooms { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .r-stair, .r-bed, .r-sitting { grid-column: 1 / -1; }
+    .r-shower, .r-kitchen, .r-play, .r-vanity { grid-column: auto; }
+    .r-shower img { aspect-ratio: 4 / 5; border-radius: 120px 120px 14px 14px; }
+    .rooms-head { margin-bottom: 24px; }
+    .ways { grid-template-columns: 1fr; gap: 12px; margin-top: 28px; }
+    .ways div { grid-template-columns: 38px 1fr; column-gap: 14px; padding: 18px; }
+    .ways svg { grid-row: 1 / 3; }
+    form { grid-template-columns: 1fr; }
+    .bar {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+      background: var(--paper-light); border-top: 1px solid var(--stone-dark);
+    }
+    .bar .btn { min-height: 50px; padding: 10px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+/* Quote draft stays usable when the device has no SMS handler. */
+#quote-form .quote-draft { grid-column: 1 / -1; margin-block-start: 14px; }
+#quote-form .quote-fallback, #quote-form .quote-copy {
+  display: inline-flex; min-height: 44px; max-width: 100%; align-items: center;
+  padding: 5px 0; color: inherit; font: inherit; text-align: left;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+#quote-form .quote-fallback, #quote-form .quote-copy {
+  background: transparent; border: 0; box-shadow: none; cursor: pointer; margin: 0;
+}
+#quote-form .quote-draft-actions { display: flex; flex-wrap: wrap; gap: 0 20px; }
+#quote-form .quote-draft label { display: block; margin: 0 0 6px; }
+#quote-form .quote-draft textarea { display: block; width: 100%; min-height: 8em; }
+#quote-form .quote-draft [role="status"] { margin: 0; }
+#quote-form .quote-draft[hidden] { display: none; }
+#quote-form :is(.quote-fallback,.quote-copy):focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px;
+}
+#quote-form :is(input:not([type="radio"]),select,textarea) { min-width: 0; min-height: 44px; font-size: max(16px, 1em); }
+</style>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<link rel="stylesheet" href="../../assets/preview.css">
+</head>
+<body>
+<aside class="mgt-preview-bar" id="design-preview" aria-label="Preview navigation">
+  <a class="mgt-preview-back" href="../../index.html#s-08">← All designs</a>
+  <span>Design preview <span aria-hidden="true">·</span> Quotes are simulated</span>
+</aside>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="wrap masthead">
+  <a class="mark" href="#top">
+    <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 3C9 3 4 10 4 18s5 15 14 15 14-7 14-15S27 3 18 3z" fill="#1F3A30"/><path d="M11 18.5l5 5 9-10" fill="none" stroke="#F4F3EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Mom's Got This
+  </a>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="#amber">Amber</a></li>
+      <li><a href="#rooms">Real homes</a></li>
+      <li><a href="#ways">Services</a></li>
+      <li><a class="btn" href="#quote">Free quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="wrap hero" id="top" aria-labelledby="hero-h">
+    <div>
+      <h1 id="hero-h">House cleaning around Kansas City, from a mom who gets it.</h1>
+      <p class="lede">I can come weekly, every other week, or for a single visit. If the tub, floors or kitchen need extra time, ask me about a deep clean.</p>
+      <div class="who">
+        <img src="../../images/owner.webp" width="880" height="1100" alt="Amber, owner of Mom's Got This Cleaning Co.">
+        <p><b>Amber, owner</b><br>I’m a mom of four, and I clean every home myself.</p>
+      </div>
+      <div class="hero-cta">
+        <a class="btn" href="#quote">Get a free quote</a>
+        <a class="btn btn-line" href="#design-preview" data-preview-contact>Text me</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <figure class="round" style="margin:0"><img src="../../images/bathtub.webp" width="1125" height="1500" alt="Close view of a scrubbed white jetted tub in a client's home"></figure>
+      <figure class="arch" style="margin:0"><img src="../../images/living-room.webp" width="1125" height="1500" alt="Tall great room with black ceiling beams and a vaulted ceiling in a client's home"></figure>
+      <p class="caption art-cap">Real client homes, shown with the homeowners' permission.</p>
+    </div>
+  </section>
+
+  <section class="why" aria-labelledby="why-h">
+    <div class="wrap why-grid">
+      <div>
+        <h2 id="why-h">Work, kids, appointments, practices, and the dishes that come back no matter what. A house asks for more than anyone has left.</h2>
+        <p>I know that feeling. I started Mom’s Got This so families juggling everything else could cross the house off the list.</p>
+      </div>
+      <figure class="round" style="margin:0"><img src="../../images/kitchen.webp" width="1500" height="1125" loading="lazy" alt="Open kitchen and dining area with white cabinets and wood floors in a client's home"></figure>
+    </div>
+  </section>
+
+  <section id="amber" aria-labelledby="amber-h">
+    <div class="wrap amber">
+      <figure class="arch" style="margin:0"><img src="../../images/owner.webp" width="880" height="1100" loading="lazy" alt="Amber, owner of Mom's Got This Cleaning Co., smiling in a white blazer"></figure>
+      <div class="amber-text">
+        <h2 id="amber-h">I’ll be the one who shows up.</h2>
+        <p>“I'm a mom of four, and I know how overwhelming keeping a house can be between work, kids, appointments and activities. I run this business and I do the cleaning myself.</p>
+        <p>I take pride in the details people notice later: the edges, the fixtures, the corners. I treat your home the way I'd want mine treated.”</p>
+        <blockquote class="her-line">“Because sometimes, even moms need someone to say, ‘Don't worry, I've got this!’”</blockquote>
+        <ul class="facts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>References on request</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Free, personal quotes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="rooms" aria-labelledby="rooms-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="rooms-head">
+        <h2 id="rooms-h">Homes I’ve cleaned</h2>
+        <p>Phone photos from client homes around Kansas City, shown as taken and with the homeowners' permission.</p>
+      </div>
+      <div class="rooms">
+        <figure class="r-stair"><img src="../../images/staircase.webp" width="1500" height="1125" loading="lazy" alt="Modern staircase climbing toward a tall window grid"><figcaption class="caption">Stairs, rails and a wall of windows</figcaption></figure>
+        <figure class="r-shower"><img src="../../images/shower.webp" width="1125" height="1500" loading="lazy" alt="Glass shower enclosure and tile"><figcaption class="caption">Glass and tile</figcaption></figure>
+        <figure class="r-kitchen"><img src="../../images/entertaining.webp" width="1500" height="1125" loading="lazy" alt="Modern dark kitchen bar with a wine wall"><figcaption class="caption">Bar and wine wall</figcaption></figure>
+        <figure class="r-play"><img src="../../images/playroom.webp" width="1125" height="1500" loading="lazy" alt="Kids' playroom with a slide and a play kitchen"><figcaption class="caption">Playroom</figcaption></figure>
+        <figure class="r-vanity"><img src="../../images/vanity.webp" width="1125" height="1500" loading="lazy" alt="Double vanity over a white marble floor"><figcaption class="caption">Vanity and marble floor</figcaption></figure>
+        <figure class="r-bed"><img src="../../images/bedroom.webp" width="1500" height="1125" loading="lazy" alt="Bright bedroom with a neatly made bed and grey carpet"><figcaption class="caption">Bedroom</figcaption></figure>
+        <figure class="r-sitting"><img src="../../images/bathroom.webp" width="1125" height="1500" loading="lazy" alt="Glass shower room with a freestanding tub and a black wall" style="object-position:50% 55%"><figcaption class="caption">Bathroom with freestanding tub</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="ways-band" id="ways" aria-labelledby="ways-h">
+    <div class="wrap">
+      <h2 id="ways-h">Four ways to start</h2>
+      <p class="sub">Not sure which fits? Pick “not sure” on the form and I’ll help you choose.</p>
+      <dl class="ways">
+        <div>
+          <svg viewBox="0 0 40 40" fill="none" stroke="#C9D3B8" stroke-width="2" aria-hidden="true"><circle cx="20" cy="20" r="15"/><circle cx="20" cy="20" r="4" fill="#C9D3B8"/></svg>
+          <dt>Weekly</dt>
+          <dd>The same reset every week, so the house never drifts far from where you want it.</dd>
+        </div>
+        <div>
+          <svg viewBox="0 0 40 40" fill="none" stroke="#C9D3B8" stroke-width="2" aria-hidden="true"><circle cx="20" cy="20" r="15"/><circle cx="14" cy="20" r="3.5" fill="#C9D3B8"/><circle cx="26" cy="20" r="3.5" fill="#C9D3B8"/></svg>
+          <dt>Biweekly</dt>
+          <dd>Every other week. Steady upkeep shaped around what your home actually needs.</dd>
+        </div>
+        <div>
+          <svg viewBox="0 0 40 40" fill="none" stroke="#C9D3B8" stroke-width="2" aria-hidden="true"><path d="M8 26c3-9 10-15 24-17-2 14-8 21-17 24"/><circle cx="12" cy="29" r="3" fill="#C9D3B8"/></svg>
+          <dt>One-time</dt>
+          <dd>For guests, a busy season or a fresh start. One visit, nothing ongoing.</dd>
+        </div>
+        <div>
+          <svg viewBox="0 0 40 40" fill="none" stroke="#C9D3B8" stroke-width="2" aria-hidden="true"><circle cx="20" cy="20" r="15"/><circle cx="20" cy="20" r="9"/><circle cx="20" cy="20" r="3.5" fill="#C9D3B8"/></svg>
+          <dt>Deep cleaning</dt>
+          <dd>A true reset: the build-up, the baseboards, the places regular tidying never reaches.</dd>
+        </div>
+      </dl>
+      <div class="ways-cta">
+        <a class="btn" href="#quote">Ask for a free quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="quote" aria-labelledby="quote-h">
+    <div class="wrap">
+      <div class="quote-panel">
+        <div class="quote-side">
+          <h2 id="quote-h">Tell me about your home</h2>
+          <p>Tell me which rooms need attention, or get in touch directly.</p>
+          <ul class="reach">
+            <li><a href="#design-preview" data-preview-contact><span>Call</span><b>816-715-4322</b></a></li>
+            <li><a href="#design-preview" data-preview-contact><span>Text</span><b>816-715-4322</b></a></li>
+            <li><a href="#design-preview" data-preview-contact><span>Email</span><b>momsgothiscleaningco@gmail.com</b></a></li>
+            <li><a href="#design-preview" data-preview-contact><span>Facebook</span><b>Mom's Got This Cleaning Co.</b></a></li>
+          </ul>
+        </div>
+        <noscript><p>Enable JavaScript to try the sample quote form.</p></noscript>
+      <form autocomplete="off" id="quote-form" novalidate>
+          <div class="field">
+            <label for="q-name">Your name</label>
+            <input id="q-name" name="name" type="text" required aria-describedby="q-name-err">
+            <span class="err" id="q-name-err" hidden>Please add your name.</span>
+          </div>
+          <div class="field">
+            <label for="q-phone">Phone</label>
+            <input id="q-phone" name="phone" type="tel" inputmode="tel" required aria-describedby="q-phone-err">
+            <span class="err" id="q-phone-err" hidden>Add a phone number so I can get back to you.</span>
+          </div>
+          <div class="field">
+            <label for="q-city">City or neighborhood</label>
+            <input id="q-city" name="city" type="text" required aria-describedby="q-city-err">
+            <span class="err" id="q-city-err" hidden>Please add roughly where you are.</span>
+          </div>
+          <div class="field">
+            <label for="q-type">Cleaning type</label>
+            <select id="q-type" name="type">
+              <option>Weekly</option>
+              <option>Biweekly</option>
+              <option>One-time</option>
+              <option>Deep cleaning</option>
+              <option selected>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="q-needs">Home size &amp; needs <span class="opt">(optional)</span></label>
+            <textarea id="q-needs" name="needs" placeholder="Bedrooms, bathrooms, pets, anything you'd like extra care on"></textarea>
+          </div>
+          <div class="send">
+            <button class="btn" type="submit">Preview quote text</button>
+            <p>Use sample details to try this form. It shows a draft on this page.</p>
+          </div>
+        <div class="quote-draft">
+          <button type="submit" class="quote-fallback" aria-controls="quote-draft" aria-expanded="false">Preview email draft</button>
+        </div>
+        <div id="quote-draft" class="quote-draft" hidden>
+          <label for="quote-draft-text">Your quote request</label>
+          <textarea id="quote-draft-text" rows="6" readonly></textarea>
+          <div class="quote-draft-actions">
+            <button type="button" class="quote-copy">Copy sample draft</button>
+
+          </div>
+          <p class="quote-draft-status" role="status"></p>
+        </div>
+      </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <b>Mom's Got This Cleaning Co.</b>
+      <p>House cleaning in the Kansas City area</p>
+      <small>&copy; <span id="year">2026</span> Mom's Got This Cleaning Co.</small>
+    </div>
+    <ul>
+      <li><a href="#design-preview" data-preview-contact>816-715-4322</a></li>
+      <li><a href="#design-preview" data-preview-contact>momsgothiscleaningco@gmail.com</a></li>
+      <li><a href="#design-preview" data-preview-contact>Facebook</a></li>
+    </ul>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a class="btn" href="#quote">Free quote</a>
+  <a class="btn btn-line" href="#design-preview" data-preview-contact>Call me</a>
+</nav>
+
+
+
+
+<script src="../../assets/preview.js" defer></script>
+<script src="page.js" defer></script>
+</body>
+</html>

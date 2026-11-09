@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preview · Mom's Got This Cleaning Co. — House cleaning around Kansas City</title>
+<!-- MGT-OG -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mom's Got This Cleaning Co.">
+<meta property="og:title" content="Preview · Mom&#x27;s Got This Cleaning Co. — House cleaning around Kansas City">
+<meta property="og:description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /MGT-OG -->
+<meta name="description" content="Design preview for Mom’s Got This Cleaning Co. I’m Amber, and I clean homes around Kansas City.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius&family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+<style>
+/* Open Design: doodle. DESIGN.md palette; Delius Swash Caps for display, its plain sibling Delius for reading text. */
+:root {
+  --primary: #49B6E5;        /* sky: CTA fills, marker highlights (never text: 2.3:1 on white) */
+  --secondary: #263D5B;      /* navy: pen lines, headings */
+  --text: #111827;
+  --surface: #FFFFFF;
+  --danger: #DC2626;
+  --primary-wash: rgba(73, 182, 229, 0.16);
+  --primary-tape: rgba(73, 182, 229, 0.45);
+  --primary-rule: rgba(73, 182, 229, 0.38);
+  --pen-shadow: 5px 6px 0 rgba(73, 182, 229, 0.35);
+
+  --font-display: "Delius Swash Caps", "Comic Sans MS", cursive;
+  --font-body: "Delius", "Comic Sans MS", cursive;
+
+  --t14: 14px; --t16: 16px; --t18: 18px; --t24: 24px; --t32: 32px; --t40: 40px;
+  --wobble-a: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  --wobble-b: 15px 255px 15px 225px / 225px 15px 255px 15px;
+  --wobble-c: 225px 25px 205px 18px / 22px 205px 25px 235px;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--surface); color: var(--text); font: 400 var(--t18)/1.6 var(--font-body); }
+/* The swash capital I reads as a J, so the pronoun drops to the plain cut */
+.plain-i { font-family: var(--font-body); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; color: var(--secondary); margin: 0; line-height: 1.15; }
+p, ul, ol, figure { margin: 0; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--secondary); text-decoration-thickness: 2px; text-underline-offset: 4px; text-decoration-color: var(--primary); }
+:focus-visible { outline: 3px solid var(--secondary); outline-offset: 3px; border-radius: 6px; }
+svg.ink { fill: none; stroke: var(--secondary); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+.skip { position: absolute; left: 16px; top: -60px; background: var(--secondary); color: var(--surface); padding: 12px 16px; border-radius: 8px; z-index: 10; }
+.skip:focus { top: 12px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 32px; }
+
+/* Buttons: sketchy outline, sky fill for the primary */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 52px; padding: 12px 24px;
+  font: 400 var(--t18)/1.2 var(--font-body); color: var(--text); text-decoration: none; cursor: pointer;
+  background: var(--surface); border: 2.5px solid var(--secondary); border-radius: var(--wobble-a);
+  transition: transform 150ms var(--ease), box-shadow 150ms var(--ease);
+}
+.btn-primary { background: var(--primary); box-shadow: 3px 4px 0 var(--secondary); }
+.btn:hover { transform: translate(-1px, -2px) rotate(-1deg); }
+.btn-primary:hover { box-shadow: 5px 6px 0 var(--secondary); }
+.btn:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--secondary); }
+
+/* Header */
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 16px; padding-bottom: 16px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--secondary); min-height: 44px; }
+.brand svg { width: 52px; height: 48px; flex: none; }
+.brand b { font: 400 var(--t24)/1.05 var(--font-display); display: block; }
+.brand small { font-size: var(--t14); display: block; color: var(--text); }
+.top nav ul { list-style: none; padding: 0; display: flex; align-items: center; gap: 4px 8px; flex-wrap: wrap; }
+.top nav a:not(.btn) { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: var(--secondary); text-decoration: none; border-radius: var(--wobble-b); }
+.top nav a:not(.btn):hover { background: var(--primary-wash); }
+.top .btn { min-height: 46px; padding: 8px 18px; font-size: var(--t16); }
+.scribble-rule { display: block; width: 100%; height: 10px; }
+
+/* Hero */
+.hero { padding: 48px 0 32px; }
+.hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
+.from { font-family: var(--font-display); font-size: var(--t24); color: var(--secondary); display: inline-flex; align-items: center; gap: 8px; }
+.from svg { width: 56px; height: 34px; }
+.hero h1 { font-size: clamp(44px, 6vw, 68px); line-height: 1.08; letter-spacing: -0.01em; margin: 12px 0 24px; }
+.hl { position: relative; white-space: nowrap; display: inline-block; }
+.hl svg { position: absolute; left: -2%; bottom: -0.12em; width: 104%; height: 0.42em; z-index: -1; overflow: visible; }
+.hl path { fill: none; stroke: var(--primary); stroke-width: 12; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 600ms 200ms var(--ease) forwards; opacity: 0.75; }
+.hl path + path { stroke-width: 7; animation-delay: 500ms; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.hero .lede { max-width: 32em; }
+.actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
+.psst { margin-top: 24px; font-family: var(--font-display); font-size: var(--t24); color: var(--secondary); display: flex; align-items: center; gap: 10px; }
+.psst svg { width: 36px; height: 36px; flex: none; }
+
+/* Polaroids and tape */
+.polaroid { position: relative; background: var(--surface); padding: 14px 14px 12px; border: 2px solid var(--secondary); border-radius: var(--wobble-c); box-shadow: var(--pen-shadow); }
+.polaroid img { width: 100%; object-fit: cover; border-radius: 4px 10px 6px 12px / 10px 4px 12px 6px; }
+.polaroid figcaption { font-family: var(--font-display); font-size: var(--t24); color: var(--secondary); text-align: center; line-height: 1.25; margin-top: 10px; }
+.tape::before {
+  content: ""; position: absolute; top: -16px; left: 50%; width: 110px; height: 30px;
+  transform: translateX(-50%) rotate(-4deg); background: var(--primary-tape);
+  clip-path: polygon(3% 8%, 10% 0, 22% 9%, 36% 2%, 50% 8%, 64% 0, 78% 9%, 90% 1%, 100% 10%, 97% 92%, 88% 100%, 74% 91%, 60% 100%, 46% 92%, 32% 100%, 18% 91%, 6% 100%, 0 90%);
+}
+.me { transform: rotate(2.5deg); max-width: 400px; justify-self: center; }
+.me img { aspect-ratio: 4 / 5; object-position: 50% 18%; }
+.me .arrow { position: absolute; left: -70px; bottom: 34px; width: 90px; height: 70px; }
+
+/* The list */
+.list { padding: 72px 0 64px; }
+.note {
+  position: relative; background: var(--surface); border: 2.5px solid var(--secondary); border-radius: var(--wobble-b);
+  box-shadow: var(--pen-shadow); padding: 48px 48px 40px;
+}
+.list .note { transform: rotate(-0.6deg); }
+.note h2 { font-size: var(--t40); }
+.note .intro { margin-top: 12px; max-width: 36em; }
+.chores { list-style: none; padding: 0; margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px 48px; }
+.chores li { display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: start; }
+.chores .box { width: 44px; height: 44px; }
+.chores .box .tick { stroke: var(--primary); stroke-width: 4; }
+.chores h3 { font-size: var(--t32); display: flex; align-items: center; gap: 10px; }
+.chores h3 svg { width: 40px; height: 40px; }
+.chores p { margin-top: 4px; }
+.aside { margin-top: 40px; line-height: 1.6; font-family: var(--font-display); font-size: var(--t24); color: var(--secondary); }
+.circled { position: relative; display: inline-block; padding: 0 4px; margin: 0 6px; }
+.circled svg { position: absolute; left: -8px; top: -8px; width: calc(100% + 16px); height: calc(100% + 16px); overflow: visible; }
+.circled path { fill: none; stroke: var(--primary); stroke-width: 3; stroke-linecap: round; }
+
+/* Photos */
+.photos { padding: 56px 0 72px; }
+.section-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 32px; margin-bottom: 48px; }
+.section-head h2 { font-size: var(--t40); }
+.section-head p { max-width: 30em; }
+.wall { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 32px; }
+.wall .polaroid { padding: 10px 10px 8px; }
+.wall .tape::before { top: -22px; }
+.wall .polaroid figcaption { font-size: var(--t18); }
+.wall img { aspect-ratio: 1 / 1; }
+.wall .polaroid:nth-child(4n+1) { transform: rotate(-2deg); }
+.wall .polaroid:nth-child(4n+2) { transform: rotate(1.5deg) translateY(16px); }
+.wall .polaroid:nth-child(4n+3) { transform: rotate(-1deg); }
+.wall .polaroid:nth-child(4n+4) { transform: rotate(2.2deg) translateY(10px); }
+.wall .wide { grid-column: span 2; }
+.wall .wide img { aspect-ratio: 2 / 1; }
+.permission { margin-top: 48px; font-size: var(--t16); display: flex; gap: 10px; align-items: center; }
+.permission svg { width: 28px; height: 28px; flex: none; }
+
+/* About */
+.about { padding: 64px 0; background-image: repeating-linear-gradient(to bottom, transparent 0 39px, var(--primary-rule) 39px 40px); border-top: 2px dashed var(--secondary); border-bottom: 2px dashed var(--secondary); }
+.about .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+.about h2 { font-size: var(--t40); margin-bottom: 16px; }
+.about p + p { margin-top: 16px; }
+.big-quote { font-family: var(--font-display); font-size: var(--t40); line-height: 1.25; color: var(--secondary); }
+.big-quote footer { font-family: var(--font-body); font-size: var(--t18); color: var(--text); margin-top: 12px; }
+.sticky {
+  margin-top: 32px; display: inline-flex; align-items: center; gap: 12px;
+  background: var(--surface); border: 2px solid var(--secondary); border-radius: var(--wobble-a);
+  padding: 12px 20px; transform: rotate(-2deg); box-shadow: var(--pen-shadow);
+}
+.sticky svg { width: 30px; height: 30px; flex: none; }
+
+/* Quote form */
+.quote { padding: 80px 0 72px; }
+.quote .wrap { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: start; }
+.quote h2 { font-size: var(--t40); }
+.quote .side > p { margin-top: 12px; }
+.ways { list-style: none; padding: 0; margin-top: 32px; display: grid; gap: 8px; }
+.ways a { display: flex; align-items: center; gap: 16px; min-height: 56px; padding: 6px 12px 6px 6px; text-decoration: none; color: var(--text); border-radius: var(--wobble-b); overflow-wrap: anywhere; }
+.ways a:hover { background: var(--primary-wash); }
+.ways svg { width: 44px; height: 44px; flex: none; }
+.ways b { display: block; font-weight: 400; font-family: var(--font-display); font-size: var(--t24); color: var(--secondary); line-height: 1.2; }
+.ways span { font-size: var(--t16); }
+
+.paper {
+  position: relative; background-color: var(--surface);
+  background-image: repeating-linear-gradient(to bottom, transparent 0 35px, var(--primary-rule) 35px 36px);
+  border: 2.5px solid var(--secondary); border-radius: var(--wobble-c); box-shadow: var(--pen-shadow);
+  padding: 44px 40px 36px; transform: rotate(0.6deg);
+}
+.paper h3 { font-size: var(--t32); }
+.paper .sub { font-size: var(--t16); margin-top: 4px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.field { margin-top: 20px; }
+.field label { display: block; font-size: var(--t16); color: var(--secondary); margin-bottom: 6px; }
+.field input, .field select, .field textarea {
+  width: 100%; display: block; min-height: 50px; padding: 10px 14px;
+  font: 400 var(--t18)/1.4 var(--font-body); color: var(--text); background: var(--surface);
+  border: 2px solid var(--secondary); border-radius: var(--wobble-a);
+}
+.field select { appearance: none; -webkit-appearance: none; padding-right: 44px; cursor: pointer; border-radius: var(--wobble-b);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12' viewBox='0 0 16 12'%3E%3Cpath d='M2 3 C 5 6, 6 8, 8 10 C 10 7, 12 5, 14.5 2' fill='none' stroke='%23263D5B' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 16px center; }
+.field textarea { min-height: 130px; resize: vertical; border-radius: var(--wobble-c); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 3px solid var(--secondary); outline-offset: 2px; box-shadow: 0 0 0 6px var(--primary-wash); }
+.field [aria-invalid="true"] { border-color: var(--danger); border-style: dashed; }
+.hint { display: block; font-size: var(--t14); margin-top: 6px; }
+.error { display: block; font-size: var(--t16); color: var(--danger); margin-top: 6px; }
+.error:empty { display: none; }
+.send { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 16px 20px; align-items: center; }
+.send p { font-size: var(--t16); max-width: 22em; }
+
+/* Footer */
+.foot { padding: 40px 0 48px; }
+.foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 40px; }
+.foot .name { font-family: var(--font-display); font-size: var(--t24); color: var(--secondary); }
+.foot ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0 24px; }
+.foot a, .foot li span { display: inline-flex; align-items: center; min-height: 44px; }
+.foot small { font-size: var(--t14); width: 100%; }
+
+@media (max-width: 960px) {
+  .hero .wrap, .about .wrap, .quote .wrap { grid-template-columns: 1fr; gap: 40px; }
+  .me { max-width: 340px; margin-left: 80px; }
+  .chores { grid-template-columns: 1fr; }
+  .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  body { font-size: var(--t16); }
+  .wrap { padding: 0 16px; }
+  .top nav li:not(:last-child) { display: none; }
+  .brand svg { width: 44px; height: 40px; }
+  .brand b { font-size: 21px; }
+  .hero { padding-top: 24px; }
+  .hero h1 { font-size: 42px; }
+  .hl { white-space: normal; }
+  .actions .btn { width: 100%; }
+  .me { margin-left: auto; margin-right: 8px; max-width: 290px; }
+  .me .arrow { display: none; }
+  .note { padding: 36px 20px 28px; }
+  .list .note { transform: none; }
+  .note h2, .section-head h2, .about h2, .quote h2 { font-size: var(--t32); }
+  .chores h3 { font-size: var(--t24); }
+  .chores li { grid-template-columns: 36px 1fr; gap: 12px; }
+  .chores .box { width: 36px; height: 36px; }
+  .aside { font-size: 21px; }
+  .wall { gap: 28px 18px; }
+  .wall .polaroid figcaption { font-size: var(--t16); }
+  .big-quote { font-size: var(--t32); }
+  .paper { padding: 32px 18px 28px; transform: none; }
+  .two { grid-template-columns: 1fr; }
+  .send .btn { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hl path { animation: none; stroke-dashoffset: 0; }
+  .btn { transition: none; }
+  .btn:hover, .btn:active { transform: none; }
+}
+/* Quote draft stays usable when the device has no SMS handler. */
+#quote-form .quote-draft { grid-column: 1 / -1; margin-block-start: 14px; }
+#quote-form .quote-fallback, #quote-form .quote-copy {
+  display: inline-flex; min-height: 44px; max-width: 100%; align-items: center;
+  padding: 5px 0; color: inherit; font: inherit; text-align: left;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+#quote-form .quote-fallback, #quote-form .quote-copy {
+  background: transparent; border: 0; box-shadow: none; cursor: pointer; margin: 0;
+}
+#quote-form .quote-draft-actions { display: flex; flex-wrap: wrap; gap: 0 20px; }
+#quote-form .quote-draft label { display: block; margin: 0 0 6px; }
+#quote-form .quote-draft textarea { display: block; width: 100%; min-height: 8em; }
+#quote-form .quote-draft [role="status"] { margin: 0; }
+#quote-form .quote-draft[hidden] { display: none; }
+#quote-form :is(.quote-fallback,.quote-copy):focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px;
+}
+#quote-form :is(input:not([type="radio"]),select,textarea) { min-width: 0; min-height: 44px; font-size: max(16px, 1em); }
+</style>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<link rel="stylesheet" href="../../assets/preview.css">
+</head>
+<body>
+<aside class="mgt-preview-bar" id="design-preview" aria-label="Preview navigation">
+  <a class="mgt-preview-back" href="../../index.html#s-06">← All designs</a>
+  <span>Design preview <span aria-hidden="true">·</span> Quotes are simulated</span>
+</aside>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Reusable hand-drawn shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="box" d="M5 6 C 15 5.2, 26 5.6, 38.5 5 C 39.2 16, 38.6 27, 39.2 38.6 C 28 39.4, 16 38.8, 5.6 39.2 C 5 28, 5.6 16, 5 6 Z"/>
+    <path id="tick" d="M10 22 C 13 25, 16 29, 19 33 C 24 22, 31 13, 41 3"/>
+    <path id="sparkle" d="M16 3 C 16.6 11, 18.5 13.6, 29 16 C 18.5 18.4, 16.6 21, 16 29 C 15.4 21, 13.5 18.4, 3 16 C 13.5 13.6, 15.4 11, 16 3 Z"/>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Mom's Got This Cleaning Co., back to top">
+      <svg class="ink" viewBox="0 0 52 48" aria-hidden="true">
+        <path d="M3.5 24 C 10 17.5, 18 11, 26.2 4.8 C 33 10.5, 40.5 16.5, 48.5 23.2"/>
+        <path d="M9.5 21 C 9 28, 9.4 36, 9.8 44 C 21 44.8, 31 44.4, 42.6 44 C 42.9 36, 42.4 28, 42.2 20.5"/>
+        <path d="M21.5 44 C 21.4 39, 21.6 35, 21.8 32.5 C 24.6 32.2, 27.4 32.4, 30.2 32.6 C 30.4 36.5, 30.2 40.5, 30.3 44"/>
+        <path d="M26 27.5 c -1.6 -3, -5.6 -1.2, -3.4 1.8 l3.4 3.1 l3.3 -3.1 c 2.2 -3, -1.8 -4.8, -3.3 -1.8z" fill="#49B6E5" stroke-width="1.6"/>
+        <path d="M36 11 C 36 8, 36.2 6, 36.1 4 C 38 4, 39.5 4.1, 40.8 4 C 40.9 8, 40.8 11.5, 40.9 14.5"/>
+      </svg>
+      <span><b>Mom's Got This</b><small>Cleaning Co.</small></span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#list">What I clean</a></li>
+        <li><a href="#photos">Photos</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a class="btn btn-primary" href="#quote">Free quote</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap">
+    <svg class="scribble-rule" viewBox="0 0 1000 10" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M2 6 C 150 3, 300 8, 480 5 S 800 3, 998 6" fill="none" stroke="#263D5B" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    </svg>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <p class="from">a note from me
+          <svg class="ink" viewBox="0 0 56 34" aria-hidden="true"><path d="M3 8 C 16 4, 34 8, 44 24"/><path d="M36 22 L45 26 L47 16"/></svg>
+        </p>
+        <h1 id="hero-title">Don't worry, <span class="hl"><span class="plain-i">I</span>'ve got this!<svg viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M4 18 C 60 10, 130 8, 190 12 S 270 16, 296 10"/><path pathLength="1" d="M26 25 C 90 20, 170 19, 262 21"/></svg></span></h1>
+        <p class="lede">I’m Amber, a mom of four. I clean houses around Kansas City myself. Tell me which room has been on your list the longest and I’ll put together a free quote.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#quote">Get my free quote</a>
+          <a class="btn" href="#design-preview" data-preview-contact>Text 816-715-4322</a>
+        </div>
+      </div>
+      <figure class="polaroid tape me">
+        <img src="../../images/owner.webp" width="880" height="1100" alt="Amber, owner of Mom's Got This Cleaning Co., smiling in a white blazer">
+        <figcaption>that's me, Amber!</figcaption>
+        <svg class="ink arrow" viewBox="0 0 90 70" aria-hidden="true"><path d="M6 12 C 18 50, 46 60, 80 50"/><path d="M68 42 L81 50 L70 60"/></svg>
+      </figure>
+    </div>
+  </section>
+
+  <section class="list" id="list" aria-labelledby="list-title">
+    <div class="wrap">
+      <div class="note tape">
+        <h2 id="list-title">Things <span class="plain-i">I</span> can take off your list</h2>
+        <p class="intro">Pick how often, or don't pick at all. Every home is different, so every quote is personal.</p>
+        <ul class="chores">
+          <li>
+            <svg class="ink box" viewBox="0 0 44 44" aria-hidden="true"><use href="#box"/><use class="tick" href="#tick"/></svg>
+            <div>
+              <h3>Weekly cleaning
+                <svg class="ink" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 10 C 18 9.4, 30 9.8, 42 9.6 C 42.4 20, 42 31, 42.4 41 C 30 41.6, 18 41.2, 6.4 41.4 C 6 31, 6.3 20, 6 10 Z"/><path d="M6.5 18 C 18 17.4, 30 18, 42 17.6"/><path d="M15 5 L15 13 M33 5 L33 13"/><path d="M14 30 C 16 27, 20 27, 21 30 C 22 34, 15 35, 14 31" stroke="#49B6E5" stroke-width="2.6"/></svg>
+              </h3>
+              <p>Every week, so the house stays caught up and your weekends stay yours.</p>
+            </div>
+          </li>
+          <li>
+            <svg class="ink box" viewBox="0 0 44 44" aria-hidden="true"><use href="#box"/><use class="tick" href="#tick"/></svg>
+            <div>
+              <h3>Biweekly cleaning
+                <svg class="ink" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 10 C 18 9.4, 30 9.8, 42 9.6 C 42.4 20, 42 31, 42.4 41 C 30 41.6, 18 41.2, 6.4 41.4 C 6 31, 6.3 20, 6 10 Z"/><path d="M6.5 18 C 18 17.4, 30 18, 42 17.6"/><path d="M15 5 L15 13 M33 5 L33 13"/><path d="M12 25 L18 31 M18 25 L12 31 M29 32 L35 38 M35 32 L29 38" stroke="#49B6E5" stroke-width="2.6"/></svg>
+              </h3>
+              <p>Every other week. Steady upkeep, shaped around how your family lives.</p>
+            </div>
+          </li>
+          <li>
+            <svg class="ink box" viewBox="0 0 44 44" aria-hidden="true"><use href="#box"/><use class="tick" href="#tick"/></svg>
+            <div>
+              <h3>One-time cleaning
+                <svg class="ink" viewBox="0 0 32 32" aria-hidden="true"><use href="#sparkle"/></svg>
+              </h3>
+              <p>Company coming? Rough month? One visit and the house feels like yours again.</p>
+            </div>
+          </li>
+          <li>
+            <svg class="ink box" viewBox="0 0 44 44" aria-hidden="true"><use href="#box"/><use class="tick" href="#tick"/></svg>
+            <div>
+              <h3>Deep cleaning
+                <svg class="ink" viewBox="0 0 48 48" aria-hidden="true"><path d="M9 20 C 10.5 28, 12 36, 13.5 43 C 21 44, 28 44, 35 43 C 36.5 36, 38 28, 39.5 20 C 29 21, 19 21, 9 20 Z"/><path d="M9.5 20 C 11 9, 37 9, 39 20"/><circle cx="18" cy="12" r="3" stroke="#49B6E5"/><circle cx="27" cy="7" r="2.2" stroke="#49B6E5"/><circle cx="33" cy="13" r="1.8" stroke="#49B6E5"/></svg>
+              </h3>
+              <p>The full top-to-bottom reset, for the build-up regular tidying never gets to.</p>
+            </div>
+          </li>
+        </ul>
+        <p class="aside">and the quote is always <span class="circled">free<svg viewBox="0 0 120 60" preserveAspectRatio="none" aria-hidden="true"><path d="M14 34 C 6 14, 54 4, 96 9 C 124 13, 122 44, 86 52 C 50 58, 10 50, 12 32 C 13 22, 34 12, 66 10"/></svg></span>. Not sure which one? Pick “not sure” on the form below.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photos" id="photos" aria-labelledby="photos-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="photos-title">A few homes <span class="plain-i">I</span>'ve cleaned</h2>
+        <p>Real client homes, shared with the homeowners' permission. Just phone photos, nothing staged.</p>
+      </div>
+      <div class="wall">
+        <figure class="polaroid tape wide">
+          <img src="../../images/kitchen.webp" width="1500" height="1125" loading="lazy" alt="Open kitchen and dining room with white cabinets, a dark dining table and shining wood floors">
+          <figcaption>kitchen + dining, ready for dinner</figcaption>
+        </figure>
+        <figure class="polaroid tape">
+          <img src="../../images/playroom.webp" width="1125" height="1500" loading="lazy" alt="Kids' playroom with a slide and a play kitchen, toys put away">
+          <figcaption>the playroom (yes, really)</figcaption>
+        </figure>
+        <figure class="polaroid tape">
+          <img src="../../images/bathtub.webp" width="1125" height="1500" loading="lazy" alt="Close view of a scrubbed white jetted bathtub">
+          <figcaption>one scrubbed tub</figcaption>
+        </figure>
+        <figure class="polaroid tape">
+          <img src="../../images/bedroom.webp" width="1500" height="1125" loading="lazy" alt="Bright bedroom with a neatly made bed and grey carpet">
+          <figcaption>bed made, room bright</figcaption>
+        </figure>
+        <figure class="polaroid tape">
+          <img src="../../images/sitting-room.webp" width="1125" height="1500" loading="lazy" alt="Sitting room with an orange sofa, a zebra-print rug and French doors">
+          <figcaption>the orange sofa room</figcaption>
+        </figure>
+        <figure class="polaroid tape wide">
+          <img src="../../images/staircase.webp" width="1500" height="1125" loading="lazy" alt="Looking up a modern open staircase toward a tall grid of windows">
+          <figcaption>stairs, rails &amp; all those windows</figcaption>
+        </figure>
+        <figure class="polaroid tape">
+          <img src="../../images/vanity.webp" width="1125" height="1500" loading="lazy" alt="Double bathroom vanity above a white marble floor">
+          <figcaption>double vanity, marble floor</figcaption>
+        </figure>
+        <figure class="polaroid tape">
+          <img src="../../images/entertaining.webp" width="1500" height="1125" loading="lazy" alt="Modern dark kitchen and bar with a lit wine wall">
+          <figcaption>bar &amp; wine wall</figcaption>
+        </figure>
+        <figure class="polaroid tape wide">
+          <img src="../../images/living-room.webp" width="1125" height="1500" loading="lazy" alt="Tall great room with black ceiling beams and a vaulted ceiling">
+          <figcaption>great room, beams and all</figcaption>
+        </figure>
+      </div>
+      <p class="permission">
+        <svg class="ink" viewBox="0 0 32 32" aria-hidden="true"><use href="#sparkle"/></svg>
+        Every photo is a real client's home, shown with their permission.
+      </p>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div>
+        <h2 id="about-title">Why “Mom's Got This”?</h2>
+        <p>Between work, kids, appointments and activities, I know how overwhelming keeping up a house can feel. I've got four kids of my own.</p>
+        <p>I started this business so families around Kansas City could walk into a clean, comfortable home without a mile-long list waiting for them. I run it myself and I do the cleaning myself. I take pride in the little details, and I treat every home the way I'd want mine treated.</p>
+        <p class="sticky">
+          <svg class="ink" viewBox="0 0 32 32" aria-hidden="true"><use href="#sparkle"/></svg>
+          References? Just ask. They're available on request.
+        </p>
+      </div>
+      <blockquote class="big-quote">
+        “Because sometimes, even moms need someone to say, ‘Don't worry, <span class="plain-i">I</span>'ve got this!’”
+        <footer>Amber, owner</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="quote" id="quote" aria-labelledby="quote-title">
+    <div class="wrap">
+      <div class="side">
+        <h2 id="quote-title">Leave me a note</h2>
+        <p>Fill in the note and I'll get back to you with a free, personal quote. Or skip the form and reach me directly.</p>
+        <ul class="ways">
+          <li><a href="#design-preview" data-preview-contact>
+            <svg class="ink" viewBox="0 0 44 44" aria-hidden="true"><path d="M6 8 C 17 7.4, 28 7.8, 38.5 7.4 C 39 15, 38.6 22, 39 29 C 30 29.5, 22 29.2, 16 29.6 C 13 32.5, 10 35, 7 37.5 C 7.6 34.5, 8 32, 8.3 29.5 L 6.4 29.4 C 6 22, 6.3 15, 6 8 Z"/><path d="M13 16 C 19 15.6, 25 16, 32 15.6 M13 22 C 17 21.7, 21 22, 25 21.8"/></svg>
+            <span><b>Text me</b>816-715-4322</span></a></li>
+          <li><a href="#design-preview" data-preview-contact>
+            <svg class="ink" viewBox="0 0 44 44" aria-hidden="true"><path d="M10 6 C 13 5.6, 15 5.8, 17 6.2 C 18.5 10, 19.5 13, 20 16 C 18 17.5, 16.5 18.5, 15 19.5 C 17.5 25, 21 28.5, 26 31 C 27 29.5, 28.2 28, 29.5 26.5 C 32.5 27.2, 35.5 28.5, 38.5 30 C 38.8 32.5, 38.6 35, 38 37.5 C 23 39, 6 25, 6.5 9.5 C 7.5 8, 8.6 6.8, 10 6 Z"/></svg>
+            <span><b>Call me</b>816-715-4322</span></a></li>
+          <li><a href="#design-preview" data-preview-contact>
+            <svg class="ink" viewBox="0 0 44 44" aria-hidden="true"><path d="M5 10 C 16 9.4, 28 9.8, 39 9.4 C 39.4 18, 39 26, 39.4 34.5 C 28 35, 16 34.6, 5.4 35 C 5 26, 5.4 18, 5 10 Z"/><path d="M5.5 11 C 11 16, 16.5 20.5, 22 24 C 28 20, 33.5 15.5, 38.5 10.5"/></svg>
+            <span><b>Email me</b>momsgothiscleaningco@gmail.com</span></a></li>
+          <li><a href="#design-preview" data-preview-contact rel="noopener">
+            <svg class="ink" viewBox="0 0 44 44" aria-hidden="true"><path d="M5 6 C 16 5.4, 28 5.8, 38.5 5.4 C 39 16, 38.6 27, 39 38.4 C 28 39, 16 38.6, 5.4 39 C 5 28, 5.4 16, 5 6 Z"/><path d="M28 13 C 24 12.4, 21.5 14, 21.6 18.5 C 21.5 25, 21.8 31, 21.7 38.5 M16 22.5 C 20 22.2, 24 22.4, 28 22.2"/></svg>
+            <span><b>Find me on Facebook</b>Mom's Got This Cleaning Co.</span></a></li>
+        </ul>
+      </div>
+
+      <noscript><p>Enable JavaScript to try the sample quote form.</p></noscript>
+      <form autocomplete="off" class="paper tape" id="quote-form" novalidate aria-labelledby="form-title">
+        <h3 id="form-title">Tell me about your home</h3>
+        <p class="sub">here's a little about my home:</p>
+        <div class="two">
+          <div class="field">
+            <label for="q-name">My name</label>
+            <input id="q-name" name="name" required aria-describedby="q-name-error">
+            <span class="error" id="q-name-error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="q-phone">My phone number</label>
+            <input id="q-phone" name="phone" type="tel" inputmode="tel" required aria-describedby="q-phone-error">
+            <span class="error" id="q-phone-error" role="alert"></span>
+          </div>
+        </div>
+        <div class="two">
+          <div class="field">
+            <label for="q-area">City or neighborhood</label>
+            <input id="q-area" name="area" required aria-describedby="q-area-error">
+            <span class="error" id="q-area-error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="q-type">Kind of cleaning</label>
+            <select id="q-type" name="type">
+              <option>Weekly</option>
+              <option>Biweekly</option>
+              <option>One-time</option>
+              <option>Deep cleaning</option>
+              <option selected>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="q-details">Home size and what I need (optional)</label>
+          <textarea id="q-details" name="details" aria-describedby="q-details-hint"></textarea>
+          <span class="hint" id="q-details-hint">Bedrooms, bathrooms, pets, the room that needs the most love.</span>
+          
+        </div>
+        <div class="send">
+          <button class="btn btn-primary" type="submit">Preview quote text</button>
+          <p>Use sample details to try this form. It shows a draft on this page.</p>
+        </div>
+      <div class="quote-draft">
+          <button type="submit" class="quote-fallback" aria-controls="quote-draft" aria-expanded="false">Preview email draft</button>
+        </div>
+        <div id="quote-draft" class="quote-draft" hidden>
+          <label for="quote-draft-text">Your quote request</label>
+          <textarea id="quote-draft-text" rows="6" readonly></textarea>
+          <div class="quote-draft-actions">
+            <button type="button" class="quote-copy">Copy sample draft</button>
+
+          </div>
+          <p class="quote-draft-status" role="status"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <svg class="scribble-rule" viewBox="0 0 1000 10" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M2 4 C 200 7, 380 3, 560 6 S 860 4, 998 5" fill="none" stroke="#263D5B" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <p class="name">Mom's Got This Cleaning Co.</p>
+    <ul>
+      <li><span>Kansas City area</span></li>
+      <li><a href="#design-preview" data-preview-contact>816-715-4322</a></li>
+      <li><a href="#design-preview" data-preview-contact>momsgothiscleaningco@gmail.com</a></li>
+    </ul>
+    <small>© <span id="year"></span> Mom's Got This Cleaning Co.</small>
+  </div>
+</footer>
+
+
+
+
+<script src="../../assets/preview.js" defer></script>
+<script src="page.js" defer></script>
+</body>
+</html>
