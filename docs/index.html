@@ -2,132 +2,210 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Website options for Mom's Got This Cleaning Co., house cleaning around Kansas City.">
-<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mom's Got This Cleaning Co. | House Cleaning, Kansas City Area</title>
+<meta name="description" content="House cleaning around Kansas City by Amber, a mom of four. Weekly, every-other-week, one-time and deep cleaning. Text or call 816-715-4322 for a free quote.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Mom's Got This Cleaning Co. website options">
-<meta property="og:image" content="https://momskc.com/sites/19-original-refined/og.jpg">
+<meta property="og:url" content="https://momskc.com/">
+<meta property="og:title" content="Mom's Got This Cleaning Co.">
+<meta property="og:description" content="House cleaning around Kansas City. Text or call Amber at 816-715-4322 for a free quote.">
+<meta property="og:image" content="https://momskc.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="images/logo-640.webp">
-<title>Mom's Got This Designs</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=JetBrains+Mono:wght@500&display=swap">
 <style>
-/* Layout: a plain gallery. The current site beside its refresh, then the new designs; each card shows the desktop view with the phone view over it, a palette strip, and links to open or phone-preview the site. */
-:root {
-  --bg: #efefec;
-  --card: #ffffff;
-  --ink: #17191c;
-  --muted: #5d6168;
-  --line: #d9dad5;
-  --heart: #d6244f;
-  --chip: #e4e5e0;
-  --display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #131416; --card: #1c1e21; --ink: #ecebe7; --muted: #a3a7ad; --line: #2d3034; --heart: #ff5d7f; --chip: #26292d;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #131416; --card: #1c1e21; --ink: #ecebe7; --muted: #a3a7ad; --line: #2d3034; --heart: #ff5d7f; --chip: #26292d;
-  color-scheme: dark;
-}
+:root { --pink: #e83c8d; --cream: #fffafd; --sage: #087f89; --ink: #28342e; }
 * { box-sizing: border-box; }
-body {
-  background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--display);
-  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
-  padding-block: 0 32px;
-}
-.wrap { max-width: 1180px; margin: 0 auto; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--cream); color: var(--ink); line-height: 1.6; }
 a { color: inherit; }
-header.intro { padding-block: 48px 28px; display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
-.kicker { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-h1 { font-weight: 800; font-size: clamp(2.3rem, 7vw, 4.6rem); line-height: .98; letter-spacing: -.03em; margin: 0; text-wrap: balance; }
-.lede { max-width: 62ch; margin: 0; font-size: 1.08rem; color: var(--muted); }
-.lede strong { color: var(--ink); font-weight: 600; }
-.how { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 0; padding: 0; list-style: none; }
-.how li { background: var(--chip); border-radius: 999px; padding: 8px 14px; font-size: .92rem; }
-
-.shelf { border-top: 1px solid var(--line); padding-block: 28px 12px; }
-.shelf-head { display: grid; gap: 4px 24px; grid-template-columns: minmax(0, 1fr); margin-bottom: 18px; }
-@media (min-width: 760px) { .shelf-head { grid-template-columns: 260px minmax(0, 1fr); align-items: baseline; } }
-.shelf h2 { margin: 0; font-size: 1.5rem; font-weight: 700; letter-spacing: -.01em; }
-.shelf-head p { margin: 0; color: var(--muted); max-width: 70ch; }
-.shelf-head a { color: var(--muted); }
-
-.grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
-.stage { position: relative; display: block; aspect-ratio: 16 / 11; background: var(--chip); overflow: hidden; text-decoration: none; }
-.stage .desk { position: absolute; left: 0; top: 0; width: 100%; height: auto; transition: transform .35s ease; transform-origin: top left; }
-.stage .phone { position: absolute; right: 14px; bottom: -40%; width: 34%; height: auto; border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.28), 0 0 0 5px #0f1012; transition: transform .35s ease; }
-.stage:hover .desk { transform: scale(1.02); }
-.stage:hover .phone { transform: translateY(-14px); }
-.stage:focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; }
-.swatches { display: flex; height: 8px; }
-.swatches span { flex: 1; }
-.body { padding: 14px 16px 16px; display: grid; gap: 8px; flex: 1; align-content: start; }
-.row { display: flex; align-items: center; gap: 10px; }
-.num { font: 500 12px/1 var(--mono); color: var(--muted); }
-.card h3 { margin: 0; font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; flex: 1; min-width: 0; }
-.card p { margin: 0; color: var(--muted); font-size: .95rem; }
-.actions { display: flex; gap: 10px; align-items: center; margin-top: 6px; }
-.open { flex: 1; text-align: center; background: var(--ink); color: var(--bg); text-decoration: none; font-weight: 600;
-  border-radius: 10px; padding: 12px 14px; min-height: 44px; }
-.open:hover { opacity: .88; }
-.open:focus-visible, .card.before { border-style: dashed; }
-
-footer { color: var(--muted); font-size: .9rem; padding-block: 28px; border-top: 1px solid var(--line); }
-@media (prefers-reduced-motion: reduce) { .stage .desk, .stage .phone { transition: none; } }
-.section { border-top: 1px solid var(--line); padding-block: 28px 12px; }
-.section h2 { margin: 0 0 6px; font-size: 1.6rem; font-weight: 800; letter-spacing: -.015em; }
-.section > p { margin: 0 0 18px; color: var(--muted); max-width: 62ch; }
-.pair { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
-@media (min-width: 760px) { .pair { grid-template-columns: 1fr 1fr; } }
-.tag { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 5px 8px; }
-.tag.after { color: var(--heart); border-color: var(--heart); }
-.phone-open { min-height: 44px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line); background: transparent; color: var(--ink); font: 600 14px var(--display); cursor: pointer; white-space: nowrap; }
-.phone-open:hover { border-color: var(--ink); }
-.phone-open:focus-visible { outline: 3px solid var(--heart); outline-offset: 2px; }
-@media (max-width: 520px) { .phone-open { display: none; } }
-.phone-dialog { border: 0; padding: 0; background: transparent; max-width: none; max-height: none; overflow: visible; }
-.phone-dialog::backdrop { background: rgb(12 14 16 / 78%); }
-.phone-shell { display: grid; gap: 12px; justify-items: center; }
-.phone-top { display: flex; gap: 10px; align-items: center; width: 406px; max-width: calc(100vw - 32px); color: #fff; font: 600 15px var(--display); }
-.phone-top span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.phone-top a, .phone-top button { color: #fff; background: transparent; border: 1px solid rgb(255 255 255 / 45%); border-radius: 8px; min-height: 40px; padding: 0 12px; font: inherit; text-decoration: none; display: inline-flex; align-items: center; cursor: pointer; }
-.phone-bezel { padding: 8px; border-radius: 34px; background: #0e0f11; box-shadow: 0 20px 60px rgb(0 0 0 / 45%); }
-.phone-bezel iframe { display: block; width: 390px; height: min(844px, calc(100dvh - 120px)); border: 0; border-radius: 26px; background: #fff; }
-
-[hidden]{display:none!important}
-body{margin:0}
+img { max-width: 100%; }
+header { background: white; position: sticky; top: 0; z-index: 2; box-shadow: 0 2px 14px #28342e12; }
+.nav { max-width: 1100px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 12px 22px; }
+.brand { font-weight: 800; font-size: 1.1rem; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.brand img { height: 52px; width: auto; }
+.links { display: flex; gap: 18px; flex-wrap: wrap; }
+.links a { text-decoration: none; font-size: .95rem; }
+.links a:hover { color: #c72578; }
+.hero { background: linear-gradient(115deg, #fff0ef, #edf9fa); padding: 100px 22px; text-align: center; }
+.wrap { max-width: 1050px; margin: auto; }
+.eyebrow { letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: #8c5965; margin: 0 0 12px; }
+h1 { font-size: clamp(2.3rem, 6vw, 4.4rem); line-height: 1.12; margin: 0 0 20px; }
+h2 { font-size: 2rem; line-height: 1.2; margin: 0 0 20px; }
+.accent { color: #c72578; }
+.lead { font-size: 1.17rem; max-width: 640px; margin: 0 auto 26px; }
+.btn { display: inline-block; background: var(--sage); color: white; padding: 14px 23px; border-radius: 999px; text-decoration: none; font-weight: 700; margin: 5px; }
+.btn.secondary { background: var(--pink); }
+.btn:hover { filter: brightness(1.08); }
+section { padding: 70px 22px; scroll-margin-top: 70px; }
+.center { text-align: center; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.card { background: white; border-radius: 18px; padding: 28px; box-shadow: 0 8px 25px #28342e0d; }
+.card h3 { margin-top: 0; }
+.card p { margin-bottom: 0; }
+.soft { background: #f1eee7; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.gallery figure { margin: 0; background: white; border-radius: 18px; overflow: hidden; box-shadow: 0 8px 25px #28342e12; }
+.gallery img { width: 100%; height: 245px; object-fit: cover; display: block; }
+.gallery figcaption { padding: 10px 15px; font-size: .9rem; font-weight: 650; }
+.note { font-size: .9rem; color: #59665e; }
+.owner-layout { display: grid; grid-template-columns: minmax(220px, 360px) 1fr; gap: 42px; align-items: center; }
+.owner-layout img { width: 100%; height: auto; display: block; border-radius: 24px; box-shadow: 0 12px 35px #28342e20; }
+.owner-layout p { margin: 0 0 16px; }
+.owner-tag { color: #c72578; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.contact { background: #e8eee8; }
+.contactbox { background: white; max-width: 700px; margin: auto; padding: 32px; border-radius: 20px; text-align: center; }
+.contactbox ul { text-align: left; max-width: 420px; margin: 0 auto 22px; padding-left: 20px; }
+.contactbox .btn { min-width: 190px; }
+.big-number { font-size: 1.6rem; font-weight: 800; margin: 18px 0 2px; }
+.big-number a { text-decoration: none; }
+.email { overflow-wrap: anywhere; }
+footer { background: #28342e; color: white; text-align: center; padding: 30px 20px; }
+footer p { margin: 8px 0; }
+.callbar { display: none; }
+@media (max-width: 700px) {
+  .owner-layout { grid-template-columns: 1fr; gap: 28px; }
+  .owner-layout img { max-width: 330px; margin: auto; }
+}
+@media (max-width: 650px) {
+  header { position: static; }
+  .nav { flex-direction: column; align-items: center; gap: 8px; padding: 12px 16px; }
+  .brand { font-size: 1rem; }
+  .brand img { height: 44px; }
+  .links { gap: 6px 16px; justify-content: center; }
+  .hero { padding: 56px 18px 64px; }
+  section { padding: 52px 18px; scroll-margin-top: 0; }
+  h2 { font-size: 1.7rem; }
+  .gallery { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .gallery figure { border-radius: 14px; }
+  .gallery img { height: 170px; }
+  .gallery figcaption { padding: 8px 10px; font-size: .82rem; line-height: 1.35; }
+  .contactbox { padding: 26px 18px; }
+  .contactbox .btn { display: block; margin: 10px 0; }
+  /* Text/Call bar pinned to the bottom of the phone screen. */
+  .callbar { display: flex; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 3; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: white; box-shadow: 0 -2px 14px #28342e1f; }
+  .callbar a { flex: 1; text-align: center; margin: 0; padding: 12px; }
+  footer { padding-bottom: 96px; }
+}
 </style>
 </head>
 <body>
+<header>
+  <nav class="nav">
+    <a class="brand" href="#home"><img src="images/logo-640.webp" alt="" width="640" height="451"> Mom's Got This Cleaning Co.</a>
+    <div class="links">
+      <a href="#services">Services</a>
+      <a href="#gallery">My Work</a>
+      <a href="#about">About</a>
+      <a href="#quote">Free Quote</a>
+    </div>
+  </nav>
+</header>
 
+<main>
+  <div class="hero" id="home">
+    <div class="wrap">
+      <p class="eyebrow">House cleaning · Kansas City area</p>
+      <h1>Come home to <span class="accent">clean.</span></h1>
+      <p class="lead">Life gets busy. I'm Amber, a mom of four, and I'll take the cleaning off your list so you can walk into a clean house.</p>
+      <a class="btn" href="#quote">Get a Free Quote</a>
+      <a class="btn secondary" href="sms:+18167154322">Text Me</a>
+      <a class="btn secondary" href="mailto:momsgothiscleaningco@gmail.com">Email Me</a>
+    </div>
+  </div>
 
-<div class="wrap">
-  <header class="intro">
-    <div class="kicker">Mom's Got This Cleaning Co.</div>
-    <h1>Website designs</h1>
-  </header>
-  <main id="shelves"></main>
-  <footer>Photos are real client homes, shown with permission. One family-name sign was replaced for privacy.</footer>
+  <section id="services">
+    <div class="wrap">
+      <h2 class="center">How I can help</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Weekly cleaning</h3>
+          <p>I come every week, so the house never gets away from you.</p>
+        </article>
+        <article class="card">
+          <h3>Every-other-week cleaning</h3>
+          <p>Every two weeks. A good fit if the house stays fairly tidy in between.</p>
+        </article>
+        <article class="card">
+          <h3>One-time and deep cleaning</h3>
+          <p>For when the house needs a full reset. Tell me what you need and I'll give you a price.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="gallery">
+    <div class="wrap">
+      <h2 class="center">My work</h2>
+      <p class="center">These are real client homes, shared with the homeowners' permission.</p>
+      <div class="gallery">
+        <figure><img loading="lazy" src="images/kitchen.webp" alt="Clean kitchen and dining area"><figcaption>Kitchen &amp; dining</figcaption></figure>
+        <figure><img loading="lazy" src="images/bathtub.webp" alt="Clean bathtub"><figcaption>Bathtub</figcaption></figure>
+        <figure><img loading="lazy" src="images/shower.webp" alt="Clean shower and tile"><figcaption>Shower &amp; tile</figcaption></figure>
+        <figure><img loading="lazy" src="images/playroom.webp" alt="Tidied playroom"><figcaption>Playroom</figcaption></figure>
+        <figure><img loading="lazy" src="images/bathroom.webp" alt="Clean bathroom counters"><figcaption>Bathroom</figcaption></figure>
+        <figure><img loading="lazy" src="images/vanity.webp" alt="Clean vanity and floor"><figcaption>Vanity &amp; floors</figcaption></figure>
+        <figure><img loading="lazy" src="images/portfolio.webp" alt="A cleaned room in a client's home"><figcaption>More of my work</figcaption></figure>
+        <figure><img loading="lazy" src="images/living-room.webp" alt="Clean living and dining room"><figcaption>Living &amp; dining room</figcaption></figure>
+        <figure><img loading="lazy" src="images/sitting-room.webp" alt="Clean sitting room"><figcaption>Sitting room</figcaption></figure>
+        <figure><img loading="lazy" src="images/home-gym.webp" alt="Clean home gym"><figcaption>Home gym</figcaption></figure>
+        <figure><img loading="lazy" src="images/bedroom.webp" alt="Clean bedroom with a made bed"><figcaption>Bedroom</figcaption></figure>
+        <figure><img loading="lazy" src="images/staircase.webp" alt="Clean staircase and windows"><figcaption>Staircase &amp; windows</figcaption></figure>
+        <figure><img loading="lazy" src="images/entertaining.webp" alt="Clean entertaining space"><figcaption>Entertaining space</figcaption></figure>
+        <figure><img loading="lazy" src="images/theater.webp" alt="Clean home theater"><figcaption>Home theater</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap owner-layout">
+      <img loading="lazy" src="images/owner.webp" alt="Amber, owner of Mom's Got This Cleaning Co." width="880" height="1100">
+      <div>
+        <p class="owner-tag">Meet the owner</p>
+        <h2>Hi, I'm Amber!</h2>
+        <p>I'm the mom behind <strong>Mom's Got This Cleaning Co.</strong> I have four kids, so I know how fast life gets away from you. Between work, kids, appointments and activities, keeping up with the house can feel impossible.</p>
+        <p>That's why I started Mom's Got This. Everyone deserves to walk into a clean, comfortable home without a million things still left on the to-do list.</p>
+        <p>When you hire me, you get someone who cares about making your week a little easier. I take pride in the details and treat every home the way I'd want mine treated.</p>
+        <p>I'm building this business one Kansas City family at a time, and <strong>I'm happy to give references if you'd like them.</strong></p>
+        <p><strong>Because sometimes, even moms need someone to say, “Don't worry, I've got this!”</strong> 💗</p>
+        <p>— Amber</p>
+        <a class="btn secondary" href="#quote">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="quote">
+    <div class="wrap">
+      <h2 class="center">Get a free quote</h2>
+      <div class="contactbox">
+        <p>Text or call me, or send an email. It helps to include:</p>
+        <ul>
+          <li>Your city or neighborhood</li>
+          <li>How many bedrooms and bathrooms</li>
+          <li>Weekly, every other week, or one time</li>
+          <li>Anything that needs extra attention</li>
+        </ul>
+        <a class="btn" href="sms:+18167154322">Text Me</a>
+        <a class="btn secondary" href="tel:+18167154322">Call Me</a>
+        <a class="btn secondary" href="mailto:momsgothiscleaningco@gmail.com?subject=Cleaning%20quote">Email Me</a>
+        <p class="big-number"><a href="tel:+18167154322">816-715-4322</a></p>
+        <p class="email"><a href="mailto:momsgothiscleaningco@gmail.com?subject=Cleaning%20quote">momsgothiscleaningco@gmail.com</a></p>
+        <p class="note">References are available. Just ask.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <strong>Mom's Got This Cleaning Co.</strong>
+  <p>Kansas City area · <a href="tel:+18167154322">816-715-4322</a><br><a class="email" href="mailto:momsgothiscleaningco@gmail.com">momsgothiscleaningco@gmail.com</a></p>
+  <small>© <span id="year">2026</span> Mom's Got This Cleaning Co.</small>
+</footer>
+
+<div class="callbar">
+  <a class="btn" href="sms:+18167154322">Text Me</a>
+  <a class="btn secondary" href="tel:+18167154322">Call Me</a>
 </div>
 
-<dialog class="phone-dialog" id="phone-preview" aria-labelledby="phone-title">
-  <div class="phone-shell">
-    <div class="phone-top"><span id="phone-title">Phone preview</span><a id="phone-full" href="#">Open full site</a><button type="button" id="phone-close">Close</button></div>
-    <div class="phone-bezel"><iframe id="phone-frame" title="Phone preview"></iframe></div>
-  </div>
-</dialog>
-
-<script src="page-1.js"></script>
-
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
