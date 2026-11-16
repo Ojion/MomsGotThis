@@ -62,6 +62,19 @@ section { padding: 70px 22px; scroll-margin-top: 70px; }
 footer { background: #28342e; color: white; text-align: center; padding: 30px 20px; }
 footer p { margin: 8px 0; }
 .callbar { display: none; }
+/* Photo viewer: tap a photo to see it full size. */
+.gallery img, .owner-layout img { cursor: zoom-in; }
+body:has(.lightbox[open]) { overflow: hidden; }
+.lightbox { border: 0; padding: 0; margin: 0; width: 100vw; height: 100vh; height: 100dvh; max-width: none; max-height: none; background: #111e; color: white; }
+.lightbox::backdrop { background: #111e; }
+.lightbox[open] { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.lightbox img { max-width: 100%; max-height: calc(100dvh - 60px); object-fit: contain; }
+.lightbox p { margin: 10px 16px; font-weight: 650; text-align: center; }
+.lightbox button { position: absolute; width: 48px; height: 48px; border: 0; border-radius: 999px; background: #0009; color: white; font-size: 1.7rem; line-height: 1; cursor: pointer; }
+.lb-close { top: 12px; right: 12px; }
+.lb-prev, .lb-next { top: 50%; transform: translateY(-50%); }
+.lb-prev { left: 12px; }
+.lb-next { right: 12px; }
 @media (max-width: 700px) {
   .owner-layout { grid-template-columns: 1fr; gap: 28px; }
   .owner-layout img { max-width: 330px; margin: auto; }
@@ -207,6 +220,71 @@ footer p { margin: 8px 0; }
   <a class="btn secondary" href="tel:+18167154322">Call Me</a>
 </div>
 
+<dialog class="lightbox" aria-label="Photo viewer">
+  <button class="lb-close" aria-label="Close">&times;</button>
+  <button class="lb-prev" aria-label="Previous photo">&lsaquo;</button>
+  <img src="" alt="">
+  <p></p>
+  <button class="lb-next" aria-label="Next photo">&rsaquo;</button>
+</dialog>
+
+<script>
+// Photo viewer: tap or click any photo to open it full size; arrows, arrow keys or a swipe move between photos.
+const box = document.querySelector(".lightbox");
+const boxImg = box.querySelector("img");
+const boxCaption = box.querySelector("p");
+const photos = Array.from(document.querySelectorAll(".gallery img, .owner-layout img"));
+let current = 0;
+
+function show(index) {
+  current = (index + photos.length) % photos.length;
+  const photo = photos[current];
+  const figure = photo.closest("figure");
+  boxImg.src = photo.src;
+  boxImg.alt = photo.alt;
+  if (figure) {
+    boxCaption.textContent = figure.querySelector("figcaption").textContent;
+  } else {
+    boxCaption.textContent = photo.alt;
+  }
+}
+
+photos.forEach(function (photo, index) {
+  photo.tabIndex = 0;
+  photo.setAttribute("role", "button");
+  photo.addEventListener("click", function () { show(index); box.showModal(); });
+  photo.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" || event.key === " ") { event.preventDefault(); show(index); box.showModal(); }
+  });
+});
+
+box.querySelector(".lb-prev").addEventListener("click", function () { show(current - 1); });
+box.querySelector(".lb-next").addEventListener("click", function () { show(current + 1); });
+// Clicking anywhere except the arrows closes it (the close button included).
+box.addEventListener("click", function (event) {
+  if (!event.target.closest(".lb-prev, .lb-next")) box.close();
+});
+box.addEventListener("keydown", function (event) {
+  if (event.key === "ArrowLeft") show(current - 1);
+  if (event.key === "ArrowRight") show(current + 1);
+});
+
+let touchStartX = null;
+box.addEventListener("touchstart", function (event) {
+  // Two fingers is a pinch-zoom, not a swipe.
+  if (event.touches.length === 1) touchStartX = event.touches[0].clientX;
+  else touchStartX = null;
+}, { passive: true });
+box.addEventListener("touchend", function (event) {
+  if (touchStartX === null) return;
+  const moved = event.changedTouches[0].clientX - touchStartX;
+  touchStartX = null;
+  if (Math.abs(moved) > 50) {
+    show(moved < 0 ? current + 1 : current - 1);
+    event.preventDefault();  // a swipe should not also count as a tap that closes the viewer
+  }
+});
+</script>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
