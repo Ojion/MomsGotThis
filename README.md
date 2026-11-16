@@ -1,6 +1,6 @@
 # momskc.com
 
-Website for Mom's Got This Cleaning Co., served by GitHub Pages from the `docs/` folder on `main`
+Website for Mom's Got This Cleaning LLC, served by GitHub Pages from the `docs/` folder on `main`
 (Settings > Pages > Deploy from a branch > `main` / `/docs`). Any push to `main` republishes within a minute or two.
 
 - `docs/index.html` is the whole site: words, links and styling.
